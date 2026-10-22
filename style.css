@@ -1406,26 +1406,71 @@ h1, h2, h3, h4, h5, h6 {
 
 .about-statement-card {
   padding: 38px 36px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-lg);
 }
 
 .statement-intro-pill {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  font-size: 0.78rem;
+  font-size: 0.76rem;
   color: var(--color-lime);
   background: var(--color-lime-muted);
+  border: 1px solid var(--color-lime-border);
   padding: 4px 12px;
   border-radius: var(--radius-full);
-  margin-bottom: 24px;
+  margin-bottom: 20px;
+}
+
+.about-card-heading {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: 16px;
+  line-height: 1.25;
 }
 
 .about-lead-paragraph {
-  font-size: 1.12rem;
+  font-size: 1.08rem;
   line-height: 1.8;
   color: var(--text-primary);
-  margin-bottom: 20px;
-  font-weight: 500;
+  margin-bottom: 0;
+  font-weight: 450;
+}
+
+.about-highlights-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 24px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.highlight-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 14px;
+  background: rgba(255, 255, 255, 0.035);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-full);
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+  transition: all var(--trans-fast);
+}
+
+.highlight-pill svg {
+  color: var(--color-lime);
+}
+
+.highlight-pill:hover {
+  background: var(--color-lime-muted);
+  border-color: var(--color-lime-border);
+  color: var(--color-lime);
+  transform: translateY(-2px);
 }
 
 .about-secondary-paragraph {
@@ -3106,30 +3151,77 @@ h1, h2, h3, h4, h5, h6 {
 /* =========================================================================
    SECTION E: TECHNICAL SKILLS
    ========================================================================= */
+.skills-block-header {
+  margin: 48px 0 24px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.skills-header-label {
+  font-size: 0.84rem;
+  color: var(--text-muted);
+  letter-spacing: 0.06em;
+}
+
+.skills-header-subtext {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+}
+
 .skills-categorized-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 28px;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 20px;
 }
 
 .skill-group-card {
-  padding: 32px 26px;
+  padding: 24px 22px;
   display: flex;
   flex-direction: column;
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  transition: border-color var(--trans-fast), transform var(--trans-fast);
+}
+
+.skill-group-card:hover {
+  border-color: var(--color-lime-border);
+  transform: translateY(-2px);
+}
+
+.skill-group-card.group-prog {
+  grid-column: span 2;
+}
+
+.skill-group-card.group-ml {
+  grid-column: span 4;
+}
+
+.skill-group-card.group-auto {
+  grid-column: span 2;
+}
+
+.skill-group-card.group-embed {
+  grid-column: span 2;
+}
+
+.skill-group-card.group-sec {
+  grid-column: span 2;
 }
 
 .group-header {
   display: flex;
   align-items: center;
-  gap: 14px;
-  margin-bottom: 24px;
-  padding-bottom: 16px;
+  gap: 12px;
+  margin-bottom: 16px;
+  padding-bottom: 14px;
   border-bottom: 1px solid var(--border-subtle);
 }
 
 .group-icon-circle {
-  width: 44px;
-  height: 44px;
+  width: 40px;
+  height: 40px;
   border-radius: var(--radius-sm);
   background: var(--color-lime-muted);
   border: 1px solid var(--color-lime-border);
@@ -3144,18 +3236,79 @@ h1, h2, h3, h4, h5, h6 {
 .skill-group-card:hover .group-icon-circle {
   background: var(--color-lime);
   color: var(--text-dark);
-  box-shadow: 0 0 18px rgba(163, 230, 53, 0.4);
+  box-shadow: 0 0 16px rgba(163, 230, 53, 0.35);
+}
+
+.group-title-box {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
 }
 
 .group-title {
-  font-size: 1.15rem;
+  font-size: 1.05rem;
+  font-weight: 700;
   color: var(--text-primary);
-  line-height: 1.2;
+  line-height: 1.25;
 }
 
 .group-tagline {
   font-size: 0.72rem;
   color: var(--text-muted);
+}
+
+.skill-group-note {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.7rem;
+  color: var(--color-lime);
+  background: var(--color-lime-muted);
+  border: 1px solid var(--color-lime-border);
+  padding: 3px 10px;
+  border-radius: var(--radius-full);
+  margin-bottom: 14px;
+  width: fit-content;
+}
+
+.skill-group-note .note-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--color-lime);
+  box-shadow: 0 0 6px var(--color-lime);
+}
+
+.skills-pills-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-content: flex-start;
+}
+
+.skill-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  background: rgba(255, 255, 255, 0.035);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-xs);
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  transition: all var(--trans-fast);
+  line-height: 1.35;
+}
+
+.skill-pill:hover {
+  background: var(--color-lime-muted);
+  border-color: var(--color-lime-border);
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
 .skills-chips-wrapper {
@@ -4594,6 +4747,18 @@ html.js-active [data-reveal].revealed {
 
   .skills-categorized-grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .skill-group-card.group-prog,
+  .skill-group-card.group-ml,
+  .skill-group-card.group-auto,
+  .skill-group-card.group-embed {
+    grid-column: span 1;
+  }
+
+  .skill-group-card.group-sec {
+    grid-column: span 2;
   }
 
   .journey-progression-grid {
@@ -4761,6 +4926,15 @@ html.js-active [data-reveal].revealed {
 
   .skills-categorized-grid {
     grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .skill-group-card.group-prog,
+  .skill-group-card.group-ml,
+  .skill-group-card.group-auto,
+  .skill-group-card.group-embed,
+  .skill-group-card.group-sec {
+    grid-column: span 1;
   }
 
   .journey-progression-grid {
