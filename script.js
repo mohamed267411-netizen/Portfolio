@@ -218,6 +218,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initImageLightbox();
   initEmailComposerAndCopy();
   initFooterYear();
+  initHeroTerminal();
 
   // Non-intrusive progressive animations (only if reduced motion is disabled)
   if (!prefersReducedMotion) {
@@ -1001,4 +1002,70 @@ function initCanvasMesh() {
   }
 
   reqId = requestAnimationFrame(animate);
+}
+
+/* ==========================================================================
+   12. HERO TERMINAL PROGRESSIVE TYPING & REVEAL
+   ========================================================================== */
+function initHeroTerminal() {
+  const terminalBody = document.getElementById('hero-terminal-body');
+  if (!terminalBody) return;
+
+  const entries = terminalBody.querySelectorAll('.term-entry');
+  const cursorLine = document.getElementById('term-cursor-line');
+  if (!entries.length) return;
+
+  // Check prefers-reduced-motion
+  const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (prefersReduced) {
+    // Leave all lines statically visible
+    return;
+  }
+
+  // Activate progressive JS styling
+  terminalBody.classList.add('js-term-active');
+
+  // Initially hide entries for progressive revelation
+  entries.forEach(entry => {
+    entry.classList.add('term-hidden');
+  });
+
+  if (cursorLine) {
+    cursorLine.style.display = 'none';
+  }
+
+  let delay = 400; // brief delay after hero card entrance
+
+  entries.forEach((entry, idx) => {
+    const cmdSpan = entry.querySelector('.term-cmd');
+    const cmdText = cmdSpan ? cmdSpan.textContent : '';
+
+    setTimeout(() => {
+      entry.classList.remove('term-hidden');
+      entry.classList.add('term-visible');
+
+      // If command exists, simulate a swift typing cadence
+      if (cmdSpan && cmdText) {
+        cmdSpan.textContent = '';
+        let charIdx = 0;
+        const typeInterval = setInterval(() => {
+          if (charIdx < cmdText.length) {
+            cmdSpan.textContent += cmdText.charAt(charIdx);
+            charIdx++;
+          } else {
+            clearInterval(typeInterval);
+          }
+        }, 35);
+      }
+
+      // If this is the last entry, reveal the blinking cursor line at the end
+      if (idx === entries.length - 1 && cursorLine) {
+        setTimeout(() => {
+          cursorLine.style.display = 'flex';
+        }, 450);
+      }
+    }, delay);
+
+    delay += 550; // smooth cadence between commands
+  });
 }

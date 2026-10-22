@@ -139,11 +139,11 @@
       <div class="container hero-layout">
         
         <!-- Left: Personal Introduction & Actions -->
-        <div class="hero-text-block" data-reveal="fade-up">
+        <div class="hero-text-block">
           
-          <!-- Identity Badge -->
+          <!-- Identity Badge with Animated Avatar Ring -->
           <div class="hero-badge-wrap">
-            <div class="hero-avatar-ring">
+            <div class="hero-avatar-ring" title="Mohamed Ismail">
               <img src="assets/mohamed-ismail-headshot.jpg" alt="Mohamed Ismail" class="hero-avatar-img" width="84" height="84">
               <span class="avatar-live-indicator" title="Available for opportunities"></span>
             </div>
@@ -153,45 +153,40 @@
             </div>
           </div>
 
-          <!-- Headline -->
+          <!-- Bold Main Headline -->
           <h1 class="hero-headline">
-            Building Ideas Into <span class="text-lime text-glow">Real Software.</span>
+            <span class="hero-headline-line">Building Ideas.</span>
+            <span class="hero-headline-line text-lime text-glow">Making Them Real.</span>
           </h1>
 
-          <!-- Concise Supporting Introduction -->
+          <!-- Concise Supporting Description -->
           <p class="hero-supporting-text">
-            I'm an engineering student passionate about building practical software solutions. My projects span Python applications, machine learning systems, relational databases, data analytics, and workflow automation.
+            Python, Machine Learning &amp; Automation &mdash; practical software built to solve real problems.
           </p>
 
-          <!-- Core Specialization Badges -->
-          <div class="hero-spec-strip font-mono">
+          <!-- Exactly Three Compact Skill Highlights -->
+          <div class="hero-spec-strip font-mono" aria-label="Core Technical Focus">
             <span class="spec-tag">Python</span>
-            <span class="spec-dot">&bull;</span>
+            <span class="spec-dot" aria-hidden="true">&bull;</span>
             <span class="spec-tag">Machine Learning</span>
-            <span class="spec-dot">&bull;</span>
-            <span class="spec-tag">SQL Server</span>
-            <span class="spec-dot">&bull;</span>
-            <span class="spec-tag">Data Analysis</span>
-            <span class="spec-dot">&bull;</span>
+            <span class="spec-dot" aria-hidden="true">&bull;</span>
             <span class="spec-tag">Automation</span>
-            <span class="spec-dot">&bull;</span>
-            <span class="spec-tag">Embedded IoT</span>
           </div>
 
           <!-- Primary & Secondary CTAs -->
           <div class="hero-cta-group">
-            <a href="#projects" class="btn btn-primary btn-lime">
-              <span>View Selected Projects</span>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"></line><polyline points="19 12 12 19 5 12"></polyline></svg>
+            <a href="#projects" class="btn btn-primary btn-lime cta-primary-btn">
+              <span>Explore Projects</span>
+              <svg class="cta-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
             </a>
 
-            <a href="#contact" class="btn btn-secondary">
+            <a href="#contact" class="btn btn-secondary cta-secondary-btn">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
               <span>Get in Touch</span>
             </a>
           </div>
 
-          <!-- Quick Verified Profile Chips -->
+          <!-- Verified Profile Chips -->
           <div class="hero-social-row font-mono">
             <span class="social-label text-muted">PROFILES:</span>
             <a href="https://github.com/mohamed267411-netizen" target="_blank" rel="noopener noreferrer" class="social-chip" title="GitHub Profile">
@@ -206,36 +201,57 @@
 
         </div>
 
-        <!-- Right: Technical Profile Hub Card -->
-        <div class="hero-terminal-side" data-reveal="fade-up">
-          <div class="tech-card-hub">
+        <!-- Right: Technical Profile Hub Card / Terminal -->
+        <div class="hero-terminal-side">
+          <div class="tech-card-hub hero-terminal-card" id="hero-terminal-card">
             <div class="tech-hub-header font-mono">
               <div class="hub-window-controls" aria-hidden="true">
                 <span class="control-dot red"></span>
                 <span class="control-dot yellow"></span>
                 <span class="control-dot green"></span>
               </div>
-              <span class="hub-title">mohamed-ismail &bull; engineering-lab</span>
-              <span class="hub-pulse-tag"><span class="pulse-lime"></span> Active</span>
+              <span class="hub-title">ismail@engineering-lab:~</span>
+              <span class="hub-pulse-tag"><span class="pulse-lime"></span> bash</span>
             </div>
 
-            <div class="hero-terminal-body font-mono">
-              <div class="terminal-line"><span class="term-prompt">$</span> <span class="term-cmd">whoami</span></div>
-              <div class="term-output text-primary">Mohamed Ismail &bull; Communications &amp; Computer Engineering Student</div>
-
-              <div class="terminal-line"><span class="term-prompt">$</span> <span class="term-cmd">cat focus.json</span></div>
-              <div class="term-output json-output">
-                <span>{</span>
-                <div class="term-tab"><span class="json-key">"role"</span>: <span class="json-val">"Software Engineer"</span>,</div>
-                <div class="term-tab"><span class="json-key">"domains"</span>: [<span class="json-val">"AI &amp; ML"</span>, <span class="json-val">"Data Analysis"</span>, <span class="json-val">"Automation"</span>],</div>
-                <div class="term-tab"><span class="json-key">"graduation"</span>: <span class="json-val">2027</span></div>
-                <span>}</span>
+            <!-- Terminal Screen with Progressive Typing & Static Fallback -->
+            <div class="hero-terminal-body font-mono" id="hero-terminal-body">
+              
+              <!-- Item 1: whoami -->
+              <div class="term-entry" data-step="1">
+                <div class="terminal-line"><span class="term-prompt">$</span> <span class="term-cmd">whoami</span></div>
+                <div class="term-output">
+                  <div class="term-val text-primary font-bold">Mohamed Ismail</div>
+                  <div class="term-sub text-muted">Software Engineer</div>
+                </div>
               </div>
+
+              <!-- Item 2: current_focus -->
+              <div class="term-entry" data-step="2">
+                <div class="terminal-line"><span class="term-prompt">$</span> <span class="term-cmd">current_focus</span></div>
+                <div class="term-output">
+                  <div class="term-val text-lime">AI &bull; Data &bull; Automation</div>
+                </div>
+              </div>
+
+              <!-- Item 3: status -->
+              <div class="term-entry" data-step="3">
+                <div class="terminal-line"><span class="term-prompt">$</span> <span class="term-cmd">status</span></div>
+                <div class="term-output">
+                  <div class="term-val text-secondary">Building practical software...</div>
+                </div>
+              </div>
+
+              <!-- Active Cursor Line -->
+              <div class="terminal-line cursor-line" id="term-cursor-line" aria-hidden="true">
+                <span class="term-prompt">$</span> <span class="term-cursor"></span>
+              </div>
+
             </div>
 
             <div class="hub-status-footer font-mono">
-              <div class="stat-slice"><span>Location</span>: Mansoura, Egypt</div>
-              <div class="stat-slice"><span>Status</span>: Open for Opportunities</div>
+              <div class="stat-slice"><span class="status-indicator-dot mini"></span> Ready</div>
+              <div class="stat-slice text-muted">Session: Interactive</div>
             </div>
           </div>
         </div>
