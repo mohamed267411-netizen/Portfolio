@@ -505,10 +505,19 @@ function initProjectDetailModal() {
     // Gallery / Schematics setup
     const gallerySection = document.getElementById('modal-gallery-section');
     const schematicSection = document.getElementById('modal-schematic-section');
+    const visualsHeading = document.getElementById('modal-visuals-heading');
+    const visualsSub = document.getElementById('modal-visuals-sub');
 
     if (data.gallery && data.gallery.length > 0) {
       gallerySection.style.display = 'flex';
       schematicSection.style.display = 'none';
+
+      if (visualsHeading) {
+        visualsHeading.innerHTML = `<span class="text-lime">&gt;</span> APPLICATION SCREENS &amp; INTERFACE GALLERY`;
+      }
+      if (visualsSub) {
+        visualsSub.textContent = `${data.gallery.length} verified screens available • Click image to open fullscreen viewer`;
+      }
 
       currentModalGallery = data.gallery;
       currentGalleryIndex = 0;
@@ -516,6 +525,14 @@ function initProjectDetailModal() {
     } else {
       gallerySection.style.display = 'none';
       schematicSection.style.display = 'block';
+
+      if (visualsHeading) {
+        visualsHeading.innerHTML = `<span class="text-lime">&gt;</span> SYSTEM ARCHITECTURE &amp; WORKFLOW SCHEMATIC`;
+      }
+      if (visualsSub) {
+        visualsSub.textContent = `Technical system blueprint & telemetry pipeline diagram`;
+      }
+
       renderSchematicPreview(schematicSection, data.schematicType);
     }
 

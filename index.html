@@ -144,7 +144,7 @@
           <!-- Identity Badge -->
           <div class="hero-badge-wrap">
             <div class="hero-avatar-ring">
-              <img src="assets/mohamed-ismail-headshot.jpg" alt="Mohamed Ismail" class="hero-avatar-img" width="58" height="58">
+              <img src="assets/mohamed-ismail-headshot.jpg" alt="Mohamed Ismail" class="hero-avatar-img" width="84" height="84">
               <span class="avatar-live-indicator" title="Available for opportunities"></span>
             </div>
             <div class="status-badge-inline font-mono">
@@ -160,7 +160,7 @@
 
           <!-- Concise Supporting Introduction -->
           <p class="hero-supporting-text">
-            I'm an engineering student at Misr Higher Institute for Engineering &amp; Technology passionate about building practical software solutions. My projects span Python applications, machine learning systems, relational databases, data analytics, and workflow automation.
+            I'm an engineering student passionate about building practical software solutions. My projects span Python applications, machine learning systems, relational databases, data analytics, and workflow automation.
           </p>
 
           <!-- Core Specialization Badges -->
@@ -228,20 +228,8 @@
                 <span>{</span>
                 <div class="term-tab"><span class="json-key">"role"</span>: <span class="json-val">"Software Engineer"</span>,</div>
                 <div class="term-tab"><span class="json-key">"domains"</span>: [<span class="json-val">"AI &amp; ML"</span>, <span class="json-val">"Data Analysis"</span>, <span class="json-val">"Automation"</span>],</div>
-                <div class="term-tab"><span class="json-key">"graduation"</span>: <span class="json-val">2027</span>,</div>
-                <div class="term-tab"><span class="json-key">"institution"</span>: <span class="json-val">"Misr Higher Institute for Engineering &amp; Technology"</span></div>
+                <div class="term-tab"><span class="json-key">"graduation"</span>: <span class="json-val">2027</span></div>
                 <span>}</span>
-              </div>
-
-              <div class="terminal-line"><span class="term-prompt">$</span> <span class="term-cmd">list_projects --status=verified</span></div>
-              <div class="term-output text-lime">
-                &check; DawReeK (Premier League ML Desktop App &bull; 10 Screens)<br>
-                &check; RansomGuard (Endpoint Security Graduation Capstone)<br>
-                &check; Smart Box (IoT Package Security System)<br>
-                &check; Tazkarti Bot (Python Ticket Availability Daemon)<br>
-                &check; Airline System (SQLite &amp; Tkinter GUI &bull; 4 Screens)<br>
-                &check; Gym Members Analytics (Exploratory Data Analysis)<br>
-                &check; Your Movies (Responsive Entertainment Portal)
               </div>
             </div>
 
@@ -827,10 +815,10 @@
           <div class="info-spec-card spotlight-card">
             <div class="info-card-header font-mono">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
-              <span>INSTITUTION &amp; FACULTY</span>
+              <span>DEGREE &amp; FIELD</span>
             </div>
-            <div class="info-card-value">Misr Higher Institute for Engineering &amp; Technology</div>
-            <div class="info-card-sub font-mono text-lime">Faculty of Engineering &bull; Communications &amp; Computers (Class of 2027)</div>
+            <div class="info-card-value">Communications &amp; Computer Engineering</div>
+            <div class="info-card-sub font-mono text-lime">Undergraduate Engineering Degree &bull; Class of 2027</div>
           </div>
 
           <!-- Cell 3: Location -->
@@ -1013,7 +1001,7 @@
           <span class="footer-name">Mohamed Ismail</span>
         </div>
         <p class="footer-tagline">
-          Engineering Student &bull; Misr Higher Institute for Engineering &amp; Technology (Class of 2027). Building practical software solutions through Python, machine learning, data analysis, and automation.
+          Engineering Student (Class of 2027) &bull; Building practical software solutions through Python, machine learning, data analysis, and automation.
         </p>
       </div>
 
@@ -1082,36 +1070,46 @@
       <!-- Scrollable Modal Body -->
       <div class="modal-scrollable-content" id="modal-body-container">
         
-        <!-- Gallery Container (Rendered dynamically if screenshots exist) -->
-        <div id="modal-gallery-section" class="modal-gallery-wrap">
-          <div class="gallery-stage" id="gallery-stage-box" title="Click to enlarge image in fullscreen lightbox">
-            <img src="" alt="" id="modal-gallery-active-img">
-            <div class="gallery-zoom-hint font-mono">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
-              <span>Click to Enlarge</span>
-            </div>
-          </div>
-          
-          <div class="gallery-caption-bar font-mono">
-            <span class="gallery-caption-text" id="modal-gallery-caption">Caption text</span>
-            <span class="gallery-counter-badge" id="modal-gallery-counter">01 / 10</span>
+        <!-- Dedicated Visuals / Image Gallery Section -->
+        <div class="modal-spec-block modal-visuals-block">
+          <div class="modal-visuals-header">
+            <h4 class="modal-block-heading font-mono" id="modal-visuals-heading">
+              <span class="text-lime">&gt;</span> APPLICATION SCREENS &amp; INTERFACE GALLERY
+            </h4>
+            <span class="modal-visuals-sub font-mono text-muted" id="modal-visuals-sub">High-resolution interface captures &bull; Click image to enlarge</span>
           </div>
 
-          <div class="gallery-controls-row">
-            <button type="button" class="gallery-nav-btn prev" id="gallery-prev-btn" aria-label="Previous screenshot">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"></polyline></svg>
-            </button>
-            <div class="gallery-thumbs-strip" id="modal-thumbs-strip">
-              <!-- Dynamically populated thumbnails -->
+          <!-- Gallery Container (Rendered dynamically if screenshots exist) -->
+          <div id="modal-gallery-section" class="modal-gallery-wrap">
+            <div class="gallery-stage" id="gallery-stage-box" title="Click to enlarge image in fullscreen lightbox">
+              <img src="" alt="" id="modal-gallery-active-img">
+              <div class="gallery-zoom-hint font-mono">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                <span>Click to Enlarge</span>
+              </div>
             </div>
-            <button type="button" class="gallery-nav-btn next" id="gallery-next-btn" aria-label="Next screenshot">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
-            </button>
+            
+            <div class="gallery-caption-bar font-mono">
+              <span class="gallery-caption-text" id="modal-gallery-caption">Caption text</span>
+              <span class="gallery-counter-badge" id="modal-gallery-counter">01 / 10</span>
+            </div>
+
+            <div class="gallery-controls-row">
+              <button type="button" class="gallery-nav-btn prev" id="gallery-prev-btn" aria-label="Previous screenshot">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"></polyline></svg>
+              </button>
+              <div class="gallery-thumbs-strip" id="modal-thumbs-strip">
+                <!-- Dynamically populated thumbnails -->
+              </div>
+              <button type="button" class="gallery-nav-btn next" id="gallery-next-btn" aria-label="Next screenshot">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              </button>
+            </div>
           </div>
+
+          <!-- Dynamic Architecture Schematics (For RansomGuard, Smart Box, Tazkarti, YourMovies) -->
+          <div id="modal-schematic-section" class="modal-schematic-wrap" style="display: none;"></div>
         </div>
-
-        <!-- Dynamic Architecture Schematics (For RansomGuard, Smart Box, Tazkarti, YourMovies) -->
-        <div id="modal-schematic-section" class="modal-schematic-wrap" style="display: none;"></div>
 
         <!-- Section: Overview -->
         <div class="modal-spec-block">
