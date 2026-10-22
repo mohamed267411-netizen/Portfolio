@@ -1,0 +1,2165 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mohamed Ismail | Engineering &amp; AI Portfolio</title>
+  
+  <!-- SEO & Social Sharing Metadata -->
+  <meta name="description" content="Engineering student portfolio of Mohamed Ismail. Building practical software solutions through Python, machine learning, data analysis, automation, and cybersecurity projects.">
+  <meta name="author" content="Mohamed Ismail">
+  <meta name="keywords" content="Mohamed Ismail, Software Engineer, Engineering Student, Python, Machine Learning, Data Analysis, Automation, RansomGuard, DawReeK, Portfolio">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Mohamed Ismail | Engineering &amp; AI Portfolio">
+  <meta property="og:description" content="Engineering Ideas Into Intelligent Solutions. Practical projects in software engineering, machine learning, data analysis, and automation.">
+  <meta property="og:image" content="assets/mohamed-ismail-headshot.jpg">
+  <meta property="og:url" content="https://github.com/mohamed267411-netizen">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Mohamed Ismail | Engineering &amp; AI Portfolio">
+  <meta name="twitter:description" content="Engineering Ideas Into Intelligent Solutions. Practical projects in software engineering, machine learning, data analysis, and automation.">
+  <meta name="twitter:image" content="assets/mohamed-ismail-headshot.jpg">
+
+  <!-- Favicon: MI Monogram in SVG -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='8' fill='%230B1120'/%3E%3Cpath d='M9 29V11h5l4 7.5 4-7.5h5v18h-4v-11l-3.5 6.5h-3L13 18v11H9z' fill='%23A3E635'/%3E%3Ccircle cx='32' cy='27' r='2.5' fill='%23A3E635'/%3E%3C/svg%3E">
+
+  <!-- Google Fonts: Plus Jakarta Sans, Inter, JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-navy">
+  <!-- Interactive Technical Grid Background Canvas -->
+  <canvas id="bg-canvas" aria-hidden="true"></canvas>
+
+  <!-- Ambient Light Orbs -->
+  <div class="ambient-glow glow-1" aria-hidden="true"></div>
+  <div class="ambient-glow glow-2" aria-hidden="true"></div>
+  <div class="ambient-glow glow-3" aria-hidden="true"></div>
+
+  <!-- Skip to Content for Accessibility -->
+  <a href="#main-content" class="skip-to-content">Skip to main content</a>
+
+  <!-- =========================================================================
+       SECTION A: NAVIGATION BAR
+       ========================================================================= -->
+  <header class="site-header" id="navbar">
+    <div class="container header-container">
+      
+      <!-- Brand Monogram Logo -->
+      <a href="#hero" class="brand-logo" aria-label="Mohamed Ismail - Home">
+        <div class="logo-box">
+          <span class="logo-letter">M</span>
+          <span class="logo-dot"></span>
+          <span class="logo-letter">I</span>
+        </div>
+        <div class="logo-info">
+          <span class="logo-name">Mohamed Ismail</span>
+          <span class="logo-tagline font-mono">Engineering &bull; AI &bull; Code</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="desktop-nav" aria-label="Primary Navigation">
+        <ul class="nav-menu">
+          <li><a href="#hero" class="nav-item">Home</a></li>
+          <li><a href="#about" class="nav-item">About</a></li>
+          <li><a href="#projects" class="nav-item">Projects</a></li>
+          <li><a href="#skills" class="nav-item">Skills</a></li>
+          <li><a href="#journey" class="nav-item">Journey</a></li>
+          <li><a href="#contact" class="nav-item">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Header Action Group -->
+      <div class="header-cta-wrap">
+        <a href="https://github.com/mohamed267411-netizen" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-ghost header-github-btn font-mono" title="GitHub Profile">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg>
+          <span>GitHub</span>
+        </a>
+
+        <a href="#contact" class="btn btn-sm btn-lime header-talk-btn">
+          <span>Let's Talk</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+        </a>
+
+        <!-- Mobile Drawer Toggle -->
+        <button id="mobile-toggle" class="mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-nav">
+          <span class="bar bar-1"></span>
+          <span class="bar bar-2"></span>
+          <span class="bar bar-3"></span>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Mobile Drawer Navigation -->
+    <div id="mobile-nav" class="mobile-nav" aria-hidden="true">
+      <div class="mobile-nav-inner container">
+        <ul class="mobile-menu-list">
+          <li><a href="#hero" class="mobile-nav-link">Home</a></li>
+          <li><a href="#about" class="mobile-nav-link">About</a></li>
+          <li><a href="#projects" class="mobile-nav-link">Featured Projects</a></li>
+          <li><a href="#skills" class="mobile-nav-link">Skills &amp; Tools</a></li>
+          <li><a href="#journey" class="mobile-nav-link">Engineering Journey</a></li>
+          <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
+        </ul>
+
+        <div class="mobile-nav-bottom">
+          <div class="mobile-status-pill font-mono">
+            <span class="pulse-lime"></span>
+            <span>Engineering Student &bull; Class of 2027</span>
+          </div>
+          <div class="mobile-social-bar">
+            <a href="mailto:mohamed267411@gmail.com" class="mobile-social-link" aria-label="Send Email">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            </a>
+            <a href="https://www.linkedin.com/in/mohamed-ismail21" target="_blank" rel="noopener noreferrer" class="mobile-social-link" aria-label="LinkedIn Profile">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+            </a>
+            <a href="https://github.com/mohamed267411-netizen" target="_blank" rel="noopener noreferrer" class="mobile-social-link" aria-label="GitHub Profile">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content" tabindex="-1">
+    
+    <!-- =========================================================================
+         SECTION B: HERO SECTION (The Engineer's Lab)
+         ========================================================================= -->
+    <section id="hero" class="hero-section">
+      <div class="container hero-layout">
+        
+        <!-- Left: Personal Introduction & Actions -->
+        <div class="hero-text-block" data-reveal="fade-up">
+          
+          <!-- Small Label -->
+          <div class="hero-badge-wrap">
+            <div class="status-badge-inline font-mono">
+              <span class="status-indicator-dot"></span>
+              <span class="status-label-text">ENGINEERING STUDENT &bull; AI &amp; SOFTWARE</span>
+            </div>
+          </div>
+
+          <!-- Name & Headline -->
+          <div class="hero-name-row">
+            <span class="hero-author-label font-mono">Mohamed Ismail</span>
+          </div>
+
+          <h1 class="hero-headline">
+            Engineering Ideas Into <span class="text-lime text-glow">Intelligent Solutions.</span>
+          </h1>
+
+          <!-- Concise Supporting Introduction -->
+          <p class="hero-supporting-text">
+            I'm an engineering student building practical solutions through Python, machine learning, data analysis, and automation. I enjoy turning technical concepts into working applications and exploring how intelligent systems can solve real problems.
+          </p>
+
+          <!-- Core Specialization Badges -->
+          <div class="hero-spec-strip font-mono">
+            <span class="spec-tag">Software Development</span>
+            <span class="spec-dot">&bull;</span>
+            <span class="spec-tag">Machine Learning &amp; AI</span>
+            <span class="spec-dot">&bull;</span>
+            <span class="spec-tag">Data Analysis</span>
+            <span class="spec-dot">&bull;</span>
+            <span class="spec-tag">Workflow Automation</span>
+            <span class="spec-dot">&bull;</span>
+            <span class="spec-tag">Cybersecurity Projects</span>
+          </div>
+
+          <!-- Primary & Secondary CTAs -->
+          <div class="hero-cta-group">
+            <a href="#projects" class="btn btn-primary btn-lime">
+              <span>Explore My Projects</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+            
+            <a href="https://github.com/mohamed267411-netizen" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg>
+              <span>View GitHub</span>
+            </a>
+
+            <a href="#contact" class="hero-inline-contact-link font-mono">
+              <span>Get in Touch &rarr;</span>
+            </a>
+          </div>
+
+          <!-- Quick Verified Links -->
+          <div class="hero-links-row">
+            <span class="links-caption font-mono">Direct Links:</span>
+            
+            <a href="https://github.com/mohamed267411-netizen" target="_blank" rel="noopener noreferrer" class="social-chip font-mono" title="GitHub Profile">
+              <span>github.com/mohamed267411-netizen</span>
+            </a>
+
+            <a href="https://www.linkedin.com/in/mohamed-ismail21" target="_blank" rel="noopener noreferrer" class="social-chip font-mono" title="LinkedIn Profile">
+              <span>linkedin.com/in/mohamed-ismail21</span>
+            </a>
+          </div>
+
+        </div>
+
+        <!-- Right: The Engineer's Lab Workbench & "Lab Status" Signature Component -->
+        <div class="hero-visual-block" data-reveal="fade-left">
+          <div class="tech-card-hub spotlight-card">
+            
+            <!-- Technical Lab Header -->
+            <div class="tech-hub-header">
+              <div class="hub-window-controls" aria-hidden="true">
+                <span class="control-dot red"></span>
+                <span class="control-dot yellow"></span>
+                <span class="control-dot green"></span>
+              </div>
+              <div class="hub-title font-mono">LAB WORKBENCH // CURRENT FOCUS</div>
+              <div class="hub-pulse-tag font-mono">
+                <span class="pulse-lime"></span>
+                <span>ONLINE</span>
+              </div>
+            </div>
+
+            <!-- Signature Component: "Currently Building" / "Lab Status" Switcher -->
+            <div class="lab-status-module">
+              
+              <div class="lab-status-nav font-mono" role="tablist" aria-label="Current Lab Tracks">
+                <button class="lab-track-btn active" data-track="ransomguard" role="tab" aria-selected="true">
+                  <span class="track-indicator"></span>
+                  <span>RansomGuard</span>
+                </button>
+                <button class="lab-track-btn" data-track="tazkarti" role="tab" aria-selected="false">
+                  <span class="track-indicator"></span>
+                  <span>Tazkarti Bot</span>
+                </button>
+                <button class="lab-track-btn" data-track="dawreek" role="tab" aria-selected="false">
+                  <span class="track-indicator"></span>
+                  <span>DawReeK</span>
+                </button>
+              </div>
+
+              <!-- Track 1: RansomGuard -->
+              <div class="lab-track-view active" data-track="ransomguard">
+                <div class="lab-meta-row font-mono">
+                  <span class="lab-spec-key">TRACK:</span>
+                  <span class="lab-spec-val text-amber">Graduation Project &bull; In Development</span>
+                </div>
+                <div class="lab-meta-row font-mono">
+                  <span class="lab-spec-key">MODULE:</span>
+                  <span class="lab-spec-val text-white">ransomguard/behavior_telemetry.py</span>
+                </div>
+                <div class="lab-spec-box font-mono">
+                  <div class="spec-line"><span class="text-lime">&gt;</span> Research Area: Behavioral ransomware detection &amp; host event telemetry</div>
+                  <div class="spec-line"><span class="text-lime">&gt;</span> Ingestion Source: Windows Sysmon &amp; process activity logging</div>
+                  <div class="spec-line"><span class="text-lime">&gt;</span> Current Objective: Validating feature extraction for anomaly classification</div>
+                </div>
+                <div class="lab-tags-row font-mono">
+                  <span class="mini-pill">Python</span>
+                  <span class="mini-pill">Sysmon</span>
+                  <span class="mini-pill">Behavioral ML</span>
+                  <span class="mini-pill">Class of 2027</span>
+                </div>
+              </div>
+
+              <!-- Track 2: Tazkarti Bot -->
+              <div class="lab-track-view" data-track="tazkarti">
+                <div class="lab-meta-row font-mono">
+                  <span class="lab-spec-key">TRACK:</span>
+                  <span class="lab-spec-val text-lime">Workflow Automation &bull; Functional Script</span>
+                </div>
+                <div class="lab-meta-row font-mono">
+                  <span class="lab-spec-key">MODULE:</span>
+                  <span class="lab-spec-val text-white">tazkarti_bot/monitor.py &amp; telegram.py</span>
+                </div>
+                <div class="lab-spec-box font-mono">
+                  <div class="spec-line"><span class="text-lime">&gt;</span> Task: Match ticket availability monitor on Tazkarti platform</div>
+                  <div class="spec-line"><span class="text-lime">&gt;</span> Persistence: SQLite database (matches.db) for fixture state diffs</div>
+                  <div class="spec-line"><span class="text-lime">&gt;</span> Dispatch: Real-time broadcast pushes via Telegram Bot API</div>
+                </div>
+                <div class="lab-tags-row font-mono">
+                  <span class="mini-pill">Python</span>
+                  <span class="mini-pill">Telegram API</span>
+                  <span class="mini-pill">SQLite</span>
+                  <span class="mini-pill">Automation</span>
+                </div>
+              </div>
+
+              <!-- Track 3: DawReeK -->
+              <div class="lab-track-view" data-track="dawreek">
+                <div class="lab-meta-row font-mono">
+                  <span class="lab-spec-key">TRACK:</span>
+                  <span class="lab-spec-val text-lime">Machine Learning &bull; Desktop Application</span>
+                </div>
+                <div class="lab-meta-row font-mono">
+                  <span class="lab-spec-key">MODULE:</span>
+                  <span class="lab-spec-val text-white">dawreek/predict_pipeline.py</span>
+                </div>
+                <div class="lab-spec-box font-mono">
+                  <div class="spec-line"><span class="text-lime">&gt;</span> Model: Poisson regression &amp; linear regression for EPL match goals</div>
+                  <div class="spec-line"><span class="text-lime">&gt;</span> Pipeline: SQL Server match history &rarr; Pandas ETL &rarr; Scikit-learn</div>
+                  <div class="spec-line"><span class="text-lime">&gt;</span> Interface: CustomTkinter desktop GUI with statistical breakdown</div>
+                </div>
+                <div class="lab-tags-row font-mono">
+                  <span class="mini-pill">Scikit-learn</span>
+                  <span class="mini-pill">SQL Server</span>
+                  <span class="mini-pill">CustomTkinter</span>
+                  <span class="mini-pill">Pandas</span>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Terminal Stream Simulation -->
+            <div class="tech-hub-terminal font-mono">
+              <div class="term-line term-active-typing">
+                <span class="term-prompt">$</span>
+                <span id="hero-typing-target" class="term-target" aria-hidden="true"></span>
+                <span class="typing-caret" aria-hidden="true"></span>
+                <span class="sr-only">Interactive developer terminal executing commands</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Scroll Down Cue -->
+      <div class="scroll-cue">
+        <a href="#about" aria-label="Scroll to About section">
+          <span class="cue-label font-mono">SCROLL TO DISCOVER</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 13l5 5 5-5M7 6l5 5 5-5"/></svg>
+        </a>
+      </div>
+    </section>
+
+
+    <!-- =========================================================================
+         SECTION C: ABOUT ME
+         ========================================================================= -->
+    <section id="about" class="about-section section-padding">
+      <div class="container">
+        
+        <div class="section-title-wrap" data-reveal="fade-up">
+          <div class="section-label font-mono">
+            <span class="label-idx">01</span>
+            <span class="label-slash">/</span>
+            <span class="label-name">IDENTITY &amp; APPROACH</span>
+          </div>
+          <h2 class="section-heading">About Me</h2>
+        </div>
+
+        <div class="about-editorial-grid">
+          
+          <!-- Left: Mohamed's Authentic Portrait Showcase Card -->
+          <div class="about-portrait-wrap" data-reveal="fade-right">
+            <div class="portrait-card spotlight-card">
+              <div class="portrait-img-box">
+                <img src="assets/mohamed-ismail-headshot.jpg" alt="Mohamed Ismail - Engineering student and aspiring Software Engineer" class="portrait-image" width="608" height="636" loading="lazy">
+                <div class="portrait-badge font-mono">
+                  <span class="pulse-lime"></span>
+                  <span>Mohamed Ismail &bull; Class of 2027</span>
+                </div>
+              </div>
+              <div class="portrait-details">
+                <div class="portrait-header">
+                  <h3 class="portrait-name">Mohamed Ismail</h3>
+                  <span class="portrait-role font-mono text-lime">Software Engineer | Python Developer</span>
+                </div>
+                <div class="portrait-tags-row font-mono">
+                  <span>Python</span>
+                  <span>Machine Learning</span>
+                  <span>Data Analysis</span>
+                  <span>SQL</span>
+                  <span>Automation</span>
+                </div>
+                <div class="portrait-social-row">
+                  <a href="https://github.com/mohamed267411-netizen" target="_blank" rel="noopener noreferrer" class="portrait-chip" title="GitHub Profile">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg>
+                    <span>GitHub</span>
+                  </a>
+                  <a href="https://www.linkedin.com/in/mohamed-ismail21" target="_blank" rel="noopener noreferrer" class="portrait-chip" title="LinkedIn Profile">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                    <span>LinkedIn</span>
+                  </a>
+                  <a href="mailto:mohamed267411@gmail.com" class="portrait-chip" title="Email Mohamed">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                    <span>Email</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Narrative & Practical Skills Breakdown -->
+          <div class="about-text-column" data-reveal="fade-left">
+            <div class="about-statement-card spotlight-card">
+              <div class="card-glass-body">
+                
+                <div class="statement-intro-pill font-mono">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-lime" aria-hidden="true"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+                  <span>Engineering Mindset</span>
+                </div>
+
+                <p class="about-lead-paragraph">
+                  I'm an engineering student passionate about software engineering, applied machine learning, and building practical solutions to real-world problems. My projects span desktop applications, data analytics pipelines, automation scripts, and cybersecurity experiments.
+                </p>
+
+                <p class="about-secondary-paragraph">
+                  I believe technical growth comes from building, testing, and debugging real applications. I focus on developing clean, practical competencies across Python programming, relational databases, data pipelines, predictive models, and event-driven automation.
+                </p>
+
+                <!-- Key Competencies Grid -->
+                <div class="about-spec-grid font-mono">
+                  <div class="spec-cell">
+                    <span class="spec-cell-label">Academic Status</span>
+                    <span class="spec-cell-val text-white">Engineering Student</span>
+                  </div>
+                  <div class="spec-cell">
+                    <span class="spec-cell-label">Expected Graduation</span>
+                    <span class="spec-cell-val text-lime">2027</span>
+                  </div>
+                  <div class="spec-cell">
+                    <span class="spec-cell-label">Primary Languages</span>
+                    <span class="spec-cell-val text-white">Python &bull; SQL</span>
+                  </div>
+                  <div class="spec-cell">
+                    <span class="spec-cell-label">Core Engineering</span>
+                    <span class="spec-cell-val text-white">ML &bull; Automation &bull; Software</span>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- Three Engineering Principles -->
+            <div class="about-principles-stack">
+              <div class="principle-item spotlight-card">
+                <div class="principle-num font-mono">01</div>
+                <div class="principle-text">
+                  <h3 class="principle-heading">Build to Learn.</h3>
+                  <p class="principle-body">
+                    Deep technical understanding comes from writing real code, managing state, handling exceptions, and debugging working software.
+                  </p>
+                </div>
+              </div>
+
+              <div class="principle-item spotlight-card">
+                <div class="principle-num font-mono">02</div>
+                <div class="principle-text">
+                  <h3 class="principle-heading">Solve Practical Problems.</h3>
+                  <p class="principle-body">
+                    Every project addresses a real need—from predicting sports outcomes and automating ticket notifications to analyzing member fitness data and researching ransomware defense.
+                  </p>
+                </div>
+              </div>
+
+              <div class="principle-item spotlight-card">
+                <div class="principle-num font-mono">03</div>
+                <div class="principle-text">
+                  <h3 class="principle-heading">Iterate &amp; Improve.</h3>
+                  <p class="principle-body">
+                    I continuously refine architectures, adopt clean commit habits, structure databases properly, and evaluate system trade-offs through hands-on builds.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- =========================================================================
+         SECTION D: FEATURED PROJECTS (The Core Section with Interactive Filters)
+         ========================================================================= -->
+    <section id="projects" class="projects-section section-padding">
+      <div class="container">
+        
+        <div class="section-title-wrap" data-reveal="fade-up">
+          <div class="section-label font-mono">
+            <span class="label-idx">02</span>
+            <span class="label-slash">/</span>
+            <span class="label-name">ENGINEERED WORK</span>
+          </div>
+          <div class="title-with-count">
+            <h2 class="section-heading">Featured Projects</h2>
+            <div class="projects-count-tag font-mono">
+              <span class="count-val" id="projects-total-count">7</span>
+              <span class="count-label">VERIFIED PROJECTS</span>
+            </div>
+          </div>
+          <p class="section-subtext">
+            Practical applications built across software development, machine learning, embedded systems &amp; IoT, data analysis, automation, and cybersecurity. Use the filters below to browse by domain.
+          </p>
+        </div>
+
+        <!-- Interactive Category Filters Bar -->
+        <div class="projects-filter-bar font-mono" role="tablist" aria-label="Filter projects by category" data-reveal="fade-up">
+          <button class="filter-tab-btn active" data-filter="all" role="tab" aria-selected="true">
+            <span>All</span>
+            <span class="filter-count">7</span>
+          </button>
+          <button class="filter-tab-btn" data-filter="ai-ml" role="tab" aria-selected="false">
+            <span>AI &amp; Machine Learning</span>
+            <span class="filter-count">2</span>
+          </button>
+          <button class="filter-tab-btn" data-filter="embedded-iot" role="tab" aria-selected="false">
+            <span>Embedded Systems &bull; IoT</span>
+            <span class="filter-count">1</span>
+          </button>
+          <button class="filter-tab-btn" data-filter="software" role="tab" aria-selected="false">
+            <span>Software Development</span>
+            <span class="filter-count">4</span>
+          </button>
+          <button class="filter-tab-btn" data-filter="data-analysis" role="tab" aria-selected="false">
+            <span>Data Analysis</span>
+            <span class="filter-count">1</span>
+          </button>
+          <button class="filter-tab-btn" data-filter="automation" role="tab" aria-selected="false">
+            <span>Automation</span>
+            <span class="filter-count">1</span>
+          </button>
+          <button class="filter-tab-btn" data-filter="cybersecurity" role="tab" aria-selected="false">
+            <span>Cybersecurity</span>
+            <span class="filter-count">1</span>
+          </button>
+        </div>
+
+        <!-- Vertical Stack of Project Cards -->
+        <div class="projects-vertical-stack" id="projects-container">
+          
+          <!-- PROJECT 1: RansomGuard -->
+          <article class="project-showcase-card spotlight-card" data-category="cybersecurity ai-ml" data-reveal="fade-up">
+            <div class="project-card-grid">
+              
+              <!-- Left: Technical Architecture Schematic -->
+              <div class="project-preview-pane">
+                <div class="technical-preview-box">
+                  <div class="preview-chrome">
+                    <div class="preview-dots" aria-hidden="true">
+                      <span></span><span></span><span></span>
+                    </div>
+                    <span class="preview-address font-mono">ransomguard &bull; telemetry-engine</span>
+                    <span class="preview-tag font-mono text-amber">Graduation Project</span>
+                  </div>
+
+                  <div class="ransomguard-schematic font-mono">
+                    <div class="sys-flow-box">
+                      <div class="flow-stage">
+                        <span class="flow-pill">Endpoint Telemetry</span>
+                        <span class="flow-detail">Windows Sysmon Logs</span>
+                      </div>
+                      <div class="flow-arrow">&darr;</div>
+                      <div class="flow-stage highlight">
+                        <span class="flow-pill">Event Feature Extractor</span>
+                        <span class="flow-detail">I/O Bursts &bull; File Entropy</span>
+                      </div>
+                      <div class="flow-arrow">&darr;</div>
+                      <div class="flow-stage">
+                        <span class="flow-pill">Behavioral Anomaly Classifier</span>
+                        <span class="flow-detail">Process Heuristics &bull; ML</span>
+                      </div>
+                      <div class="flow-arrow">&darr;</div>
+                      <div class="flow-stage containment">
+                        <span class="flow-pill text-amber">Automated Containment</span>
+                        <span class="flow-detail">Process Isolation &bull; Network Cut</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="preview-footer-stats font-mono">
+                    <div class="stat-slice"><span>Scope</span>: Security Engineering</div>
+                    <div class="stat-slice"><span>Telemetry</span>: Sysmon Events</div>
+                    <div class="stat-slice"><span>Status</span>: In Active Development</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Right: Project Information -->
+              <div class="project-details-pane">
+                <div class="project-meta-top">
+                  <span class="project-cat-pill pill-amber font-mono">Cybersecurity &bull; Machine Learning</span>
+                  <span class="badge-in-progress font-mono">
+                    <span class="pulse-amber"></span> In Development (Class of 2027)
+                  </span>
+                </div>
+
+                <h3 class="project-name">
+                  RansomGuard &mdash; Behavioral Ransomware Detection &amp; Response
+                </h3>
+
+                <p class="project-summary">
+                  An intelligent cybersecurity graduation project exploring behavioral detection of ransomware activity on host endpoints. The system investigates Windows Sysmon event telemetry to detect rapid encryption patterns and process anomalies, laying the foundation for automated containment and network isolation.
+                </p>
+
+                <div class="technical-highlights font-mono">
+                  <div class="highlights-heading">TECHNICAL SPECIFICATIONS:</div>
+                  <ul class="highlights-list">
+                    <li><strong>Behavioral Telemetry:</strong> Ingests host-level Windows Sysmon logs, inspecting process creation, high-frequency file modifications, and suspicious I/O spikes.</li>
+                    <li><strong>Detection Architecture:</strong> Formulating feature extraction pipelines to distinguish legitimate bulk operations from malicious encryption bursts.</li>
+                    <li><strong>Automated Response:</strong> Exploring rapid containment strategies including local process suspension and automated network disconnection.</li>
+                  </ul>
+                </div>
+
+                <div class="tech-pills-row font-mono">
+                  <span class="tech-pill">Python</span>
+                  <span class="tech-pill">Windows Sysmon</span>
+                  <span class="tech-pill">Behavioral ML</span>
+                  <span class="tech-pill">Process Monitoring</span>
+                  <span class="tech-pill">Security Engineering</span>
+                </div>
+
+                <div class="project-actions-row">
+                  <div class="capstone-progress-alert font-mono">
+                    <span class="pulse-amber"></span>
+                    <span>Active Graduation Capstone Project &bull; Architecture and validation in progress</span>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </article>
+
+
+          <!-- PROJECT 2: DawReeK -->
+          <article class="project-showcase-card spotlight-card" data-category="ai-ml software" data-reveal="fade-up">
+            <div class="project-card-grid">
+              
+              <!-- Left: Project Visual with Real Analytics Screenshot -->
+              <div class="project-preview-pane">
+                <div class="technical-preview-box">
+                  <div class="preview-chrome">
+                    <div class="preview-dots" aria-hidden="true">
+                      <span></span><span></span><span></span>
+                    </div>
+                    <span class="preview-address font-mono">DawReeK Desktop &bull; Premier League Analytics</span>
+                    <span class="preview-tag font-mono">ML &bull; Desktop</span>
+                  </div>
+
+                  <!-- Numbered Interactive Image Carousel (10 Desktop App Screens) -->
+                  <div class="project-gallery-carousel" id="dawreek-carousel">
+                    
+                    <!-- Slides Container -->
+                    <div class="gallery-slides-wrap">
+                      
+                      <div class="gallery-slide active" data-slide-index="1">
+                        <img src="assets/dawreek-1.png" alt="DawReek - Screen 1: Discover and Predict Matches Onboarding" class="project-real-img" loading="lazy" width="572" height="916">
+                        <div class="slide-caption-bar font-mono">
+                          <span class="slide-badge-num">SCREEN 01 / 10</span>
+                          <span class="slide-caption-text">Intro &bull; Discover &amp; Predict Matches Onboarding</span>
+                        </div>
+                      </div>
+
+                      <div class="gallery-slide" data-slide-index="2">
+                        <img src="assets/dawreek-2.png" alt="DawReek - Screen 2: Desktop Application Login and Authentication" class="project-real-img" loading="lazy" width="567" height="907">
+                        <div class="slide-caption-bar font-mono">
+                          <span class="slide-badge-num">SCREEN 02 / 10</span>
+                          <span class="slide-caption-text">Authentication &bull; Desktop Application Login Portal</span>
+                        </div>
+                      </div>
+
+                      <div class="gallery-slide" data-slide-index="3">
+                        <img src="assets/dawreek-3.png" alt="DawReek - Screen 3: Choose Your Favorite Premier League Team" class="project-real-img" loading="lazy" width="565" height="915">
+                        <div class="slide-caption-bar font-mono">
+                          <span class="slide-badge-num">SCREEN 03 / 10</span>
+                          <span class="slide-caption-text">Personalization &bull; Premier League Team Selection</span>
+                        </div>
+                      </div>
+
+                      <div class="gallery-slide" data-slide-index="4">
+                        <img src="assets/dawreek-4.png" alt="DawReek - Screen 4: Season Analysis - Referee and Card Distribution" class="project-real-img" loading="lazy" width="563" height="918">
+                        <div class="slide-caption-bar font-mono">
+                          <span class="slide-badge-num">SCREEN 04 / 10</span>
+                          <span class="slide-caption-text">Season Analytics &bull; Referee &amp; Card Distribution</span>
+                        </div>
+                      </div>
+
+                      <div class="gallery-slide" data-slide-index="5">
+                        <img src="assets/dawreek-5.png" alt="DawReek - Screen 5: Season Analysis - Match Goals and Summary Donut Chart" class="project-real-img" loading="lazy" width="557" height="918">
+                        <div class="slide-caption-bar font-mono">
+                          <span class="slide-badge-num">SCREEN 05 / 10</span>
+                          <span class="slide-caption-text">Season Analytics &bull; 380 Matches &amp; Total Goals Chart</span>
+                        </div>
+                      </div>
+
+                      <div class="gallery-slide" data-slide-index="6">
+                        <img src="assets/dawreek-6.png" alt="DawReek - Screen 6: Premier League Fixtures - 2025 Schedule Generator" class="project-real-img" loading="lazy" width="560" height="923">
+                        <div class="slide-caption-bar font-mono">
+                          <span class="slide-badge-num">SCREEN 06 / 10</span>
+                          <span class="slide-caption-text">Fixtures &bull; 2025 Official Season Match Schedule</span>
+                        </div>
+                      </div>
+
+                      <div class="gallery-slide" data-slide-index="7">
+                        <img src="assets/dawreek-7.png" alt="DawReek - Screen 7: Match Results and Outcome Probabilities" class="project-real-img" loading="lazy" width="586" height="921">
+                        <div class="slide-caption-bar font-mono">
+                          <span class="slide-badge-num">SCREEN 07 / 10</span>
+                          <span class="slide-caption-text">Simulation &bull; Simulated Match Scores &amp; Win Odds</span>
+                        </div>
+                      </div>
+
+                      <div class="gallery-slide" data-slide-index="8">
+                        <img src="assets/dawreek-8.png" alt="DawReek - Screen 8: Premier League Standings Table" class="project-real-img" loading="lazy" width="577" height="908">
+                        <div class="slide-caption-bar font-mono">
+                          <span class="slide-badge-num">SCREEN 08 / 10</span>
+                          <span class="slide-caption-text">League Table &bull; Live Points, Goal Diff &amp; Standings</span>
+                        </div>
+                      </div>
+
+                      <div class="gallery-slide" data-slide-index="9">
+                        <img src="assets/dawreek-9.png" alt="DawReek - Screen 9: Match Prediction - Feature Input Form" class="project-real-img" loading="lazy" width="572" height="921">
+                        <div class="slide-caption-bar font-mono">
+                          <span class="slide-badge-num">SCREEN 09 / 10</span>
+                          <span class="slide-caption-text">Prediction Engine &bull; Feature Input &amp; Ratings Form</span>
+                        </div>
+                      </div>
+
+                      <div class="gallery-slide" data-slide-index="10">
+                        <img src="assets/dawreek-10.png" alt="DawReek - Screen 10: Match Prediction Output and Poisson Probability Matrix" class="project-real-img" loading="lazy" width="552" height="903">
+                        <div class="slide-caption-bar font-mono">
+                          <span class="slide-badge-num">SCREEN 10 / 10</span>
+                          <span class="slide-caption-text">ML Prediction &bull; Poisson Score Probability Matrix</span>
+                        </div>
+                      </div>
+
+                    </div>
+
+                    <!-- Carousel Controls Bar with Numbered Selectors -->
+                    <div class="gallery-controls-bar font-mono">
+                      <button type="button" class="carousel-nav-btn prev-btn" aria-label="Previous screenshot" title="Previous Image">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                      </button>
+
+                      <!-- Numbered Screen Indicators [01] to [10] -->
+                      <div class="carousel-number-pills" role="tablist" aria-label="DawReeK screenshot navigation">
+                        <button type="button" class="num-pill active" data-go-slide="1" role="tab" aria-selected="true" aria-label="View screenshot 1">01</button>
+                        <button type="button" class="num-pill" data-go-slide="2" role="tab" aria-selected="false" aria-label="View screenshot 2">02</button>
+                        <button type="button" class="num-pill" data-go-slide="3" role="tab" aria-selected="false" aria-label="View screenshot 3">03</button>
+                        <button type="button" class="num-pill" data-go-slide="4" role="tab" aria-selected="false" aria-label="View screenshot 4">04</button>
+                        <button type="button" class="num-pill" data-go-slide="5" role="tab" aria-selected="false" aria-label="View screenshot 5">05</button>
+                        <button type="button" class="num-pill" data-go-slide="6" role="tab" aria-selected="false" aria-label="View screenshot 6">06</button>
+                        <button type="button" class="num-pill" data-go-slide="7" role="tab" aria-selected="false" aria-label="View screenshot 7">07</button>
+                        <button type="button" class="num-pill" data-go-slide="8" role="tab" aria-selected="false" aria-label="View screenshot 8">08</button>
+                        <button type="button" class="num-pill" data-go-slide="9" role="tab" aria-selected="false" aria-label="View screenshot 9">09</button>
+                        <button type="button" class="num-pill" data-go-slide="10" role="tab" aria-selected="false" aria-label="View screenshot 10">10</button>
+                      </div>
+
+                      <button type="button" class="carousel-nav-btn next-btn" aria-label="Next screenshot" title="Next Image">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                      </button>
+                    </div>
+
+                  </div>
+
+                  <div class="dawreek-schematic-sub font-mono">
+                    <div class="sch-pipeline-line">
+                      <span class="sch-step">SQL Server DB</span>
+                      <span class="sch-arrow">&rarr;</span>
+                      <span class="sch-step">Pandas ETL</span>
+                      <span class="sch-arrow">&rarr;</span>
+                      <span class="sch-step">Poisson Regression</span>
+                      <span class="sch-arrow">&rarr;</span>
+                      <span class="sch-step">CustomTkinter GUI</span>
+                    </div>
+                  </div>
+
+                  <div class="preview-footer-stats font-mono">
+                    <div class="stat-slice"><span>Dataset</span>: EPL Match Statistics</div>
+                    <div class="stat-slice"><span>Database</span>: SQL Server</div>
+                    <div class="stat-slice"><span>UI</span>: CustomTkinter</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Right: Project Information -->
+              <div class="project-details-pane">
+                <div class="project-meta-top">
+                  <span class="project-cat-pill font-mono">AI &amp; Machine Learning &bull; Desktop App</span>
+                </div>
+
+                <h3 class="project-name">
+                  <a href="https://github.com/mohamed267411-netizen/DawReeK" target="_blank" rel="noopener noreferrer">
+                    DawReeK &mdash; Premier League Match Predictor &amp; Analytics
+                    <span class="ext-arrow" aria-hidden="true">&nearr;</span>
+                  </a>
+                </h3>
+
+                <p class="project-summary">
+                  A machine learning-powered desktop application for Premier League football analysis and score prediction. Integrates historical match data from SQL Server, processes statistical indicators with Pandas, and trains predictive regression models to forecast fixture outcomes through an interactive CustomTkinter interface.
+                </p>
+
+                <div class="technical-highlights font-mono">
+                  <div class="highlights-heading">TECHNICAL SPECIFICATIONS:</div>
+                  <ul class="highlights-list">
+                    <li><strong>Prediction Engine:</strong> Combines Poisson regression for goal probabilities with linear regression models trained on team performance metrics.</li>
+                    <li><strong>Database Architecture:</strong> Relational SQL Server storage holding match statistics, team head-to-head records, and historical outcomes.</li>
+                    <li><strong>Desktop Interface:</strong> Modern desktop GUI built with CustomTkinter, featuring local authentication and interactive match prediction breakdowns.</li>
+                  </ul>
+                </div>
+
+                <div class="tech-pills-row font-mono">
+                  <span class="tech-pill">Python</span>
+                  <span class="tech-pill">CustomTkinter</span>
+                  <span class="tech-pill">SQL Server</span>
+                  <span class="tech-pill">Scikit-learn</span>
+                  <span class="tech-pill">Poisson Regression</span>
+                  <span class="tech-pill">Pandas</span>
+                  <span class="tech-pill">NumPy</span>
+                </div>
+
+                <div class="project-actions-row">
+                  <a href="https://github.com/mohamed267411-netizen/DawReeK" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-lime">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg>
+                    <span>View Repository &bull; DawReeK</span>
+                  </a>
+                  <span class="desktop-notice font-mono text-muted">&bull; Desktop Application</span>
+                </div>
+              </div>
+
+            </div>
+          </article>
+
+
+          <!-- PROJECT 3: Smart Box -->
+          <article class="project-showcase-card spotlight-card" data-category="embedded-iot" data-reveal="fade-up">
+            <div class="project-card-grid">
+              
+              <!-- Left: Technical Architecture Schematic & Concept Illustration -->
+              <div class="project-preview-pane">
+                <div class="technical-preview-box">
+                  <div class="preview-chrome">
+                    <div class="preview-dots" aria-hidden="true">
+                      <span></span><span></span><span></span>
+                    </div>
+                    <span class="preview-address font-mono">smartbox &bull; embedded-iot-controller</span>
+                    <span class="preview-tag font-mono text-lime">University Project</span>
+                  </div>
+
+                  <!-- Conceptual Hardware & Access Flow Schematic -->
+                  <div class="smartbox-schematic font-mono">
+                    <div class="sb-arch-diagram">
+                      
+                      <!-- Access Credential Inputs Layer -->
+                      <div class="sb-inputs-row">
+                        <!-- Keypad Input Module -->
+                        <div class="sb-module-box">
+                          <div class="sb-module-header">
+                            <span>Keypad Matrix</span>
+                            <span class="text-lime">4x3 PIN</span>
+                          </div>
+                          <div class="sb-keypad-mini" aria-hidden="true">
+                            <span class="sb-key-btn">1</span><span class="sb-key-btn">2</span><span class="sb-key-btn">3</span>
+                            <span class="sb-key-btn">4</span><span class="sb-key-btn">5</span><span class="sb-key-btn">6</span>
+                            <span class="sb-key-btn">7</span><span class="sb-key-btn">8</span><span class="sb-key-btn">9</span>
+                            <span class="sb-key-btn">*</span><span class="sb-key-btn">0</span><span class="sb-key-btn">#</span>
+                          </div>
+                        </div>
+
+                        <!-- RFID Sensor Module -->
+                        <div class="sb-module-box">
+                          <div class="sb-module-header">
+                            <span>RFID Reader</span>
+                            <span class="text-lime">13.56MHz</span>
+                          </div>
+                          <div class="sb-rfid-sensor">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-lime" aria-hidden="true"><circle cx="12" cy="12" r="2"></circle><path d="M16.24 7.76a6 6 0 0 1 0 8.49m-8.48-.01a6 6 0 0 1 0-8.49m11.31-2.82a10 10 0 0 1 0 14.14m-14.14 0a10 10 0 0 1 0-14.14"></path></svg>
+                            <span>Card Credential</span>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- Bus Signal Connector -->
+                      <div class="sb-bus-connector">
+                        <span class="sb-bus-line"></span>
+                        <span>&darr; GPIO Signal Bus &darr;</span>
+                        <span class="sb-bus-line"></span>
+                      </div>
+
+                      <!-- Central Microcontroller Unit -->
+                      <div class="sb-mcu-core">
+                        <div class="sb-mcu-title">&bull; Microcontroller Processing Core &bull;</div>
+                        <div class="sb-mcu-desc">Access State Machine &bull; Credential Validation &bull; Actuator Gating</div>
+                      </div>
+
+                      <!-- Bus to Actuators -->
+                      <div class="sb-bus-connector">
+                        <span class="sb-bus-line"></span>
+                        <span>&darr; Control Line &bull; Telemetry &darr;</span>
+                        <span class="sb-bus-line"></span>
+                      </div>
+
+                      <!-- Output Actuators & Connectivity -->
+                      <div class="sb-outputs-row">
+                        <div class="sb-module-box">
+                          <div class="sb-module-header">
+                            <span>Solenoid Lock</span>
+                            <span class="sb-lock-status">&bull; Controlled</span>
+                          </div>
+                          <div class="text-muted" style="font-size: 0.65rem; margin-top: 4px;">
+                            Relay-driven locking bolt &bull; Default secured
+                          </div>
+                        </div>
+
+                        <div class="sb-module-box">
+                          <div class="sb-module-header">
+                            <span>IoT Telemetry</span>
+                            <span class="text-lime">Concept</span>
+                          </div>
+                          <div class="text-muted" style="font-size: 0.65rem; margin-top: 4px;">
+                            Remote access status &bull; Reception event log
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- Secure Delivery Compartment Bay -->
+                      <div class="sb-compartment-box">
+                        <div>
+                          <span class="text-primary font-mono" style="font-size: 0.75rem; font-weight: 700;">Secure Package Bay:</span>
+                          <span class="text-muted" style="font-size: 0.68rem; margin-left: 4px;">Enclosed anti-tamper compartment</span>
+                        </div>
+                        <span class="text-lime font-mono" style="font-size: 0.68rem;">PROTECTED</span>
+                      </div>
+
+                    </div>
+                  </div>
+
+                  <div class="preview-footer-stats font-mono">
+                    <div class="stat-slice"><span>Context</span>: University Engineering</div>
+                    <div class="stat-slice"><span>Access</span>: Keypad &bull; RFID</div>
+                    <div class="stat-slice"><span>Control</span>: Microcontroller Logic</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Right: Project Information -->
+              <div class="project-details-pane">
+                <div class="project-meta-top">
+                  <span class="project-cat-pill font-mono">Embedded Systems &bull; IoT</span>
+                  <span class="badge-academic font-mono">
+                    <span class="pulse-lime"></span> University Engineering Project
+                  </span>
+                </div>
+
+                <h3 class="project-name">
+                  Smart Box &mdash; IoT-Based Smart Package Security System
+                </h3>
+
+                <p class="project-summary">
+                  An IoT-based smart package box designed to improve delivery security through electronic access control and remote interaction. The project combines embedded systems concepts with hardware components to explore safer package reception.
+                </p>
+
+                <div class="technical-highlights font-mono">
+                  <div class="highlights-heading">TECHNICAL SPECIFICATIONS:</div>
+                  <ul class="highlights-list">
+                    <li><strong>Electronic Access Control:</strong> Explores dual-method authorization using a numeric matrix keypad for one-time PIN codes and an RFID sensor for authorized proximity cards.</li>
+                    <li><strong>Embedded Control Architecture:</strong> A central microcontroller coordinates sensor inputs, access logic state machines, and electronic locking actuators.</li>
+                    <li><strong>Secure Package Reception:</strong> Designed around an electronically locked physical compartment to reduce the risk of unattended delivery theft or exposure.</li>
+                    <li><strong>IoT Connectivity Concepts:</strong> Conceptualizes remote status monitoring and user interaction within a connected IoT device framework.</li>
+                  </ul>
+                </div>
+
+                <div class="tech-pills-row font-mono">
+                  <span class="tech-pill">Embedded Systems</span>
+                  <span class="tech-pill">IoT</span>
+                  <span class="tech-pill">RFID</span>
+                  <span class="tech-pill">Keypad</span>
+                  <span class="tech-pill">Microcontroller</span>
+                </div>
+
+                <div class="project-actions-row">
+                  <button type="button" class="btn btn-sm btn-lime smartbox-modal-open-btn" aria-haspopup="dialog" aria-controls="smartbox-details-modal">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="9" y1="3" x2="9" y2="21"></line></svg>
+                    <span>View Details</span>
+                  </button>
+
+                  <div class="capstone-progress-alert font-mono">
+                    <span class="pulse-lime"></span>
+                    <span>University Engineering Project &bull; Architecture &amp; Hardware Concepts</span>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </article>
+
+
+          <!-- PROJECT 4: Tazkarti Bot -->
+          <article class="project-showcase-card spotlight-card" data-category="automation software" data-reveal="fade-up">
+            <div class="project-card-grid">
+              
+              <!-- Left: Automation Stream Preview Box -->
+              <div class="project-preview-pane">
+                <div class="technical-preview-box">
+                  <div class="preview-chrome">
+                    <div class="preview-dots" aria-hidden="true">
+                      <span></span><span></span><span></span>
+                    </div>
+                    <span class="preview-address font-mono">tazkarti_bot &bull; monitor.py &bull; daemon</span>
+                    <span class="preview-tag font-mono">Automation</span>
+                  </div>
+
+                  <div class="bot-stream-visual font-mono">
+                    <div class="stream-line"><span class="stream-ts">[08:42:01]</span> <span class="text-lime">POLL:</span> tazkarti.com/matches -> 200 OK</div>
+                    <div class="stream-line"><span class="stream-ts">[08:42:02]</span> <span class="text-muted">DIFF:</span> Checking SQLite (matches.db)</div>
+                    <div class="stream-line highlight"><span class="stream-ts">[08:42:03]</span> <span class="text-lime">EVENT:</span> Match status changed: BOOKING_OPEN</div>
+                    <div class="stream-line"><span class="stream-ts">[08:42:04]</span> <span class="text-lime">DISPATCH:</span> Telegram broadcast sent to subscribers</div>
+                  </div>
+
+                  <div class="preview-footer-stats font-mono">
+                    <div class="stat-slice"><span>Service</span>: Telegram Push Bot</div>
+                    <div class="stat-slice"><span>State</span>: SQLite Database</div>
+                    <div class="stat-slice"><span>Polling</span>: Automated Loop</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Right: Project Information -->
+              <div class="project-details-pane">
+                <div class="project-meta-top">
+                  <span class="project-cat-pill font-mono">Automation &bull; Software Development</span>
+                </div>
+
+                <h3 class="project-name">
+                  <a href="https://github.com/mohamed267411-netizen/tazkarti_bot" target="_blank" rel="noopener noreferrer">
+                    Tazkarti Bot &mdash; Match Availability &amp; Telegram Alerts
+                    <span class="ext-arrow" aria-hidden="true">&nearr;</span>
+                  </a>
+                </h3>
+
+                <p class="project-summary">
+                  A practical Python workflow automation tool that monitors Egyptian football match availability on the Tazkarti platform. Tracks updates in a local SQLite database, detects ticket release events, and broadcasts real-time push alerts with direct booking links to Telegram subscribers.
+                </p>
+
+                <div class="technical-highlights font-mono">
+                  <div class="highlights-heading">TECHNICAL SPECIFICATIONS:</div>
+                  <ul class="highlights-list">
+                    <li><strong>Continuous Monitoring:</strong> Periodically requests match availability pages, parsing structured fixture schedules and seat reservation states.</li>
+                    <li><strong>State Persistence:</strong> Utilizes an SQLite relational database (<code>matches.db</code>) to track historical fixture statuses and prevent duplicate notifications.</li>
+                    <li><strong>Telegram Broadcast API:</strong> Automatically formats and broadcasts rich HTML alert messages to chat subscribers the moment matches open for booking.</li>
+                  </ul>
+                </div>
+
+                <div class="tech-pills-row font-mono">
+                  <span class="tech-pill">Python</span>
+                  <span class="tech-pill">Telegram Bot API</span>
+                  <span class="tech-pill">SQLite</span>
+                  <span class="tech-pill">Requests</span>
+                  <span class="tech-pill">Automation</span>
+                  <span class="tech-pill">Python-dotenv</span>
+                </div>
+
+                <div class="project-actions-row">
+                  <a href="https://github.com/mohamed267411-netizen/tazkarti_bot" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-lime">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg>
+                    <span>View Repository &bull; Tazkarti Bot</span>
+                  </a>
+                </div>
+              </div>
+
+            </div>
+          </article>
+
+
+          <!-- PROJECT 5: Airline Management System -->
+          <article class="project-showcase-card spotlight-card" data-category="software" data-reveal="fade-up">
+            <div class="project-card-grid">
+              
+              <!-- Left: Desktop Application Visual Wireframe -->
+              <div class="project-preview-pane">
+                <div class="technical-preview-box">
+                  <div class="preview-chrome">
+                    <div class="preview-dots" aria-hidden="true">
+                      <span></span><span></span><span></span>
+                    </div>
+                    <span class="preview-address font-mono">airline_system &bull; tkinter &bull; sqlite</span>
+                    <span class="preview-tag font-mono">University Foundation</span>
+                  </div>
+
+                  <!-- Numbered Interactive Image Carousel -->
+                  <div class="project-gallery-carousel" id="airline-carousel">
+                    
+                    <!-- Slides Container -->
+                    <div class="gallery-slides-wrap">
+                      <div class="gallery-slide active" data-slide-index="1">
+                        <img src="assets/air1.png" alt="Airline Management System - Screenshot 1: Desktop Application Main Interface" class="project-real-img" loading="lazy" width="700" height="480">
+                        <div class="slide-caption-bar font-mono">
+                          <span class="slide-badge-num">SCREEN 01 / 04</span>
+                          <span class="slide-caption-text">Main Dashboard &bull; Flight Booking Portal</span>
+                        </div>
+                      </div>
+
+                      <div class="gallery-slide" data-slide-index="2">
+                        <img src="assets/air2.png" alt="Airline Management System - Screenshot 2: Passenger Details and Records" class="project-real-img" loading="lazy" width="700" height="480">
+                        <div class="slide-caption-bar font-mono">
+                          <span class="slide-badge-num">SCREEN 02 / 04</span>
+                          <span class="slide-caption-text">Passenger Data Entry &bull; SQLite Record Verification</span>
+                        </div>
+                      </div>
+
+                      <div class="gallery-slide" data-slide-index="3">
+                        <img src="assets/air3.png" alt="Airline Management System - Screenshot 3: Flight Schedule and Seat Selection" class="project-real-img" loading="lazy" width="700" height="480">
+                        <div class="slide-caption-bar font-mono">
+                          <span class="slide-badge-num">SCREEN 03 / 04</span>
+                          <span class="slide-caption-text">Flight Schedule &bull; Origin, Destination &amp; Seat Capacity</span>
+                        </div>
+                      </div>
+
+                      <div class="gallery-slide" data-slide-index="4">
+                        <img src="assets/air4.png" alt="Airline Management System - Screenshot 4: Ticket Confirmation and Cancellation" class="project-real-img" loading="lazy" width="700" height="480">
+                        <div class="slide-caption-bar font-mono">
+                          <span class="slide-badge-num">SCREEN 04 / 04</span>
+                          <span class="slide-caption-text">Booking Operations &bull; Cancellation &amp; Status Query</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Carousel Controls Bar with Numbered Selectors -->
+                    <div class="gallery-controls-bar font-mono">
+                      <button type="button" class="carousel-nav-btn prev-btn" aria-label="Previous screenshot" title="Previous Image">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                      </button>
+
+                      <!-- Numbered Screen Indicators -->
+                      <div class="carousel-number-pills" role="tablist" aria-label="Screenshot navigation">
+                        <button type="button" class="num-pill active" data-go-slide="1" role="tab" aria-selected="true" aria-label="View screenshot 1">01</button>
+                        <button type="button" class="num-pill" data-go-slide="2" role="tab" aria-selected="false" aria-label="View screenshot 2">02</button>
+                        <button type="button" class="num-pill" data-go-slide="3" role="tab" aria-selected="false" aria-label="View screenshot 3">03</button>
+                        <button type="button" class="num-pill" data-go-slide="4" role="tab" aria-selected="false" aria-label="View screenshot 4">04</button>
+                      </div>
+
+                      <button type="button" class="carousel-nav-btn next-btn" aria-label="Next screenshot" title="Next Image">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                      </button>
+                    </div>
+
+                  </div>
+
+                  <div class="preview-footer-stats font-mono">
+                    <div class="stat-slice"><span>Scope</span>: Early University Project</div>
+                    <div class="stat-slice"><span>UI</span>: Tkinter GUI</div>
+                    <div class="stat-slice"><span>Database</span>: SQLite</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Right: Project Information -->
+              <div class="project-details-pane">
+                <div class="project-meta-top">
+                  <span class="project-cat-pill font-mono">Software Development &bull; Desktop Application</span>
+                </div>
+
+                <h3 class="project-name">
+                  <a href="https://github.com/mohamed267411-netizen/airline-management-system" target="_blank" rel="noopener noreferrer">
+                    Airline Management System &mdash; Desktop Flight Reservation
+                    <span class="ext-arrow" aria-hidden="true">&nearr;</span>
+                  </a>
+                </h3>
+
+                <p class="project-summary">
+                  An early university engineering project exploring Python desktop software development. Demonstrates fundamental object-oriented programming (OOP), relational data modeling with SQLite, and graphical user interface design using Tkinter for flight scheduling and passenger reservations.
+                </p>
+
+                <div class="technical-highlights font-mono">
+                  <div class="highlights-heading">TECHNICAL SPECIFICATIONS:</div>
+                  <ul class="highlights-list">
+                    <li><strong>Foundational Architecture:</strong> Implemented object-oriented classes to model flights, passengers, tickets, and booking transactions.</li>
+                    <li><strong>Relational Persistence:</strong> Integrated an embedded SQLite database to persist passenger records and seat availability across application sessions.</li>
+                    <li><strong>Graphical Interface:</strong> Designed a Tkinter desktop console with flight lookup views, passenger data entry forms, and booking validation.</li>
+                  </ul>
+                </div>
+
+                <div class="tech-pills-row font-mono">
+                  <span class="tech-pill">Python</span>
+                  <span class="tech-pill">Tkinter</span>
+                  <span class="tech-pill">SQLite</span>
+                  <span class="tech-pill">OOP Design</span>
+                  <span class="tech-pill">Desktop App</span>
+                </div>
+
+                <div class="project-actions-row">
+                  <a href="https://github.com/mohamed267411-netizen/airline-management-system" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-lime">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg>
+                    <span>View Repository &bull; Airline System</span>
+                  </a>
+                  <span class="desktop-notice font-mono text-muted">&bull; University Learning Project</span>
+                </div>
+              </div>
+
+            </div>
+          </article>
+
+
+          <!-- PROJECT 6: Gym Members Analytics -->
+          <article class="project-showcase-card spotlight-card" data-category="data-analysis" data-reveal="fade-up">
+            <div class="project-card-grid">
+              
+              <!-- Left: Real Dashboard Screenshot -->
+              <div class="project-preview-pane">
+                <div class="technical-preview-box">
+                  <div class="preview-chrome">
+                    <div class="preview-dots" aria-hidden="true">
+                      <span></span><span></span><span></span>
+                    </div>
+                    <span class="preview-address font-mono">Gym Performance Dashboard &bull; Python EDA</span>
+                    <span class="preview-tag font-mono">Analytics</span>
+                  </div>
+
+                  <!-- Real Project Screenshot -->
+                  <div class="project-real-asset-wrap">
+                    <img src="assets/gym-dashboard.png" alt="Gym Performance Dashboard showing user age distributions, goal achievement rates, and subscription statistics" class="project-real-img" loading="lazy" width="700" height="390">
+                    <div class="project-asset-overlay font-mono">
+                      <span>Screenshot: Gym Performance Dashboard Analysis</span>
+                    </div>
+                  </div>
+
+                  <div class="preview-footer-stats font-mono">
+                    <div class="stat-slice"><span>Toolkit</span>: Python &bull; Pandas &bull; NumPy &bull; Matplotlib</div>
+                    <div class="stat-slice"><span>Scope</span>: Exploratory Data Analysis</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Right: Project Information -->
+              <div class="project-details-pane">
+                <div class="project-meta-top">
+                  <span class="project-cat-pill font-mono">Data Analysis &bull; Python</span>
+                </div>
+
+                <h3 class="project-name">
+                  <a href="https://github.com/mohamed267411-netizen/Analysis-of-the-Gym" target="_blank" rel="noopener noreferrer">
+                    Gym Members Analytics &mdash; Exploratory Data Analysis
+                    <span class="ext-arrow" aria-hidden="true">&nearr;</span>
+                  </a>
+                </h3>
+
+                <p class="project-summary">
+                  An exploratory data analysis (EDA) project evaluating gym membership demographics, attendance patterns, workout frequency, and subscription tiers. Cleans and transforms raw survey and operational data to discover key trends that influence member retention and fitness goal achievement.
+                </p>
+
+                <div class="technical-highlights font-mono">
+                  <div class="highlights-heading">TECHNICAL SPECIFICATIONS:</div>
+                  <ul class="highlights-list">
+                    <li><strong>Data Preprocessing:</strong> Handled missing data, formatted categorical indicators, and normalized numeric workout statistics using Pandas.</li>
+                    <li><strong>Distribution Analysis:</strong> Examined member age groups, visit frequencies, and workout duration distributions using NumPy and Matplotlib.</li>
+                    <li><strong>Actionable Metrics:</strong> Visualized subscription retention rates and identified correlations between workout regularity and member satisfaction.</li>
+                  </ul>
+                </div>
+
+                <div class="tech-pills-row font-mono">
+                  <span class="tech-pill">Python</span>
+                  <span class="tech-pill">Pandas</span>
+                  <span class="tech-pill">NumPy</span>
+                  <span class="tech-pill">Matplotlib</span>
+                  <span class="tech-pill">Data Cleaning</span>
+                  <span class="tech-pill">EDA</span>
+                </div>
+
+                <div class="project-actions-row">
+                  <a href="https://github.com/mohamed267411-netizen/Analysis-of-the-Gym" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-lime">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg>
+                    <span>View Repository &bull; Gym Analysis</span>
+                  </a>
+                </div>
+              </div>
+
+            </div>
+          </article>
+
+
+          <!-- PROJECT 7: Your Movies -->
+          <article class="project-showcase-card spotlight-card" data-category="software" data-reveal="fade-up">
+            <div class="project-card-grid">
+              
+              <!-- Left: Browser UI Mockup Frame -->
+              <div class="project-preview-pane">
+                <div class="technical-preview-box">
+                  <div class="preview-chrome">
+                    <div class="preview-dots" aria-hidden="true">
+                      <span></span><span></span><span></span>
+                    </div>
+                    <span class="preview-address font-mono">https://mohamed267411-netizen.github.io/your-movie/</span>
+                    <a href="https://mohamed267411-netizen.github.io/your-movie/" target="_blank" rel="noopener noreferrer" class="live-pill font-mono" title="Open live website in new tab">
+                      <span class="live-pulse"></span> LIVE
+                    </a>
+                  </div>
+
+                  <div class="web-preview-mockup font-mono">
+                    <div class="mockup-header-nav">
+                      <span class="mock-brand">YOUR MOVIES</span>
+                      <div class="mock-links">
+                        <span>Movies</span>
+                        <span>Series</span>
+                        <span>Anime</span>
+                      </div>
+                    </div>
+                    <div class="mockup-featured-banner">
+                      <div class="banner-badge">FEATURED RELEASES</div>
+                      <div class="banner-title text-lime">Curated Entertainment Catalog</div>
+                      <div class="banner-sub">Multi-page navigation &bull; Responsive layouts &bull; Pure Vanilla Web</div>
+                    </div>
+                    <div class="mockup-cards-row">
+                      <div class="mock-card"><span>Movie Portal</span></div>
+                      <div class="mock-card"><span>Series Portal</span></div>
+                      <div class="mock-card"><span>Anime Portal</span></div>
+                    </div>
+                  </div>
+
+                  <div class="preview-footer-stats font-mono">
+                    <div class="stat-slice"><span>Status</span>: Live on GitHub Pages</div>
+                    <div class="stat-slice"><span>Architecture</span>: Multi-Page Web App</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Right: Project Information -->
+              <div class="project-details-pane">
+                <div class="project-meta-top">
+                  <span class="project-cat-pill font-mono">Software Development &bull; Web Technologies</span>
+                </div>
+
+                <h3 class="project-name">
+                  <a href="https://mohamed267411-netizen.github.io/your-movie/" target="_blank" rel="noopener noreferrer">
+                    Your Movies &mdash; Multi-Page Entertainment Web Portal
+                    <span class="ext-arrow" aria-hidden="true">&nearr;</span>
+                  </a>
+                </h3>
+
+                <p class="project-summary">
+                  A multi-page responsive web application providing dedicated catalogs for trending movies, television series, and anime. Built using semantic HTML5, modern CSS3 animations, and vanilla JavaScript without external framework overhead, hosted live via GitHub Pages.
+                </p>
+
+                <div class="technical-highlights font-mono">
+                  <div class="highlights-heading">TECHNICAL SPECIFICATIONS:</div>
+                  <ul class="highlights-list">
+                    <li><strong>Multi-Page Architecture:</strong> Dedicated portal pages structured with clean semantic markup and responsive navigation layouts.</li>
+                    <li><strong>Interactive Client Logic:</strong> Client-side JavaScript handling dynamic DOM updates, search interactions, and media filtering.</li>
+                    <li><strong>Performance Optimization:</strong> Lightweight assets, modular CSS stylesheets, and fast delivery over GitHub Pages.</li>
+                  </ul>
+                </div>
+
+                <div class="tech-pills-row font-mono">
+                  <span class="tech-pill">HTML5</span>
+                  <span class="tech-pill">CSS3</span>
+                  <span class="tech-pill">JavaScript</span>
+                  <span class="tech-pill">Responsive Design</span>
+                  <span class="tech-pill">GitHub Pages</span>
+                </div>
+
+                <div class="project-actions-row">
+                  <a href="https://mohamed267411-netizen.github.io/your-movie/" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary btn-lime cta-live-demo">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><polygon points="10 8 16 12 10 16 10 8"></polygon></svg>
+                    <span>View Live Demo &nearr;</span>
+                  </a>
+
+                  <a href="https://github.com/mohamed267411-netizen/your-movie" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-lime">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg>
+                    <span>View Source Code</span>
+                  </a>
+                </div>
+              </div>
+
+            </div>
+          </article>
+
+        </div>
+
+        <!-- Empty State Fallback (If Filter matches zero items) -->
+        <div id="projects-empty-state" class="projects-empty font-mono" style="display: none;">
+          <p>No projects match this category filter at this time.</p>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- =========================================================================
+         SECTION E: SKILLS & TOOLS (Organized Groups &ndash; No Arbitrary Percentages)
+         ========================================================================= -->
+    <section id="skills" class="skills-section section-padding">
+      <div class="container">
+        
+        <div class="section-title-wrap" data-reveal="fade-up">
+          <div class="section-label font-mono">
+            <span class="label-idx">03</span>
+            <span class="label-slash">/</span>
+            <span class="label-name">CAPABILITIES</span>
+          </div>
+          <h2 class="section-heading">Skills &amp; Tools</h2>
+          <p class="section-subtext">
+            Organized strictly into core engineering domains. Every skill listed represents hands-on project implementation or academic engineering study.
+          </p>
+        </div>
+
+        <div class="skills-categorized-grid">
+          
+          <!-- Category 1: Programming -->
+          <div class="skill-group-card spotlight-card" data-reveal="fade-up">
+            <div class="group-header">
+              <div class="group-icon-circle" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+              </div>
+              <div>
+                <h3 class="group-title">Programming</h3>
+                <span class="group-tagline font-mono">Core Languages</span>
+              </div>
+            </div>
+            
+            <div class="skills-chips-wrapper">
+              <div class="skill-tag-item">
+                <span class="tag-title">Python</span>
+                <span class="tag-context font-mono">Primary language &bull; Scripting &bull; ML &bull; Automation</span>
+              </div>
+              <div class="skill-tag-item">
+                <span class="tag-title">SQL</span>
+                <span class="tag-context font-mono">Relational schemas &bull; Data queries &bull; Aggregations</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category 2: Machine Learning & Data Analysis -->
+          <div class="skill-group-card spotlight-card" data-reveal="fade-up" data-delay="100">
+            <div class="group-header">
+              <div class="group-icon-circle" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21.21 15.89A10 10 0 1 1 8 2.83"></path><path d="M22 12A10 10 0 0 0 12 2v10z"></path></svg>
+              </div>
+              <div>
+                <h3 class="group-title">ML &amp; Data Analysis</h3>
+                <span class="group-tagline font-mono">Predictive Modeling &amp; Analytics</span>
+              </div>
+            </div>
+            
+            <div class="skills-chips-wrapper">
+              <div class="skill-tag-item">
+                <span class="tag-title">Pandas &amp; NumPy</span>
+                <span class="tag-context font-mono">Data manipulation &bull; Array operations &bull; Matrix math</span>
+              </div>
+              <div class="skill-tag-item">
+                <span class="tag-title">Scikit-learn</span>
+                <span class="tag-context font-mono">Model training &bull; Pipelines &bull; Regression algorithms</span>
+              </div>
+              <div class="skill-tag-item">
+                <span class="tag-title">Data Preprocessing</span>
+                <span class="tag-context font-mono">Handling missing values &bull; Feature scaling &bull; Outliers</span>
+              </div>
+              <div class="skill-tag-item">
+                <span class="tag-title">Model Evaluation</span>
+                <span class="tag-context font-mono">Accuracy &bull; Loss functions &bull; Performance metrics</span>
+              </div>
+              <div class="skill-tag-item">
+                <span class="tag-title">Regression &amp; Classification</span>
+                <span class="tag-context font-mono">Linear regression &bull; Poisson regression &bull; Anomaly detection</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category 3: Development & Tools -->
+          <div class="skill-group-card spotlight-card" data-reveal="fade-up" data-delay="200">
+            <div class="group-header">
+              <div class="group-icon-circle" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>
+              </div>
+              <div>
+                <h3 class="group-title">Development &amp; Tools</h3>
+                <span class="group-tagline font-mono">Engineering Environment</span>
+              </div>
+            </div>
+            
+            <div class="skills-chips-wrapper">
+              <div class="skill-tag-item">
+                <span class="tag-title">Git &amp; GitHub</span>
+                <span class="tag-context font-mono">Atomic commits &bull; Branching &bull; Pull requests</span>
+              </div>
+              <div class="skill-tag-item">
+                <span class="tag-title">VS Code</span>
+                <span class="tag-context font-mono">Primary IDE &bull; Debugging &bull; Extension ecosystem</span>
+              </div>
+              <div class="skill-tag-item">
+                <span class="tag-title">Jupyter Notebook</span>
+                <span class="tag-context font-mono">Exploratory data analysis &bull; Model experiments</span>
+              </div>
+              <div class="skill-tag-item">
+                <span class="tag-title">SQL Server</span>
+                <span class="tag-context font-mono">Relational database management &bull; Python integration</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category 4: Automation -->
+          <div class="skill-group-card spotlight-card" data-reveal="fade-up" data-delay="300">
+            <div class="group-header">
+              <div class="group-icon-circle" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+              </div>
+              <div>
+                <h3 class="group-title">Automation</h3>
+                <span class="group-tagline font-mono">Scripts &amp; Event-Driven Systems</span>
+              </div>
+            </div>
+            
+            <div class="skills-chips-wrapper">
+              <div class="skill-tag-item">
+                <span class="tag-title">Python Scripts</span>
+                <span class="tag-context font-mono">Scheduled monitoring &bull; Data scraping &bull; Background daemons</span>
+              </div>
+              <div class="skill-tag-item">
+                <span class="tag-title">REST APIs</span>
+                <span class="tag-context font-mono">Telegram Bot API &bull; HTTP requests &bull; JSON parsing</span>
+              </div>
+              <div class="skill-tag-item">
+                <span class="tag-title">Workflow Automation</span>
+                <span class="tag-context font-mono">Event-driven alerts &bull; State synchronization &bull; Bot alerts</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- =========================================================================
+         SECTION F: ENGINEERING JOURNEY (Progression Grounded in Real Projects)
+         ========================================================================= -->
+    <section id="journey" class="journey-section section-padding">
+      <div class="container">
+        
+        <div class="section-title-wrap" data-reveal="fade-up">
+          <div class="section-label font-mono">
+            <span class="label-idx">04</span>
+            <span class="label-slash">/</span>
+            <span class="label-name">CHRONOLOGY</span>
+          </div>
+          <h2 class="section-heading">Engineering Journey</h2>
+          <p class="section-subtext">
+            A real-world progression from early programming and desktop architectures toward data analysis, machine learning, practical automation, and cybersecurity.
+          </p>
+        </div>
+
+        <div class="journey-progression-grid">
+          
+          <!-- Milestone 1 -->
+          <div class="journey-milestone-card spotlight-card" data-reveal="fade-up">
+            <div class="milestone-top font-mono">
+              <span class="milestone-step-num text-lime">01</span>
+              <span class="milestone-period">Foundations</span>
+            </div>
+            <h3 class="milestone-title">Desktop Architecture &amp; OOP</h3>
+            <p class="milestone-body">
+              Started building desktop software with Python, Tkinter, and SQLite. Developed the Airline Management System, learning object-oriented design, relational schemas, and event handling.
+            </p>
+          </div>
+
+          <!-- Milestone 2 -->
+          <div class="journey-milestone-card spotlight-card" data-reveal="fade-up" data-delay="100">
+            <div class="milestone-top font-mono">
+              <span class="milestone-step-num text-lime">02</span>
+              <span class="milestone-period">Exploratory Analytics</span>
+            </div>
+            <h3 class="milestone-title">Data Processing &amp; EDA</h3>
+            <p class="milestone-body">
+              Expanded into Python data analysis with Pandas, NumPy, and Matplotlib. Built the Gym Members Analysis project to evaluate membership behavior, workout frequencies, and attendance patterns.
+            </p>
+          </div>
+
+          <!-- Milestone 3 -->
+          <div class="journey-milestone-card spotlight-card" data-reveal="fade-up" data-delay="200">
+            <div class="milestone-top font-mono">
+              <span class="milestone-step-num text-lime">03</span>
+              <span class="milestone-period">Applied ML</span>
+            </div>
+            <h3 class="milestone-title">Machine Learning &amp; Databases</h3>
+            <p class="milestone-body">
+              Engineered DawReeK, combining Premier League historical data in SQL Server with scikit-learn Poisson and linear regression models, presenting predictions inside a CustomTkinter desktop interface.
+            </p>
+          </div>
+
+          <!-- Milestone 4 -->
+          <div class="journey-milestone-card spotlight-card" data-reveal="fade-up" data-delay="300">
+            <div class="milestone-top font-mono">
+              <span class="milestone-step-num text-lime">04</span>
+              <span class="milestone-period">Automation</span>
+            </div>
+            <h3 class="milestone-title">Event-Driven Automation</h3>
+            <p class="milestone-body">
+              Developed Tazkarti Bot to monitor football match availability on Tazkarti. Implemented automated ticket polling, SQLite status diffing, and instant broadcast dispatches via the Telegram Bot API.
+            </p>
+          </div>
+
+          <!-- Milestone 5 -->
+          <div class="journey-milestone-card spotlight-card" data-reveal="fade-up" data-delay="400">
+            <div class="milestone-top font-mono">
+              <span class="milestone-step-num text-amber">05</span>
+              <span class="milestone-period text-amber">In Progress</span>
+            </div>
+            <h3 class="milestone-title">Graduation Capstone: RansomGuard</h3>
+            <p class="milestone-body">
+              Synthesizing systems engineering, Windows Sysmon telemetry, and machine learning anomaly detection to build an intelligent ransomware behavior monitoring and automated containment framework.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- =========================================================================
+         SECTION G: CURRENTLY LEARNING
+         ========================================================================= -->
+    <section id="learning" class="learning-section section-padding">
+      <div class="container">
+        
+        <div class="section-title-wrap" data-reveal="fade-up">
+          <div class="section-label font-mono">
+            <span class="label-idx">05</span>
+            <span class="label-slash">/</span>
+            <span class="label-name">CONTINUOUS DEVELOPMENT</span>
+          </div>
+          <h2 class="section-heading">Currently Learning</h2>
+          <p class="section-subtext">
+            Key areas of continuous active study and practical experimentation.
+          </p>
+        </div>
+
+        <div class="learning-cards-grid">
+          
+          <div class="learning-pillar spotlight-card" data-reveal="fade-up">
+            <div class="pillar-top font-mono">
+              <span class="pillar-num">01</span>
+              <span class="pillar-tag text-lime">AI &amp; ML</span>
+            </div>
+            <h3 class="pillar-heading">Applied Machine Learning</h3>
+            <p class="pillar-description">
+              Deepening practical modeling pipelines, feature extraction from raw telemetry, evaluating classifier precision/recall, and handling imbalanced datasets.
+            </p>
+          </div>
+
+          <div class="learning-pillar spotlight-card" data-reveal="fade-up" data-delay="100">
+            <div class="pillar-top font-mono">
+              <span class="pillar-num">02</span>
+              <span class="pillar-tag text-lime">AUTOMATION</span>
+            </div>
+            <h3 class="pillar-heading">Practical Automation</h3>
+            <p class="pillar-description">
+              Designing resilient background workers, event-driven web monitors, API orchestration pipelines, and self-recovering daemon scripts.
+            </p>
+          </div>
+
+          <div class="learning-pillar spotlight-card" data-reveal="fade-up" data-delay="200">
+            <div class="pillar-top font-mono">
+              <span class="pillar-num">03</span>
+              <span class="pillar-tag text-lime">RELIABILITY</span>
+            </div>
+            <h3 class="pillar-heading">Building Reliable Software</h3>
+            <p class="pillar-description">
+              Refining modular code architecture, defensive error handling, atomic commits, comprehensive documentation, and structured testing.
+            </p>
+          </div>
+
+          <div class="learning-pillar spotlight-card" data-reveal="fade-up" data-delay="300">
+            <div class="pillar-top font-mono">
+              <span class="pillar-num">04</span>
+              <span class="pillar-tag text-lime">SECURITY</span>
+            </div>
+            <h3 class="pillar-heading">Security Monitoring &amp; Ransomware</h3>
+            <p class="pillar-description">
+              Investigating Windows Sysmon event telemetry, high-entropy file writes, process injection indicators, and automated endpoint containment.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- =========================================================================
+         SECTION H: CONTACT
+         ========================================================================= -->
+    <section id="contact" class="contact-section section-padding">
+      <div class="container">
+        
+        <div class="contact-main-card spotlight-card" data-reveal="fade-up">
+          <div class="contact-card-inner">
+            
+            <div class="contact-header-block text-center">
+              <div class="section-label justify-center font-mono">
+                <span class="label-idx">06</span>
+                <span class="label-slash">/</span>
+                <span class="label-name">GET IN TOUCH</span>
+              </div>
+              
+              <h2 class="contact-main-heading">Let's Connect</h2>
+              
+              <p class="contact-main-subtext">
+                I'm always open to discussing software projects, engineering internships, machine learning ideas, and relevant technical opportunities. Feel free to reach out.
+              </p>
+            </div>
+
+            <!-- Direct Contact Grid -->
+            <div class="contact-methods-grid">
+              
+              <!-- Email Card -->
+              <a href="mailto:mohamed267411@gmail.com" class="method-card">
+                <div class="method-icon-circle" aria-hidden="true">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                </div>
+                <div class="method-info">
+                  <span class="method-type font-mono">DIRECT EMAIL</span>
+                  <span class="method-value">mohamed267411@gmail.com</span>
+                </div>
+                <span class="method-arrow" aria-hidden="true">&rarr;</span>
+              </a>
+
+              <!-- LinkedIn Card -->
+              <a href="https://www.linkedin.com/in/mohamed-ismail21/" target="_blank" rel="noopener noreferrer" class="method-card">
+                <div class="method-icon-circle" aria-hidden="true">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                </div>
+                <div class="method-info">
+                  <span class="method-type font-mono">LINKEDIN PROFILE</span>
+                  <span class="method-value">linkedin.com/in/mohamed-ismail21</span>
+                </div>
+                <span class="method-arrow" aria-hidden="true">&rarr;</span>
+              </a>
+
+              <!-- GitHub Card -->
+              <a href="https://github.com/mohamed267411-netizen" target="_blank" rel="noopener noreferrer" class="method-card">
+                <div class="method-icon-circle" aria-hidden="true">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg>
+                </div>
+                <div class="method-info">
+                  <span class="method-type font-mono">GITHUB REPOSITORIES</span>
+                  <span class="method-value">github.com/mohamed267411-netizen</span>
+                </div>
+                <span class="method-arrow" aria-hidden="true">&rarr;</span>
+              </a>
+
+            </div>
+
+            <!-- Functional Mailto Composer Form -->
+            <div class="functional-email-composer">
+              <div class="composer-title-bar font-mono">
+                <span class="text-lime">&gt;</span> Quick Email Dispatch &bull; Prepares Draft in Your Email Client
+              </div>
+              <p class="composer-explanation font-mono text-muted">
+                Submitting this form prepares an email draft to <code>mohamed267411@gmail.com</code> with your entered subject and message. No backend storage or third-party tracking.
+              </p>
+              <form id="contact-quick-form" class="composer-form">
+                <div class="form-row-2">
+                  <div class="input-wrap">
+                    <label for="contact-name" class="font-mono">Your Name / Organization</label>
+                    <input type="text" id="contact-name" placeholder="e.g. Engineering Recruiter" required>
+                  </div>
+                  <div class="input-wrap">
+                    <label for="contact-subject" class="font-mono">Subject</label>
+                    <input type="text" id="contact-subject" placeholder="Project Discussion / Internship Opportunity" required>
+                  </div>
+                </div>
+                <div class="input-wrap">
+                  <label for="contact-message" class="font-mono">Message</label>
+                  <textarea id="contact-message" rows="3" placeholder="Hello Mohamed, I reviewed your engineering portfolio and would like to discuss..." required></textarea>
+                </div>
+                <div class="form-submit-row">
+                  <button type="submit" class="btn btn-primary btn-lime">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+                    <span>Send Message (via Email)</span>
+                  </button>
+                  <button type="button" id="copy-email-btn" class="btn btn-ghost font-mono" data-copy="mohamed267411@gmail.com">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                    <span>Copy Email Address</span>
+                  </button>
+                </div>
+              </form>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- =========================================================================
+       SECTION I: FOOTER
+       ========================================================================= -->
+  <footer class="site-footer">
+    <div class="container footer-content-grid">
+      
+      <!-- Left: Identity & Tagline -->
+      <div class="footer-brand-col">
+        <div class="footer-logo">
+          <div class="logo-box small">
+            <span class="logo-letter">M</span>
+            <span class="logo-dot"></span>
+            <span class="logo-letter">I</span>
+          </div>
+          <span class="footer-name">Mohamed Ismail</span>
+        </div>
+        <p class="footer-tagline">
+          Engineering Student &bull; Class of 2027. Building practical solutions through Python, machine learning, data analysis, and automation.
+        </p>
+      </div>
+
+      <!-- Center: Key Navigation -->
+      <div class="footer-links-col">
+        <span class="footer-col-title font-mono">NAVIGATION</span>
+        <ul class="footer-links-list">
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#journey">Journey</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Right: Verified Connections -->
+      <div class="footer-social-col">
+        <span class="footer-col-title font-mono">CONNECT</span>
+        <ul class="footer-links-list">
+          <li><a href="mailto:mohamed267411@gmail.com">mohamed267411@gmail.com</a></li>
+          <li><a href="https://www.linkedin.com/in/mohamed-ismail21/" target="_blank" rel="noopener noreferrer">LinkedIn Profile &nearr;</a></li>
+          <li><a href="https://github.com/mohamed267411-netizen" target="_blank" rel="noopener noreferrer">GitHub Profile &nearr;</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- Bottom Subline with Back-to-Top and Copyright -->
+    <div class="container footer-bottom-bar font-mono">
+      <div class="copyright-text">
+        &copy; <span id="copyright-year">2026</span> Mohamed Ismail. All rights reserved.
+      </div>
+      
+      <div class="footer-status-pill">
+        <span class="spec-dot" aria-hidden="true"></span>
+        <span>Reduced Motion &amp; Screen Reader Accessible</span>
+      </div>
+
+      <!-- Back to Top Link -->
+      <a href="#hero" class="back-to-top-link" aria-label="Back to top of page">
+        <span>Back to Top</span>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="18 15 12 9 6 15"></polyline></svg>
+      </a>
+    </div>
+  </footer>
+
+  <!-- =========================================================================
+       PROJECT DETAILS MODAL: SMART BOX (IoT-Based Package Security System)
+       ========================================================================= -->
+  <div id="smartbox-details-modal" class="project-modal" role="dialog" aria-modal="true" aria-labelledby="smartbox-modal-title" aria-hidden="true">
+    <div class="project-modal-container">
+      
+      <!-- Modal Header -->
+      <div class="project-modal-header">
+        <div class="project-modal-header-left">
+          <div class="modal-section-label font-mono">
+            <span>PROJECT SPECIFICATION</span>
+            <span class="label-slash">/</span>
+            <span>EMBEDDED SYSTEMS &amp; IOT</span>
+          </div>
+          <h2 id="smartbox-modal-title" class="modal-title">Smart Box: IoT-Based Smart Package Security System</h2>
+          <span class="modal-tagline font-mono text-lime">A smarter and more secure way to receive packages when you're away.</span>
+        </div>
+        <button type="button" class="modal-close-btn font-mono" aria-label="Close project details">
+          <span aria-hidden="true">&times;</span>
+          <span>ESC</span>
+        </button>
+      </div>
+
+      <!-- Modal Body (Sections A through G) -->
+      <div class="project-modal-body">
+        
+        <!-- SECTION A: Overview -->
+        <section class="modal-section" aria-labelledby="sec-a-title">
+          <h3 id="sec-a-title" class="modal-section-title font-mono">
+            <span class="section-idx">SECTION A</span>
+            <span>OVERVIEW &bull; PROJECT CONTEXT</span>
+          </h3>
+          <p class="modal-body-p">
+            <strong>Smart Box: IoT-Based Smart Package Security System</strong> is a university engineering project that explores how embedded systems and IoT technologies can improve the security of package deliveries.
+          </p>
+          <p class="modal-body-p">
+            The concept is to provide a dedicated package compartment with electronically controlled access, allowing authorized users to interact with the box while reducing the risk of unauthorized access to unattended deliveries. The project combines hardware-level control with the broader idea of connected, remotely accessible devices.
+          </p>
+        </section>
+
+        <!-- SECTION B: The Problem -->
+        <section class="modal-section" aria-labelledby="sec-b-title">
+          <h3 id="sec-b-title" class="modal-section-title font-mono">
+            <span class="section-idx">SECTION B</span>
+            <span>THE PROBLEM &bull; UNATTENDED DELIVERIES</span>
+          </h3>
+          <p class="modal-body-p">
+            Online shopping and home deliveries create a practical problem: packages may arrive when the recipient is not available.
+          </p>
+          <p class="modal-body-p">
+            Leaving a package unattended can expose it to unauthorized access, theft, or other delivery complications. Traditional delivery arrangements may also require the recipient to be present at the exact time of delivery. Smart Box explores an engineering approach to improving the security and convenience of receiving packages.
+          </p>
+        </section>
+
+        <!-- SECTION C: Proposed Solution -->
+        <section class="modal-section" aria-labelledby="sec-c-title">
+          <h3 id="sec-c-title" class="modal-section-title font-mono">
+            <span class="section-idx">SECTION C</span>
+            <span>PROPOSED SOLUTION &bull; SYSTEM CAPABILITIES</span>
+          </h3>
+          <p class="modal-body-p">
+            The proposed system centers on a secure package compartment with electronic access control. The design explores the following capabilities:
+          </p>
+          
+          <div class="modal-solution-grid">
+            <div class="solution-card-mini">
+              <div class="sol-card-header font-mono">
+                <span class="spec-dot">&bull;</span>
+                <span>Electronic Access Control</span>
+              </div>
+              <p class="sol-card-text">
+                A keypad and/or RFID-based authorization mechanism for controlling access.
+              </p>
+            </div>
+
+            <div class="solution-card-mini">
+              <div class="sol-card-header font-mono">
+                <span class="spec-dot">&bull;</span>
+                <span>Controlled Locking</span>
+              </div>
+              <p class="sol-card-text">
+                An electronically controlled lock mechanism that remains secured by default.
+              </p>
+            </div>
+
+            <div class="solution-card-mini">
+              <div class="sol-card-header font-mono">
+                <span class="spec-dot">&bull;</span>
+                <span>Embedded Control</span>
+              </div>
+              <p class="sol-card-text">
+                A microcontroller coordinates the relevant inputs and outputs and evaluates authorization logic.
+              </p>
+            </div>
+
+            <div class="solution-card-mini">
+              <div class="sol-card-header font-mono">
+                <span class="spec-dot">&bull;</span>
+                <span>IoT Interaction</span>
+              </div>
+              <p class="sol-card-text">
+                A connected-device concept for remote interaction and status monitoring, depending on the functions implemented in the project.
+              </p>
+            </div>
+
+            <div class="solution-card-mini" style="grid-column: 1 / -1;">
+              <div class="sol-card-header font-mono">
+                <span class="spec-dot">&bull;</span>
+                <span>Modular Design</span>
+              </div>
+              <p class="sol-card-text">
+                The ability to integrate sensing, access control, and connectivity into one unified engineering system.
+              </p>
+            </div>
+          </div>
+
+          <div class="modal-alert-box font-mono">
+            <strong>ENGINEERING NOTE:</strong> This is a university engineering project. Capabilities represent the system's design and explored architecture. Advanced commercial features (such as facial recognition, biometric authentication, package detection sensors, delivery-company cloud integration, or real-time carrier notifications) are not claimed or implemented.
+          </div>
+        </section>
+
+        <!-- SECTION D: Hardware and Technologies -->
+        <section class="modal-section" aria-labelledby="sec-d-title">
+          <h3 id="sec-d-title" class="modal-section-title font-mono">
+            <span class="section-idx">SECTION D</span>
+            <span>HARDWARE &amp; TECHNOLOGIES &bull; POTENTIAL COMPONENTS</span>
+          </h3>
+          <p class="modal-body-p">
+            Technologies and components associated with the project architecture (conceptual design, not a verified commercial bill of materials):
+          </p>
+
+          <div class="modal-components-grid">
+            <div class="comp-card-mini font-mono">
+              <div class="comp-title text-lime">Microcontroller</div>
+              <div class="comp-desc">ESP32 or Arduino platform coordinating relevant GPIO inputs, outputs, and state machine logic.</div>
+            </div>
+
+            <div class="comp-card-mini font-mono">
+              <div class="comp-title text-lime">RFID Reader &amp; Cards</div>
+              <div class="comp-desc">RFID sensor and compatible access cards/fobs for contactless proximity authorization.</div>
+            </div>
+
+            <div class="comp-card-mini font-mono">
+              <div class="comp-title text-lime">Numeric Keypad</div>
+              <div class="comp-desc">Matrix keypad for entering an authorized access code or delivery PIN.</div>
+            </div>
+
+            <div class="comp-card-mini font-mono">
+              <div class="comp-title text-lime">Electronic Lock Mechanism</div>
+              <div class="comp-desc">Solenoid or relay-driven electronic locking bolt to release and secure the door.</div>
+            </div>
+
+            <div class="comp-card-mini font-mono">
+              <div class="comp-title text-lime">Power Supply &amp; Connections</div>
+              <div class="comp-desc">Dedicated power supply and required electrical connections for logic circuits and actuators.</div>
+            </div>
+
+            <div class="comp-card-mini font-mono">
+              <div class="comp-title text-lime">IoT Communication Tools</div>
+              <div class="comp-desc">IoT communication and mobile interaction tools for remote telemetry, if implemented.</div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SECTION E: System Workflow -->
+        <section class="modal-section" aria-labelledby="sec-e-title">
+          <h3 id="sec-e-title" class="modal-section-title font-mono">
+            <span class="section-idx">SECTION E</span>
+            <span>SYSTEM WORKFLOW &bull; DESIGNED SEQUENCE</span>
+          </h3>
+          <p class="modal-body-p">
+            Conceptual workflow representing the system's intended and designed behavior:
+          </p>
+
+          <div class="modal-workflow-list font-mono">
+            <div class="workflow-step-row">
+              <span class="wf-step-idx">01</span>
+              <div class="wf-step-text">A delivery or package-reception scenario requires access to the box.</div>
+            </div>
+
+            <div class="workflow-step-row">
+              <span class="wf-step-idx">02</span>
+              <div class="wf-step-text">The user interacts with the electronic access interface (keypad or RFID reader).</div>
+            </div>
+
+            <div class="workflow-step-row">
+              <span class="wf-step-idx">03</span>
+              <div class="wf-step-text">The access-control mechanism checks the provided credential, depending on the implemented design.</div>
+            </div>
+
+            <div class="workflow-step-row">
+              <span class="wf-step-idx">04</span>
+              <div class="wf-step-text"><strong class="text-lime">Authorization Success:</strong> If authorization succeeds, the electronic lock permits access to the compartment.</div>
+            </div>
+
+            <div class="workflow-step-row">
+              <span class="wf-step-idx">05</span>
+              <div class="wf-step-text"><strong class="text-amber">Authorization Failure:</strong> If authorization fails, the box remains secured.</div>
+            </div>
+
+            <div class="workflow-step-row">
+              <span class="wf-step-idx">06</span>
+              <div class="wf-step-text">If connectivity features are implemented, the system may communicate relevant status information through the connected interface.</div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SECTION F: My Engineering Focus -->
+        <section class="modal-section" aria-labelledby="sec-f-title">
+          <h3 id="sec-f-title" class="modal-section-title font-mono">
+            <span class="section-idx">SECTION F</span>
+            <span>MY ENGINEERING FOCUS &bull; CONCEPTS DEMONSTRATED</span>
+          </h3>
+          <p class="modal-body-p">
+            This project represents an opportunity to apply and explore core engineering disciplines:
+          </p>
+
+          <div class="modal-focus-grid font-mono">
+            <div class="focus-item-pill">
+              <span class="focus-bullet">&bull;</span>
+              <span>Embedded systems fundamentals</span>
+            </div>
+            <div class="focus-item-pill">
+              <span class="focus-bullet">&bull;</span>
+              <span>Hardware and software integration</span>
+            </div>
+            <div class="focus-item-pill">
+              <span class="focus-bullet">&bull;</span>
+              <span>Electronic access-control concepts</span>
+            </div>
+            <div class="focus-item-pill">
+              <span class="focus-bullet">&bull;</span>
+              <span>Microcontroller-based control</span>
+            </div>
+            <div class="focus-item-pill">
+              <span class="focus-bullet">&bull;</span>
+              <span>IoT system architecture</span>
+            </div>
+            <div class="focus-item-pill">
+              <span class="focus-bullet">&bull;</span>
+              <span>Practical engineering problem-solving</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- SECTION G: Project Information -->
+        <section class="modal-section" aria-labelledby="sec-g-title">
+          <h3 id="sec-g-title" class="modal-section-title font-mono">
+            <span class="section-idx">SECTION G</span>
+            <span>PROJECT INFORMATION &bull; METADATA</span>
+          </h3>
+
+          <div class="modal-meta-grid font-mono">
+            <div class="meta-field-cell">
+              <span class="meta-field-label">PROJECT</span>
+              <span class="meta-field-val">Smart Box</span>
+            </div>
+
+            <div class="meta-field-cell">
+              <span class="meta-field-label">DOMAIN</span>
+              <span class="meta-field-val highlight">Embedded Systems / IoT</span>
+            </div>
+
+            <div class="meta-field-cell">
+              <span class="meta-field-label">CONTEXT</span>
+              <span class="meta-field-val">University Engineering Project</span>
+            </div>
+
+            <div class="meta-field-cell">
+              <span class="meta-field-label">SOURCE CODE</span>
+              <span class="meta-field-val text-muted">Not publicly available</span>
+            </div>
+
+            <div class="meta-field-cell" style="grid-column: 1 / -1;">
+              <span class="meta-field-label">LIVE DEMO</span>
+              <span class="meta-field-val text-muted">Not available</span>
+            </div>
+          </div>
+        </section>
+
+      </div>
+
+      <!-- Modal Footer -->
+      <div class="project-modal-footer font-mono">
+        <span class="text-muted" style="font-size: 0.75rem;">
+          Mohamed Ismail &bull; Engineering &amp; AI Portfolio
+        </span>
+        <button type="button" class="btn btn-sm btn-ghost modal-close-btn">
+          <span>Close Details</span>
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Toast Notification Feedback Component -->
+  <div id="toast" class="toast" role="status" aria-live="polite">
+    <span class="toast-check" aria-hidden="true">✓</span>
+    <span id="toast-message" class="toast-text font-mono">Copied to clipboard!</span>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
