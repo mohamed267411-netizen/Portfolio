@@ -1,7 +1,7 @@
 /* ==========================================================================
-   MOHAMED ISMAIL - PERSONAL PORTFOLIO
-   Creative & Senior Technical Portfolio Stylesheet
-   Palette: Deep Navy (#0B1020), Slate Secondary (#111827), Lime Accent (#A3E635)
+   MOHAMED ISMAIL - ENGINEERING PORTFOLIO
+   Stylesheet: Clean Dark Palette & Authentic Technical Hierarchy
+   Palette: Deep Navy (#0B1120), Slate Secondary (#111B2E), Lime Accent (#A3E635)
    ========================================================================== */
 
 /* --- ROOT DESIGN TOKENS --- */
@@ -778,7 +778,7 @@ h1, h2, h3, h4, h5, h6 {
   animation: heroSlideUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.64s backwards;
 }
 
-.hero-terminal-side {
+.hero-profile-side {
   animation: heroCardEntrance 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.3s backwards;
 }
 
@@ -1028,68 +1028,46 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* =========================================================================
-   RIGHT COLUMN: REFINED TERMINAL CARD
+   RIGHT COLUMN: ACADEMIC & TECHNICAL PROFILE CARD
    ========================================================================= */
-.hero-terminal-side {
+.hero-profile-side {
   display: flex;
   justify-content: center;
+  animation: heroCardEntrance 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.3s backwards;
 }
 
-.hero-terminal-card {
+.hero-profile-card {
   width: 100%;
-  max-width: 480px;
-  background: rgba(13, 20, 36, 0.92);
-  border: 1px solid rgba(163, 230, 53, 0.22);
+  max-width: 460px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-medium);
   border-radius: var(--radius-md);
-  box-shadow: 0 20px 50px -12px rgba(0, 0, 0, 0.8), 0 0 30px -10px rgba(163, 230, 53, 0.12);
+  box-shadow: 0 20px 50px -12px rgba(0, 0, 0, 0.7);
   overflow: hidden;
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  animation: heroTerminalFloat 6s ease-in-out infinite;
-  transition: border-color var(--trans-fast), box-shadow var(--trans-fast);
+  transition: border-color var(--trans-fast), transform var(--trans-fast);
 }
 
-.hero-terminal-card:hover {
-  border-color: rgba(163, 230, 53, 0.45);
-  box-shadow: 0 24px 60px -10px rgba(0, 0, 0, 0.85), 0 0 35px -6px rgba(163, 230, 53, 0.22);
+.hero-profile-card:hover {
+  border-color: var(--color-lime-border);
+  transform: translateY(-2px);
 }
 
-.tech-hub-header {
-  background: rgba(9, 14, 28, 0.98);
-  padding: 11px 16px;
+.hero-card-header {
+  background: rgba(9, 14, 28, 0.95);
+  padding: 12px 20px;
   border-bottom: 1px solid var(--border-subtle);
   display: flex;
   align-items: center;
-  justify-content: space-between;
-}
-
-.hub-window-controls {
-  display: flex;
-  gap: 6px;
-}
-
-.control-dot {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-}
-.control-dot.red { background: #EF4444; }
-.control-dot.yellow { background: #F59E0B; }
-.control-dot.green { background: #10B981; }
-
-.hub-title {
-  font-size: 0.74rem;
-  color: var(--text-muted);
-  letter-spacing: 0.04em;
-}
-
-.hub-pulse-tag {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  font-family: var(--font-mono);
-  font-size: 0.7rem;
+  gap: 10px;
+  font-size: 0.76rem;
   color: var(--color-lime);
+  letter-spacing: 0.06em;
+}
+
+.profile-header-title {
+  font-weight: 700;
 }
 
 .pulse-lime {
@@ -1100,96 +1078,46 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: 0 0 8px var(--color-lime);
 }
 
-/* Terminal Body Content */
-.hero-terminal-body {
-  padding: 22px 24px;
-  background: rgba(8, 12, 24, 0.96);
-  min-height: 250px;
+.hero-card-body {
+  padding: 22px 22px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  gap: 14px;
 }
 
-.term-entry {
-  margin-bottom: 16px;
-  transition: opacity 0.3s ease, transform 0.3s ease;
-}
-
-.term-entry:last-of-type {
-  margin-bottom: 12px;
-}
-
-.terminal-line {
+.profile-spec-row {
   display: flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 0.85rem;
-  color: var(--text-primary);
-  line-height: 1.4;
+  flex-direction: column;
+  gap: 3px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.08);
 }
 
-.term-prompt {
-  color: var(--color-lime);
-  font-weight: 700;
-  user-select: none;
+.profile-spec-row:last-child {
+  padding-bottom: 0;
+  border-bottom: none;
 }
 
-.term-cmd {
-  color: #F8FAFC;
-  font-weight: 600;
-  letter-spacing: 0.02em;
+.spec-label {
+  font-size: 0.68rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-muted);
 }
 
-.term-output {
-  padding-left: 18px;
-  margin-top: 5px;
-  font-size: 0.82rem;
-  line-height: 1.5;
-  border-left: 2px solid rgba(163, 230, 53, 0.22);
+.spec-value {
+  font-size: 0.86rem;
+  line-height: 1.45;
 }
 
-.term-output .term-val {
-  font-weight: 600;
-}
-
-.term-output .term-sub {
-  font-size: 0.75rem;
-  margin-top: 1px;
-}
-
-.cursor-line {
-  margin-top: 4px;
-}
-
-.term-cursor {
-  display: inline-block;
-  width: 8px;
-  height: 14px;
-  background: var(--color-lime);
-  animation: cursorBlink 1s step-end infinite;
-  vertical-align: middle;
-}
-
-.hub-status-footer {
-  padding: 9px 16px;
-  background: rgba(9, 14, 28, 0.98);
+.hero-card-footer {
+  background: rgba(9, 14, 28, 0.9);
+  padding: 10px 20px;
   border-top: 1px solid var(--border-subtle);
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  gap: 8px;
   font-size: 0.72rem;
-}
-
-/* Progressive Animation State helper */
-.hero-terminal-body.js-term-active .term-entry.term-hidden {
-  opacity: 0;
-  transform: translateY(6px);
-  pointer-events: none;
-}
-
-.hero-terminal-body.js-term-active .term-entry.term-visible {
-  opacity: 1;
-  transform: translateY(0);
 }
 
 /* =========================================================================
@@ -1202,8 +1130,8 @@ h1, h2, h3, h4, h5, h6 {
   .hero-spec-strip,
   .hero-cta-group,
   .hero-social-row,
-  .hero-terminal-side,
-  .hero-terminal-card {
+  .hero-profile-side,
+  .hero-profile-card {
     animation: none !important;
     opacity: 1 !important;
     transform: none !important;
@@ -4727,7 +4655,7 @@ html.js-active [data-reveal].revealed {
     gap: 48px;
   }
 
-  .tech-card-hub {
+  .hero-profile-card {
     max-width: 680px;
     margin: 0 auto;
     width: 100%;
