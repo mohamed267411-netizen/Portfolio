@@ -102,6 +102,34 @@ const PROJECTS_DATA = {
     demo: null
   },
 
+  linefollower: {
+    id: "linefollower",
+    title: "Line Follower Car — Autonomous Tracking & RemoteXY Control",
+    category: "Embedded Systems • Robotics • Arduino",
+    badge: "Hardware & Robotics",
+    badgeType: "lime",
+    shortDesc: "An Arduino robot featuring autonomous line tracking and mobile-controlled driving.",
+    overview: "The Line Follower Car is an embedded systems project that combines autonomous line tracking with manual control through a mobile interface. The car uses IR sensors to detect the track and control its movement. The mobile interface provides manual driving controls and a switch to select the operating mode.",
+    problem: "Navigating mobile robotic systems requires reliable low-latency motor control, robust optical sensor feedback to follow surface tracks autonomously, and an intuitive manual override interface for off-track driving.",
+    solution: "Built an Arduino-controlled vehicular platform integrating two IR sensors on analog inputs (A0 and A1) for optical path detection, paired with a dual DC motor driver for direction and speed control, and configured with the RemoteXY mobile interface to provide seamless mode switching between autonomous line tracking and manual directional steering.",
+    features: [
+      "Autonomous line-following behavior utilizing two analog IR track-detection sensors (A0 & A1)",
+      "Selectable autonomous and manual operation via mobile mode switch",
+      "Manual directional movement controls through mobile RemoteXY interface (forward, backward, left, right)",
+      "Motor direction and speed control through an integrated motor driver",
+      "Dual DC drive motor configuration supporting differential turning dynamics"
+    ],
+    technologies: ["Arduino", "Embedded C/C++", "IR Sensors", "DC Motor Control", "RemoteXY"],
+    contribution: "Designed and assembled the robotic platform: wired the dual IR sensor array and motor driver circuit to the Arduino microcontroller, authored the embedded control firmware, and developed the RemoteXY mobile interface layout.",
+    gallery: [
+      { src: "assets/line-follower-car.jpg", title: "Line Follower Car & Testing Track", caption: "Physical robotic car assembly and track testing course demonstrating autonomous navigation." },
+      { src: "assets/line-follower-remotexy.jpg", title: "RemoteXY Mobile Control Interface", caption: "Smartphone control dashboard featuring autonomous/manual mode switch and directional driving controls." }
+    ],
+    schematicType: "linefollower",
+    github: null,
+    demo: null
+  },
+
   tazkarti: {
     id: "tazkarti",
     title: "Tazkarti Bot — Match Availability & Telegram Alerts",
@@ -759,6 +787,24 @@ function renderSchematicPreview(container, type) {
           <div style="background: rgba(255,255,255,0.03); padding: 12px; border-radius: 4px; font-size: 0.75rem;">
             <div style="color: var(--color-lime); font-weight: 700; margin-bottom: 4px;">Curated Entertainment Portal</div>
             <div style="color: var(--text-secondary); line-height: 1.5;">Lightweight, responsive multi-page architecture with client-side Vanilla JS filtering and zero external framework overhead.</div>
+          </div>
+        </div>
+      </div>
+    `;
+  } else if (type === 'linefollower') {
+    container.innerHTML = `
+      <div class="technical-preview-box">
+        <div class="preview-chrome font-mono">
+          <div class="preview-dots"><span></span><span></span><span></span></div>
+          <span class="preview-address">arduino &bull; line-follower &bull; remotexy</span>
+          <span class="preview-tag text-lime">Robotics</span>
+        </div>
+        <div class="bot-stream-visual font-mono" style="padding: 16px; background: #080d1a;">
+          <div style="font-size: 0.72rem; line-height: 1.8; color: var(--text-secondary);">
+            <span class="text-muted">[SENSORS]</span> Dual Analog IR Array (A0: Left, A1: Right)... Calibrated<br>
+            <span class="text-muted">[MODES]</span> Autonomous Optical Tracking &bull; Mobile RemoteXY Override<br>
+            <span class="text-lime">[ACTUATORS]</span> Dual DC Drive Motors with Differential Steering via Motor Driver<br>
+            <span class="text-muted">[TELEMETRY]</span> Directional driving commands and operating mode status
           </div>
         </div>
       </div>
