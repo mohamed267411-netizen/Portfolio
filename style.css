@@ -421,13 +421,49 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .brand-logo {
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  gap: 12px;
   text-decoration: none;
   color: var(--text-primary);
+  padding: 4px 0;
+  transition: opacity var(--trans-fast);
 }
 
+.brand-wordmark {
+  font-family: var(--font-heading);
+  font-size: 1.45rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: #F8FAFC;
+  line-height: 1;
+  display: inline-flex;
+  align-items: baseline;
+  transition: color var(--trans-fast);
+}
+
+.brand-wordmark .brand-dot {
+  color: var(--color-lime);
+  font-weight: 800;
+  margin-left: 1px;
+  transition: color var(--trans-fast), text-shadow var(--trans-fast);
+}
+
+.brand-logo:hover .brand-wordmark {
+  color: #FFFFFF;
+}
+
+.brand-logo:hover .brand-wordmark .brand-dot {
+  color: var(--color-lime-light);
+  text-shadow: 0 0 12px rgba(163, 230, 53, 0.45);
+}
+
+.brand-logo:focus-visible {
+  outline: 2px solid var(--color-lime);
+  outline-offset: 4px;
+  border-radius: var(--radius-xs);
+}
+
+/* Retained for footer logo badge */
 .logo-box {
   width: 40px;
   height: 40px;
@@ -444,12 +480,6 @@ h1, h2, h3, h4, h5, h6 {
   transition: all var(--trans-normal);
 }
 
-.brand-logo:hover .logo-box {
-  border-color: var(--color-lime);
-  background: var(--color-lime-muted);
-  box-shadow: 0 0 16px rgba(163, 230, 53, 0.35);
-}
-
 .logo-letter { line-height: 1; }
 .logo-dot {
   width: 3px;
@@ -457,25 +487,6 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 50%;
   background: var(--color-lime);
   margin: 0 2px;
-}
-
-.logo-info {
-  display: flex;
-  flex-direction: column;
-}
-
-.logo-name {
-  font-family: var(--font-heading);
-  font-size: 0.98rem;
-  font-weight: 700;
-  color: var(--text-primary);
-  line-height: 1.15;
-}
-
-.logo-tagline {
-  font-family: var(--font-mono);
-  font-size: 0.72rem;
-  color: var(--text-muted);
 }
 
 /* Desktop Nav Menu */
@@ -4937,8 +4948,8 @@ html.js-active [data-reveal].revealed {
 /* --- 6. Compact Phones (<= 440px, e.g. iPhone SE, 360-400px viewports) --- */
 @media (max-width: 440px) {
   /* Prevent header overflow */
-  .brand-logo .logo-tagline {
-    display: none;
+  .brand-wordmark {
+    font-size: 1.3rem;
   }
 
   .header-github-btn span {
@@ -4954,10 +4965,6 @@ html.js-active [data-reveal].revealed {
   .header-talk-btn {
     padding: 7px 11px;
     font-size: 0.8rem;
-  }
-
-  .brand-logo .logo-name {
-    font-size: 0.95rem;
   }
 
   .hero-avatar-ring {
