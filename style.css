@@ -3692,8 +3692,56 @@ html.js-active [data-reveal].revealed {
 }
 
 /* =========================================================================
-   COMPACT PROJECTS GRID & MINI THUMBNAILS
+   COMPACT PROJECTS SECTION & MINI THUMBNAILS
    ========================================================================= */
+.projects-section {
+  padding-top: 48px;
+  padding-bottom: 64px;
+}
+
+.projects-section .section-title-wrap {
+  margin-bottom: 20px;
+}
+
+.projects-section .section-label {
+  margin-bottom: 6px;
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+}
+
+.projects-section .section-heading {
+  font-size: clamp(1.75rem, 3.2vw, 2.2rem);
+  margin-bottom: 8px;
+  letter-spacing: -0.03em;
+}
+
+.projects-section .section-subtext {
+  font-size: 0.88rem;
+  line-height: 1.55;
+  color: var(--text-secondary);
+  max-width: 620px;
+}
+
+.projects-section .projects-filter-bar {
+  margin-bottom: 22px;
+  padding: 6px 10px;
+  gap: 6px;
+  background: rgba(13, 20, 36, 0.75);
+  border-radius: var(--radius-sm);
+}
+
+.projects-section .filter-tab-btn {
+  padding: 5px 12px;
+  font-size: 0.75rem;
+  gap: 6px;
+  border-radius: var(--radius-xs);
+}
+
+.projects-section .filter-tab-btn .filter-count {
+  font-size: 0.65rem;
+  padding: 1px 6px;
+}
+
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);

@@ -89,7 +89,14 @@ const PROJECTS_DATA = {
     ],
     technologies: ["Embedded Systems", "IoT Concepts", "RFID (13.56MHz)", "Keypad Matrix", "Microcontroller (ESP32/Arduino)", "Circuit Design"],
     contribution: "Designed system workflow, mapped microcontroller pinout and hardware interface schematics, formulated access authorization state machine, and drafted IoT telemetry specifications.",
-    gallery: [],
+    gallery: [
+      { src: "assets/smart-box.png", title: "Smart Box Prototype Overview", caption: "Physical prototype and hardware assembly of the IoT smart package delivery box." },
+      { src: "assets/box1.jpeg", title: "Front Access Keypad and RFID Interface", caption: "Electronic authentication panel supporting dual-factor PIN and RFID proximity entry." },
+      { src: "assets/box2.jpeg", title: "Interior Storage Compartment and Solenoid Lock", caption: "Secure compartment featuring relay-driven electronic solenoid locking bolt." },
+      { src: "assets/box3.jpeg", title: "Microcontroller Circuitry and Power Wiring", caption: "Microcontroller processing hub, sensor routing, and regulated power distribution." },
+      { src: "assets/box4.jpeg", title: "Full Enclosure Structure and Drop Mechanics", caption: "Tamper-resistant physical enclosure designed for reliable package drop and safe retrieval." },
+      { src: "assets/box4.png", title: "Integrated Physical Assembly", caption: "Full operational perspective showcasing package reception workflow and mechanical fit." }
+    ],
     schematicType: "smartbox",
     github: null,
     demo: null
