@@ -32,16 +32,11 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="style.css?v=3.1">
+  <link rel="stylesheet" href="style.css?v=3.3">
 </head>
 <body class="bg-navy">
-  <!-- Interactive Technical Grid Background Canvas -->
-  <canvas id="bg-canvas" aria-hidden="true"></canvas>
-
-  <!-- Ambient Light Orbs -->
-  <div class="ambient-glow glow-1" aria-hidden="true"></div>
-  <div class="ambient-glow glow-2" aria-hidden="true"></div>
-  <div class="ambient-glow glow-3" aria-hidden="true"></div>
+  <!-- Subtle Static Technical Grid Texture -->
+  <div class="site-grid-overlay" aria-hidden="true"></div>
 
   <!-- Skip to Content for Accessibility -->
   <a href="#main-content" class="skip-to-content">Skip to main content</a>
@@ -130,45 +125,47 @@
     <section id="hero" class="hero-section">
       <div class="container hero-layout">
         
-        <!-- Left: Personal Introduction & Actions -->
+        <!-- Left: Developer Identity, Real Pitch & Actions -->
         <div class="hero-text-block">
           
-          <!-- Identity Badge with Avatar Ring -->
+          <!-- Identity Badge with Clean Avatar & Live Branch Status -->
           <div class="hero-badge-wrap">
             <div class="hero-avatar-ring" title="Mohamed Ismail">
-              <img src="assets/mohamed-ismail-headshot.jpg" alt="Mohamed Ismail" class="hero-avatar-img" width="84" height="84">
-              <span class="avatar-live-indicator" title="Available for opportunities"></span>
+              <img src="assets/mohamed-ismail-headshot.jpg" alt="Mohamed Ismail" class="hero-avatar-img" width="82" height="82">
+              <span class="avatar-live-indicator" title="Available for internships & junior roles"></span>
             </div>
             <div class="status-badge-inline font-mono">
               <span class="status-indicator-dot"></span>
-              <span class="status-label-text">Mohamed Ismail &bull; Engineering Student &bull; Class of 2027</span>
+              <span class="status-branch">main*</span>
+              <span class="status-sep">/</span>
+              <span class="status-label-text">Open to internships &amp; junior roles</span>
             </div>
           </div>
 
-          <!-- Clear Professional Headline -->
+          <!-- Human, Direct Headline -->
           <h1 class="hero-headline">
-            <span class="hero-headline-line">Communications &amp;</span>
-            <span class="hero-headline-line text-lime text-glow">Computer Engineering Student</span>
+            <span class="hero-greeting font-mono text-lime">// Hey, I'm Mohamed</span>
+            <span class="hero-headline-line">Building real software, training ML models, and wiring hardware.</span>
           </h1>
 
-          <!-- Concise Supporting Description -->
+          <!-- Real Developer Bio -->
           <p class="hero-supporting-text">
-            Interested in Software Development, Machine Learning, and Automation &mdash; building practical projects through hands-on implementation.
+            Senior Communications &amp; Computer Engineering student at Mansoura. I spend my time building practical Python backends, training predictive models on real datasets, and automating away repetitive chores &mdash; with a strong bias toward code that solves actual problems.
           </p>
 
-          <!-- Core Focus Highlights -->
+          <!-- Core Focus Highlights (Clean Monospace Tech Tags) -->
           <div class="hero-spec-strip font-mono" aria-label="Core Technical Focus">
-            <span class="spec-tag">Python</span>
+            <span class="spec-tag"><code>python</code></span>
             <span class="spec-dot" aria-hidden="true">&bull;</span>
-            <span class="spec-tag">Machine Learning</span>
+            <span class="spec-tag"><code>ml</code></span>
             <span class="spec-dot" aria-hidden="true">&bull;</span>
-            <span class="spec-tag">Automation</span>
+            <span class="spec-tag"><code>automation</code></span>
           </div>
 
           <!-- Primary & Secondary CTAs -->
           <div class="hero-cta-group">
             <a href="#projects" class="btn btn-primary btn-lime cta-primary-btn">
-              <span>Explore Projects</span>
+              <span>Explore My Builds</span>
               <svg class="cta-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
             </a>
 
@@ -180,10 +177,10 @@
 
           <!-- Verified Profile Chips -->
           <div class="hero-social-row font-mono">
-            <span class="social-label text-muted">PROFILES:</span>
+            <span class="social-label text-muted">DEV_LINKS:</span>
             <a href="https://github.com/mohamed267411-netizen" target="_blank" rel="noopener noreferrer" class="social-chip" title="GitHub Profile">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg>
-              <span>GitHub</span>
+              <span>github.com/mohamed267411-netizen</span>
             </a>
             <a href="https://www.linkedin.com/in/mohamed-ismail21" target="_blank" rel="noopener noreferrer" class="social-chip" title="LinkedIn Profile">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
@@ -193,39 +190,59 @@
 
         </div>
 
-        <!-- Right: Authentic Academic & Technical Profile Card -->
+        <!-- Right: Authentic Developer Workstation / Interactive Code Terminal -->
         <div class="hero-profile-side">
-          <div class="hero-profile-card spotlight-card">
-            <div class="hero-card-header font-mono">
-              <span class="pulse-lime"></span>
-              <span class="profile-header-title">ACADEMIC &amp; TECHNICAL PROFILE</span>
-            </div>
-            <div class="hero-card-body font-mono">
-              <div class="profile-spec-row">
-                <span class="spec-label text-muted">Field</span>
-                <span class="spec-value text-primary font-bold">Communications &amp; Computer Engineering</span>
+          <div class="dev-terminal-card" id="hero-terminal">
+            
+            <!-- Terminal Header / Titlebar -->
+            <div class="terminal-titlebar font-mono">
+              <div class="terminal-window-buttons" aria-hidden="true">
+                <span class="win-btn close"></span>
+                <span class="win-btn minimize"></span>
+                <span class="win-btn maximize"></span>
               </div>
-              <div class="profile-spec-row">
-                <span class="spec-label text-muted">Degree</span>
-                <span class="spec-value text-lime">Undergraduate &bull; Class of 2027</span>
+              <div class="terminal-tab-group">
+                <span class="term-tab active font-mono">
+                  <span class="tab-icon text-lime">&gt;</span>
+                  <span class="tab-label">mohamed.py</span>
+                </span>
               </div>
-              <div class="profile-spec-row">
-                <span class="spec-label text-muted">Core Focus</span>
-                <span class="spec-value">Software Development &bull; ML &bull; Automation</span>
-              </div>
-              <div class="profile-spec-row">
-                <span class="spec-label text-muted">Active Work</span>
-                <span class="spec-value text-secondary">RansomGuard (Behavioral Security Capstone)</span>
-              </div>
-              <div class="profile-spec-row">
-                <span class="spec-label text-muted">Primary Stack</span>
-                <span class="spec-value">Python &bull; SQL Server &bull; Arduino C/C++</span>
+              <div class="terminal-branch-badge font-mono">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="6" y1="3" x2="6" y2="15"></line><circle cx="18" cy="6" r="3"></circle><circle cx="6" cy="18" r="3"></circle><path d="M18 9a9 9 0 0 1-9 9"></path></svg>
+                <span>main</span>
               </div>
             </div>
-            <div class="hero-card-footer font-mono">
-              <span class="status-indicator-dot mini"></span>
-              <span class="footer-note text-muted">Hands-on Implementation &bull; Mansoura, Egypt</span>
+
+            <!-- Terminal Code Pane -->
+            <div class="terminal-pane font-mono" id="pane-profile">
+              <div class="code-editor-lines">
+                <div class="code-line"><span class="line-num">01</span><span class="tok-comment"># Engineer &amp; builder &bull; Mansoura, Egypt</span></div>
+                <div class="code-line"><span class="line-num">02</span><span class="tok-keyword">class</span>&nbsp;<span class="tok-class">MohamedIsmail</span>:</div>
+                <div class="code-line"><span class="line-num">03</span>&nbsp;&nbsp;&nbsp;&nbsp;degree&nbsp;&nbsp;&nbsp;=&nbsp;<span class="tok-string">"B.Sc. Computer &amp; Comms ('27)"</span></div>
+                <div class="code-line"><span class="line-num">04</span>&nbsp;&nbsp;&nbsp;&nbsp;location&nbsp;=&nbsp;<span class="tok-string">"Mansoura, Egypt 📍"</span></div>
+                <div class="code-line"><span class="line-num">05</span>&nbsp;&nbsp;&nbsp;&nbsp;status&nbsp;&nbsp;&nbsp;=&nbsp;<span class="tok-string">"🟢 Open to internships &amp; junior roles"</span></div>
+                <div class="code-line"><span class="line-num">06</span></div>
+                <div class="code-line"><span class="line-num">07</span>&nbsp;&nbsp;&nbsp;&nbsp;focus&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;[<span class="tok-string">"Python"</span>,&nbsp;<span class="tok-string">"ML"</span>,&nbsp;<span class="tok-string">"Automation"</span>]</div>
+                <div class="code-line"><span class="line-num">08</span>&nbsp;&nbsp;&nbsp;&nbsp;capstone&nbsp;=&nbsp;<span class="tok-string">"RansomGuard (Behavioral Security)"</span></div>
+                <div class="code-line"><span class="line-num">09</span></div>
+                <div class="code-line"><span class="line-num">10</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="tok-keyword">def</span>&nbsp;<span class="tok-func">motto</span>(<span class="tok-param">self</span>):</div>
+                <div class="code-line"><span class="line-num">11</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tok-keyword">return</span>&nbsp;<span class="tok-string">"If I do it twice, I script it."</span></div>
+              </div>
             </div>
+
+            <!-- Terminal Status Bar -->
+            <div class="terminal-statusbar font-mono">
+              <div class="term-status-left">
+                <span class="term-mode">NORMAL</span>
+                <span class="term-file">UTF-8</span>
+                <span class="term-lang">python</span>
+              </div>
+              <div class="term-status-right">
+                <span class="pulse-lime mini"></span>
+                <span>Ready &bull; Mansoura, EG</span>
+              </div>
+            </div>
+
           </div>
         </div>
 
@@ -242,11 +259,11 @@
           <div class="section-label font-mono">
             <span class="label-idx">01</span>
             <span class="label-slash">/</span>
-            <span class="label-name">SELECTED WORK</span>
+            <span class="label-name">// FEATURED_BUILDS</span>
           </div>
-          <h2 class="section-heading">Selected Projects</h2>
+          <h2 class="section-heading">Projects I've Built &amp; Shipped</h2>
           <p class="section-subtext">
-            Practical engineering projects built across machine learning, software engineering, embedded IoT, data analysis, and automation. Click <strong>View Details</strong> on any card to explore full specifications, architecture, and screenshot galleries.
+            No generic tutorial clones. Here are real projects I designed, coded, and debugged &mdash; driven by real-world friction, curiosity about data, and practical hardware needs. Click <strong>View Details</strong> to read the story, architecture, and code decisions behind each.
           </p>
         </div>
 
@@ -282,7 +299,7 @@
           </button>
         </div>
 
-        <!-- Responsive Card Grid: 7 Selected Projects -->
+        <!-- Responsive Card Grid: 8 Selected Projects -->
         <div class="projects-grid" id="projects-container">
           
           <!-- CARD 1: DawReeK -->
@@ -292,10 +309,10 @@
               <span class="thumbnail-badge font-mono">10 Screenshots</span>
             </div>
             <div class="project-card-body">
-              <div class="project-card-category font-mono">AI &amp; Machine Learning &bull; Desktop App</div>
-              <h3 class="project-card-title">DawReeK &mdash; Premier League Match Prediction System</h3>
+              <div class="project-card-category font-mono">Machine Learning &bull; Python Desktop</div>
+              <h3 class="project-card-title">DawReeK &mdash; Premier League Match Predictor</h3>
               <p class="project-card-desc">
-                A Python desktop application that uses historical Premier League data to predict home and away goals. It combines Poisson regression, match statistics, and SQL Server to display predictions through a desktop interface.
+                Got tired of subjective match arguments with friends, so I built an expected goals (xG) engine using historical Premier League match logs, Poisson regression models, and SQL Server &mdash; packaged in a Python desktop UI to test my predictions before kick-off.
               </p>
               <div class="project-card-tags font-mono">
                 <span class="tech-pill">Python</span>
@@ -305,7 +322,7 @@
               </div>
               <div class="project-card-footer">
                 <button type="button" class="btn btn-sm btn-lime btn-view-details" data-project-id="dawreek">
-                  <span>View Details</span>
+                  <span>View Details &amp; Story</span>
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="9" y1="3" x2="9" y2="21"></line></svg>
                 </button>
               </div>
@@ -319,23 +336,23 @@
                 <div class="mini-pipe-row"><span class="mini-node">Sysmon</span> &rarr; <span class="mini-node highlight">Entropy</span> &rarr; <span class="mini-node amber">Isolation</span></div>
                 <div class="mini-thumb-caption">Endpoint Telemetry Pipeline</div>
               </div>
-              <span class="thumbnail-badge amber font-mono">Graduation Capstone &bull; In Development</span>
+              <span class="thumbnail-badge amber font-mono">Graduation Capstone &bull; Active Work</span>
             </div>
             <div class="project-card-body">
               <div class="project-card-category font-mono">Cybersecurity &bull; Behavioral ML</div>
-              <h3 class="project-card-title">RansomGuard &mdash; Behavioral Ransomware Detection &amp; Response</h3>
+              <h3 class="project-card-title">RansomGuard &mdash; Behavioral Ransomware Defense</h3>
               <p class="project-card-desc">
-                An undergraduate engineering capstone project investigating Windows Sysmon telemetry and file entropy analysis to explore behavioral ransomware detection.
+                Zero-day ransomware easily bypasses hash-based antivirus databases. For our senior capstone, we're building an endpoint monitor that catches active encryption via real-time Windows Sysmon event telemetry and Shannon file entropy spikes.
               </p>
               <div class="project-card-tags font-mono">
                 <span class="tech-pill">Python</span>
                 <span class="tech-pill">Windows Sysmon</span>
-                <span class="tech-pill">Behavioral ML</span>
-                <span class="tech-pill">Security</span>
+                <span class="tech-pill">Shannon Entropy</span>
+                <span class="tech-pill">Heuristics</span>
               </div>
               <div class="project-card-footer">
                 <button type="button" class="btn btn-sm btn-lime btn-view-details" data-project-id="ransomguard">
-                  <span>View Details</span>
+                  <span>View Details &amp; Story</span>
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="9" y1="3" x2="9" y2="21"></line></svg>
                 </button>
               </div>
@@ -346,23 +363,23 @@
           <article class="project-grid-card spotlight-card" data-category="embedded-iot" data-reveal="fade-up">
             <div class="project-thumbnail-wrap">
               <img src="assets/smart-box.png" alt="Smart Box IoT Package Security System" class="project-thumbnail-img" loading="lazy">
-              <span class="thumbnail-badge font-mono">6 Photos</span>
+              <span class="thumbnail-badge font-mono">6 Hardware Photos</span>
             </div>
             <div class="project-card-body">
-              <div class="project-card-category font-mono">Embedded Systems &bull; IoT</div>
-              <h3 class="project-card-title">Smart Box &mdash; IoT-Based Smart Package Security System</h3>
+              <div class="project-card-category font-mono">Embedded Systems &bull; IoT Hardware</div>
+              <h3 class="project-card-title">Smart Box &mdash; IoT Secure Package Delivery Locker</h3>
               <p class="project-card-desc">
-                A university engineering project prototyping an electronically secured package delivery compartment using dual-factor PIN and RFID access control and IoT architecture concepts.
+                Tackled doorstep package theft with a physical hardware build: wired an Arduino with dual-factor RFID and matrix PIN authentication, controlling a heavy-duty 12V fail-secure solenoid deadbolt through an isolated relay circuit.
               </p>
               <div class="project-card-tags font-mono">
-                <span class="tech-pill">Embedded Systems</span>
-                <span class="tech-pill">IoT</span>
-                <span class="tech-pill">RFID</span>
-                <span class="tech-pill">Keypad</span>
+                <span class="tech-pill">Arduino</span>
+                <span class="tech-pill">Embedded C++</span>
+                <span class="tech-pill">RFID (13.56MHz)</span>
+                <span class="tech-pill">Solenoid Relay</span>
               </div>
               <div class="project-card-footer">
                 <button type="button" class="btn btn-sm btn-lime btn-view-details" data-project-id="smartbox">
-                  <span>View Details</span>
+                  <span>View Details &amp; Story</span>
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="9" y1="3" x2="9" y2="21"></line></svg>
                 </button>
               </div>
@@ -373,23 +390,23 @@
           <article class="project-grid-card spotlight-card" data-category="embedded-iot" data-reveal="fade-up">
             <div class="project-thumbnail-wrap">
               <img src="assets/line-follower-car.jpg" alt="Line Follower Car with Track and Mobile RemoteXY Interface" class="project-thumbnail-img" style="object-position: center 30%;" loading="lazy">
-              <span class="thumbnail-badge font-mono">2 Photos</span>
+              <span class="thumbnail-badge font-mono">2 Build Photos</span>
             </div>
             <div class="project-card-body">
-              <div class="project-card-category font-mono">Embedded Systems &bull; Robotics &bull; Arduino</div>
-              <h3 class="project-card-title">Line Follower Car &mdash; Autonomous Tracking &amp; Mobile Control</h3>
+              <div class="project-card-category font-mono">Embedded Robotics &bull; Arduino</div>
+              <h3 class="project-card-title">Line Follower Car &mdash; Autonomous Optical Tracking &amp; RemoteXY RC</h3>
               <p class="project-card-desc">
-                An Arduino robot combining autonomous optical line tracking via analog infrared sensors with manual Bluetooth driving via RemoteXY.
+                Built from bare components to master real-time sensor loops: calibrated dual analog IR sensors for drift-free track tracing, then wired an HC-05 Bluetooth module with RemoteXY to toggle instant mobile steering from my phone.
               </p>
               <div class="project-card-tags font-mono">
                 <span class="tech-pill">Arduino</span>
-                <span class="tech-pill">Embedded C/C++</span>
+                <span class="tech-pill">Embedded C++</span>
                 <span class="tech-pill">IR Sensors</span>
-                <span class="tech-pill">RemoteXY</span>
+                <span class="tech-pill">RemoteXY Bluetooth</span>
               </div>
               <div class="project-card-footer">
                 <button type="button" class="btn btn-sm btn-lime btn-view-details" data-project-id="linefollower">
-                  <span>View Details</span>
+                  <span>View Details &amp; Story</span>
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="9" y1="3" x2="9" y2="21"></line></svg>
                 </button>
               </div>
@@ -406,20 +423,20 @@
               <span class="thumbnail-badge font-mono">Verified Repo</span>
             </div>
             <div class="project-card-body">
-              <div class="project-card-category font-mono">Automation &bull; Software Development</div>
-              <h3 class="project-card-title">Tazkarti Bot &mdash; Match Availability &amp; Telegram Alerts</h3>
+              <div class="project-card-category font-mono">Automation &bull; Python Daemon</div>
+              <h3 class="project-card-title">Tazkarti Bot &mdash; Match Availability &amp; Instant Telegram Alerts</h3>
               <p class="project-card-desc">
-                An automated Python monitoring script that checks football ticket availability on Tazkarti, tracks state changes in SQLite, and sends instant push alerts via Telegram.
+                Egyptian football tickets sell out in 3 minutes unannounced. Rather than refreshing F5 all day, I wrote a 24/7 Python daemon that polls match availability, tracks state in SQLite, and pushes immediate Telegram alerts with direct booking links.
               </p>
               <div class="project-card-tags font-mono">
                 <span class="tech-pill">Python</span>
-                <span class="tech-pill">Telegram API</span>
+                <span class="tech-pill">Telegram Bot API</span>
                 <span class="tech-pill">SQLite</span>
                 <span class="tech-pill">Automation</span>
               </div>
               <div class="project-card-footer">
                 <button type="button" class="btn btn-sm btn-lime btn-view-details" data-project-id="tazkarti">
-                  <span>View Details</span>
+                  <span>View Details &amp; Story</span>
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="9" y1="3" x2="9" y2="21"></line></svg>
                 </button>
               </div>
@@ -433,20 +450,20 @@
               <span class="thumbnail-badge font-mono">4 Screenshots</span>
             </div>
             <div class="project-card-body">
-              <div class="project-card-category font-mono">Software Development &bull; Desktop App</div>
-              <h3 class="project-card-title">Airline Management System &mdash; Desktop Reservation Console</h3>
+              <div class="project-card-category font-mono">Software Engineering &bull; Desktop App</div>
+              <h3 class="project-card-title">Airline Management System &mdash; Reservation Desk &amp; Console</h3>
               <p class="project-card-desc">
-                An object-oriented desktop application for managing flight schedules, passenger bookings, and seat reservations with an SQLite database and a Tkinter GUI.
+                University OOP project built like a real airport reservation desk: strict relational SQLite transactions to prevent seat double-booking, complete with passenger lifecycles and an interactive Tkinter desk interface.
               </p>
               <div class="project-card-tags font-mono">
                 <span class="tech-pill">Python</span>
-                <span class="tech-pill">Tkinter</span>
+                <span class="tech-pill">Tkinter GUI</span>
                 <span class="tech-pill">SQLite</span>
-                <span class="tech-pill">OOP</span>
+                <span class="tech-pill">OOP Architecture</span>
               </div>
               <div class="project-card-footer">
                 <button type="button" class="btn btn-sm btn-lime btn-view-details" data-project-id="airline">
-                  <span>View Details</span>
+                  <span>View Details &amp; Story</span>
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="9" y1="3" x2="9" y2="21"></line></svg>
                 </button>
               </div>
@@ -460,20 +477,20 @@
               <span class="thumbnail-badge font-mono">Data Dashboard</span>
             </div>
             <div class="project-card-body">
-              <div class="project-card-category font-mono">Data Analysis &bull; Python</div>
-              <h3 class="project-card-title">Gym Members Analytics &mdash; Exploratory Data Analysis</h3>
+              <div class="project-card-category font-mono">Data Analysis &bull; Python EDA</div>
+              <h3 class="project-card-title">Gym Members Analytics &mdash; Attendance &amp; Retention EDA</h3>
               <p class="project-card-desc">
-                An exploratory data analysis project evaluating gym member attendance patterns, workout frequency, and subscription retention factors using Pandas and Matplotlib.
+                Exploratory data analysis in Pandas and Seaborn investigating why gym members quit: uncovered key dropout inflection points, attendance drop-offs, and multi-variable correlations that predict subscription renewals.
               </p>
               <div class="project-card-tags font-mono">
                 <span class="tech-pill">Python</span>
                 <span class="tech-pill">Pandas</span>
                 <span class="tech-pill">NumPy</span>
-                <span class="tech-pill">Matplotlib</span>
+                <span class="tech-pill">Matplotlib / Seaborn</span>
               </div>
               <div class="project-card-footer">
                 <button type="button" class="btn btn-sm btn-lime btn-view-details" data-project-id="gym">
-                  <span>View Details</span>
+                  <span>View Details &amp; Story</span>
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="9" y1="3" x2="9" y2="21"></line></svg>
                 </button>
               </div>
@@ -490,20 +507,20 @@
               <span class="thumbnail-badge font-mono">Live Demo</span>
             </div>
             <div class="project-card-body">
-              <div class="project-card-category font-mono">Software Development &bull; Web Technologies</div>
-              <h3 class="project-card-title">Your Movies &mdash; Multi-Page Entertainment Web Portal</h3>
+              <div class="project-card-category font-mono">Frontend &bull; Vanilla Web</div>
+              <h3 class="project-card-title">Your Movies &mdash; Lightweight Entertainment Web Portal</h3>
               <p class="project-card-desc">
-                A responsive multi-page entertainment catalog for movies, series, and anime built with semantic HTML5, CSS3 transitions, and vanilla JavaScript DOM filtering.
+                Challenged myself to build a snappy multi-page media portal without heavy frameworks: handcrafted semantic HTML5, modern CSS Grid/Flexbox, and vanilla JavaScript DOM operations for instant real-time search and genre filtering.
               </p>
               <div class="project-card-tags font-mono">
                 <span class="tech-pill">HTML5</span>
-                <span class="tech-pill">CSS3</span>
-                <span class="tech-pill">JavaScript</span>
+                <span class="tech-pill">CSS3 Grid</span>
+                <span class="tech-pill">Vanilla JS</span>
                 <span class="tech-pill">GitHub Pages</span>
               </div>
               <div class="project-card-footer">
                 <button type="button" class="btn btn-sm btn-lime btn-view-details" data-project-id="yourmovies">
-                  <span>View Details</span>
+                  <span>View Details &amp; Story</span>
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="9" y1="3" x2="9" y2="21"></line></svg>
                 </button>
               </div>
@@ -525,11 +542,11 @@
           <div class="section-label font-mono">
             <span class="label-idx">02</span>
             <span class="label-slash">/</span>
-            <span class="label-name">BACKGROUND &amp; CAPABILITIES</span>
+            <span class="label-name">// THE_ENGINEER</span>
           </div>
-          <h2 class="section-heading">About &amp; Technical Skills</h2>
+          <h2 class="section-heading">Background &amp; What I Work With</h2>
           <p class="section-subtext">
-            My engineering foundation, practical approach to software, and verified core technical capabilities.
+            My philosophy on building software, how I approach engineering problems, and the actual tools I use day-to-day.
           </p>
         </div>
 
@@ -540,16 +557,16 @@
           <div class="about-portrait-wrap">
             <div class="portrait-card spotlight-card">
               <div class="portrait-img-box" style="height: 380px;">
-                <img src="assets/mohamed-ismail.jpg" alt="Mohamed Ismail - Engineering student and aspiring Software Engineer" class="portrait-image" style="object-position: center 30% !important;" width="608" height="636" loading="lazy">
+                <img src="assets/mohamed-ismail.jpg" alt="Mohamed Ismail - Engineering student and developer" class="portrait-image" style="object-position: center 30% !important;" width="608" height="636" loading="lazy">
                 <div class="portrait-badge font-mono">
-                  <span class="pulse-lime"></span>
-                  <span>Engineering Student &bull; Class of 2027</span>
+                  <span class="status-indicator-dot mini"></span>
+                  <span>Mansoura, Egypt &bull; Class of 2027</span>
                 </div>
               </div>
               <div class="portrait-details">
                 <div class="portrait-header">
                   <h3 class="portrait-name">Mohamed Ismail</h3>
-                  <span class="portrait-role font-mono text-lime">Communications &amp; Computer Engineering Student</span>
+                  <span class="portrait-role font-mono text-lime">// Computer &amp; Communications Engineer in Training</span>
                 </div>
                 <div class="portrait-tags-row font-mono">
                   <span>Python</span>
@@ -581,28 +598,32 @@
           <div class="about-text-column">
             <div class="about-statement-card spotlight-card">
               <div class="statement-intro-pill font-mono">
-                <span class="pulse-lime"></span>
-                <span>ENGINEERING STUDENT &bull; CONTINUOUS LEARNER</span>
+                <span class="status-indicator-dot mini"></span>
+                <span>// MANSOURA &bull; COMMUNICATIONS &amp; COMPUTER ENG</span>
               </div>
 
-              <h3 class="about-card-heading">About Me</h3>
+              <h3 class="about-card-heading">A builder at heart, driven by how systems actually operate under the hood.</h3>
 
               <p class="about-lead-paragraph">
-                I'm a Communications and Computer Engineering student interested in software development, machine learning, and automation. I work on practical projects spanning Python desktop applications, data-driven forecasting, automation scripts, and microcontroller-based embedded systems. Rather than focusing only on theory, I use hands-on implementation to explore how software interfaces with data pipelines and hardware. I'm continuously expanding my technical foundation as I work toward my degree.
+                I'm an engineering student who genuinely loves the entire pipeline of turning an abstract concept into functional code. Some people prefer staying purely in high-level abstractions; I enjoy digging into the details &mdash; how queries execute inside relational engines, how Poisson regression models evaluate expected goals, and how embedded microcontrollers handle real-time sensor loops.
+              </p>
+
+              <p class="about-lead-paragraph" style="margin-top: 14px;">
+                Whether it's writing a Python daemon to catch sold-out ticket drops, cleaning noisy datasets in Pandas, or reverse-engineering Windows Sysmon logs to detect ransomware entropy spikes for my senior capstone &mdash; I care about writing code that is clean, practical, and dependable.
               </p>
 
               <div class="about-highlights-row font-mono">
                 <div class="highlight-pill">
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
-                  <span>Software Development</span>
+                  <span>Backend &amp; Python Scripting</span>
                 </div>
                 <div class="highlight-pill">
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21.21 15.89A10 10 0 1 1 8 2.83"></path><path d="M22 12A10 10 0 0 0 12 2v10z"></path></svg>
-                  <span>Machine Learning &amp; Data</span>
+                  <span>Predictive ML &amp; Data Pipelines</span>
                 </div>
                 <div class="highlight-pill">
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
-                  <span>Automation &amp; Embedded</span>
+                  <span>Automation &amp; Hardware Logic</span>
                 </div>
               </div>
             </div>
@@ -613,14 +634,14 @@
         <!-- Skills Header -->
         <div class="skills-block-header" data-reveal="fade-up">
           <div class="skills-header-label font-mono">
-            <span class="text-lime">&gt;</span> CORE TECHNICAL CAPABILITIES
+            <span class="text-lime">&gt;</span> DAILY_TOOLBOX &amp; STACK
           </div>
           <p class="skills-header-subtext">
-            Practical tools, languages, and frameworks applied across completed projects and active coursework.
+            Technologies and frameworks I've actually shipped code with &mdash; from production databases to hardware controllers.
           </p>
         </div>
 
-        <!-- Categorized Skills Grid (5 Compact Groups &bull; Verified Implementation) -->
+        <!-- Categorized Skills Grid -->
         <div class="skills-categorized-grid" data-reveal="fade-up">
           
           <!-- Category 1: Programming & Databases -->
@@ -630,18 +651,18 @@
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
               </div>
               <div class="group-title-box">
-                <h3 class="group-title">Programming &amp; Databases</h3>
-                <span class="group-tagline font-mono">Core Languages &amp; Storage</span>
+                <h3 class="group-title">Languages &amp; Databases</h3>
+                <span class="group-tagline font-mono">// Core Building Blocks</span>
               </div>
             </div>
             
             <div class="skills-pills-wrap">
-              <span class="skill-pill">Python</span>
+              <span class="skill-pill">Python 3.x</span>
               <span class="skill-pill">C / C++</span>
-              <span class="skill-pill">SQL</span>
-              <span class="skill-pill">SQL Server</span>
+              <span class="skill-pill">SQL Server (T-SQL)</span>
               <span class="skill-pill">SQLite</span>
               <span class="skill-pill">Git &amp; GitHub</span>
+              <span class="skill-pill">Object-Oriented Design</span>
             </div>
           </div>
 
@@ -652,21 +673,19 @@
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21.21 15.89A10 10 0 1 1 8 2.83"></path><path d="M22 12A10 10 0 0 0 12 2v10z"></path></svg>
               </div>
               <div class="group-title-box">
-                <h3 class="group-title">Machine Learning &amp; Data Analysis</h3>
-                <span class="group-tagline font-mono">Predictive Modeling &amp; Analytics</span>
+                <h3 class="group-title">ML &amp; Data Analysis</h3>
+                <span class="group-tagline font-mono">// Statistical Models &amp; Wrangling</span>
               </div>
             </div>
             
             <div class="skills-pills-wrap">
-              <span class="skill-pill">NumPy</span>
               <span class="skill-pill">Pandas</span>
+              <span class="skill-pill">NumPy</span>
               <span class="skill-pill">Scikit-learn</span>
-              <span class="skill-pill">Matplotlib</span>
-              <span class="skill-pill">Seaborn</span>
+              <span class="skill-pill">Poisson Regression</span>
+              <span class="skill-pill">Matplotlib &amp; Seaborn</span>
+              <span class="skill-pill">Feature Engineering</span>
               <span class="skill-pill">Exploratory Data Analysis (EDA)</span>
-              <span class="skill-pill">Data Preprocessing</span>
-              <span class="skill-pill">Poisson &amp; Regression Models</span>
-              <span class="skill-pill">Model Evaluation</span>
             </div>
           </div>
 
@@ -678,16 +697,16 @@
               </div>
               <div class="group-title-box">
                 <h3 class="group-title">Automation &amp; Scripting</h3>
-                <span class="group-tagline font-mono">Daemons &amp; State Tracking</span>
+                <span class="group-tagline font-mono">// Background Daemons &amp; APIs</span>
               </div>
             </div>
             
             <div class="skills-pills-wrap">
               <span class="skill-pill">Python Automation</span>
               <span class="skill-pill">Telegram Bot API</span>
-              <span class="skill-pill">HTTP Requests &amp; Polling</span>
-              <span class="skill-pill">JSON &amp; State Persistence</span>
-              <span class="skill-pill">Workflow Scripting</span>
+              <span class="skill-pill">HTTP Scraping / Polling</span>
+              <span class="skill-pill">State Persistence (SQLite)</span>
+              <span class="skill-pill">Cron Jobs &amp; Daemons</span>
             </div>
           </div>
 
@@ -698,17 +717,17 @@
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect><rect x="9" y="9" width="6" height="6"></rect><line x1="9" y1="1" x2="9" y2="4"></line><line x1="15" y1="1" x2="15" y2="4"></line><line x1="9" y1="20" x2="9" y2="23"></line><line x1="15" y1="20" x2="15" y2="23"></line><line x1="20" y1="9" x2="23" y2="9"></line><line x1="20" y1="14" x2="23" y2="14"></line><line x1="1" y1="9" x2="4" y2="9"></line><line x1="1" y1="14" x2="4" y2="14"></line></svg>
               </div>
               <div class="group-title-box">
-                <h3 class="group-title">Software &amp; Embedded Systems</h3>
-                <span class="group-tagline font-mono">GUI Applications &amp; Hardware Logic</span>
+                <h3 class="group-title">Hardware &amp; Desktop GUI</h3>
+                <span class="group-tagline font-mono">// Microcontrollers &amp; Interfaces</span>
               </div>
             </div>
             
             <div class="skills-pills-wrap">
-              <span class="skill-pill">Tkinter / CustomTkinter</span>
-              <span class="skill-pill">Object-Oriented Programming (OOP)</span>
               <span class="skill-pill">Arduino (C/C++)</span>
-              <span class="skill-pill">Sensors &amp; Motor Control</span>
-              <span class="skill-pill">Embedded IoT Concepts</span>
+              <span class="skill-pill">Sensors &amp; Solenoid Relays</span>
+              <span class="skill-pill">Motor Drivers (L298N)</span>
+              <span class="skill-pill">RFID (RC522) &amp; Keypads</span>
+              <span class="skill-pill">Tkinter / CustomTkinter</span>
             </div>
           </div>
 
@@ -719,21 +738,21 @@
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
               </div>
               <div class="group-title-box">
-                <h3 class="group-title">Cybersecurity &amp; Active Learning</h3>
-                <span class="group-tagline font-mono">Endpoint Telemetry &amp; Heuristics</span>
+                <h3 class="group-title">Security &amp; Capstone Research</h3>
+                <span class="group-tagline font-mono">// Endpoint Telemetry &amp; Heuristics</span>
               </div>
             </div>
             
             <div class="skill-group-note font-mono">
               <span class="note-dot"></span>
-              <span>Project Work &amp; Active Learning</span>
+              <span>Senior Graduation Capstone &bull; Active Work</span>
             </div>
 
             <div class="skills-pills-wrap">
               <span class="skill-pill">Windows Sysmon Event Logs</span>
               <span class="skill-pill">Shannon File Entropy</span>
-              <span class="skill-pill">Behavioral Heuristics</span>
-              <span class="skill-pill">Endpoint Security Concepts</span>
+              <span class="skill-pill">Behavioral Anomaly Detection</span>
+              <span class="skill-pill">Endpoint Defense Concepts</span>
             </div>
           </div>
 
@@ -752,11 +771,11 @@
           <div class="section-label font-mono">
             <span class="label-idx">03</span>
             <span class="label-slash">/</span>
-            <span class="label-name">ACADEMIC &amp; BACKGROUND</span>
+            <span class="label-name">// SYSTEM_SPEC</span>
           </div>
-          <h2 class="section-heading">Academic &amp; Personal Info</h2>
+          <h2 class="section-heading">Academic &amp; Base Details</h2>
           <p class="section-subtext">
-            Verified academic background, technical focus, and location.
+            Quick facts regarding my university background, location, and focus areas.
           </p>
         </div>
 
@@ -766,7 +785,7 @@
           <div class="info-spec-card spotlight-card">
             <div class="info-card-header font-mono">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
-              <span>NAME &amp; IDENTITY</span>
+              <span>// 01_IDENTITY</span>
             </div>
             <div class="info-card-value">Mohamed Ismail</div>
             <div class="info-card-sub font-mono text-muted">Communications &amp; Computer Engineering Student</div>
@@ -776,30 +795,30 @@
           <div class="info-spec-card spotlight-card">
             <div class="info-card-header font-mono">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
-              <span>DEGREE &amp; FIELD</span>
+              <span>// 02_ACADEMICS</span>
             </div>
-            <div class="info-card-value">Communications &amp; Computer Engineering</div>
-            <div class="info-card-sub font-mono text-lime">Misr Higher Institute for Engineering &amp; Technology &bull; Class of 2027</div>
+            <div class="info-card-value">B.Sc. Computer Engineering</div>
+            <div class="info-card-sub font-mono text-lime">Misr Higher Institute for Engineering &amp; Technology &bull; Expected 2027</div>
           </div>
 
           <!-- Cell 3: Location -->
           <div class="info-spec-card spotlight-card">
             <div class="info-card-header font-mono">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-              <span>LOCATION</span>
+              <span>// 03_LOCATION</span>
             </div>
-            <div class="info-card-value">Mansoura, Dakahlia Governorate</div>
-            <div class="info-card-sub font-mono text-muted">Egypt &bull; Open for Remote &amp; On-Site Opportunities</div>
+            <div class="info-card-value">Mansoura, Egypt 📍</div>
+            <div class="info-card-sub font-mono text-muted">Open for Remote &amp; On-Site Opportunities</div>
           </div>
 
           <!-- Cell 4: Specialization & Languages -->
           <div class="info-spec-card spotlight-card">
             <div class="info-card-header font-mono">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
-              <span>FOCUS &amp; LANGUAGES</span>
+              <span>// 04_COMMUNICATION</span>
             </div>
-            <div class="info-card-value">Software &bull; ML &bull; Automation</div>
-            <div class="info-card-sub font-mono text-muted">Languages: Arabic (Native) &bull; English (Good)</div>
+            <div class="info-card-value">Arabic (Native) &bull; English (Good)</div>
+            <div class="info-card-sub font-mono text-muted">Comfortable reading docs, writing code &amp; collaborating</div>
           </div>
 
         </div>
@@ -817,11 +836,11 @@
           <div class="section-label font-mono">
             <span class="label-idx">04</span>
             <span class="label-slash">/</span>
-            <span class="label-name">DIRECT COMMUNICATION</span>
+            <span class="label-name">// INITIATE_CONTACT</span>
           </div>
-          <h2 class="section-heading">Contact Me</h2>
+          <h2 class="section-heading">Let's Build Something Together</h2>
           <p class="section-subtext">
-            Interested in discussing an engineering internship, software project, or collaboration? Reach out directly through any of the channels below.
+            I'm currently looking for engineering internships, junior backend/software roles, and collaborative projects. Whether you have an open opportunity or just want to chat about tech &mdash; feel free to drop a line.
           </p>
         </div>
 
@@ -836,7 +855,7 @@
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
               </div>
               <div class="method-info">
-                <span class="method-type font-mono">PRIMARY EMAIL</span>
+                <span class="method-type font-mono">DIRECT INBOX</span>
                 <span class="method-value">mohamed267411@gmail.com</span>
               </div>
               <span class="method-arrow" aria-hidden="true">&rarr;</span>
@@ -848,7 +867,7 @@
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
               </div>
               <div class="method-info">
-                <span class="method-type font-mono">LINKEDIN PROFILE</span>
+                <span class="method-type font-mono">LINKEDIN NETWORK</span>
                 <span class="method-value">linkedin.com/in/mohamed-ismail21</span>
               </div>
               <span class="method-arrow" aria-hidden="true">&nearr;</span>
@@ -860,7 +879,7 @@
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg>
               </div>
               <div class="method-info">
-                <span class="method-type font-mono">GITHUB REPOSITORIES</span>
+                <span class="method-type font-mono">CODE REPOSITORIES</span>
                 <span class="method-value">github.com/mohamed267411-netizen</span>
               </div>
               <span class="method-arrow" aria-hidden="true">&nearr;</span>
@@ -872,7 +891,7 @@
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
               </div>
               <div class="method-info">
-                <span class="method-type font-mono">DIRECT PHONE</span>
+                <span class="method-type font-mono">PHONE &bull; WHATSAPP</span>
                 <span class="method-value">+20 120 303 5267</span>
               </div>
               <span class="method-arrow" aria-hidden="true">&rarr;</span>
@@ -1053,7 +1072,7 @@
         <!-- Section: Overview -->
         <div class="modal-spec-block">
           <h4 class="modal-block-heading font-mono">
-            <span class="text-lime">&gt;</span> PROJECT OVERVIEW
+            <span class="text-lime">&gt;</span> // CONTEXT &amp; MOTIVATION
           </h4>
           <p class="modal-body-text" id="modal-project-overview"></p>
         </div>
@@ -1063,7 +1082,7 @@
           <div class="prob-sol-card">
             <div class="prob-sol-header font-mono text-amber">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
-              <span>THE PROBLEM</span>
+              <span>// REAL-WORLD FRICTION &amp; BOTTLENECK</span>
             </div>
             <p class="prob-sol-text" id="modal-project-problem"></p>
           </div>
@@ -1071,7 +1090,7 @@
           <div class="prob-sol-card">
             <div class="prob-sol-header font-mono text-lime">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-              <span>PROPOSED SOLUTION</span>
+              <span>// THE ENGINEERING SOLUTION</span>
             </div>
             <p class="prob-sol-text" id="modal-project-solution"></p>
           </div>
@@ -1080,7 +1099,7 @@
         <!-- Section: Key Features -->
         <div class="modal-spec-block">
           <h4 class="modal-block-heading font-mono">
-            <span class="text-lime">&gt;</span> KEY ARCHITECTURAL FEATURES
+            <span class="text-lime">&gt;</span> // ARCHITECTURAL &amp; CODE HIGHLIGHTS
           </h4>
           <ul class="modal-features-list font-mono" id="modal-project-features"></ul>
         </div>
@@ -1088,7 +1107,7 @@
         <!-- Section: Technologies Used -->
         <div class="modal-spec-block">
           <h4 class="modal-block-heading font-mono">
-            <span class="text-lime">&gt;</span> TECHNOLOGIES &amp; TOOLS
+            <span class="text-lime">&gt;</span> // TOOLS &amp; ECOSYSTEM
           </h4>
           <div class="modal-tech-pills font-mono" id="modal-project-techs"></div>
         </div>
@@ -1096,7 +1115,7 @@
         <!-- Section: My Contribution -->
         <div class="modal-spec-block">
           <h4 class="modal-block-heading font-mono">
-            <span class="text-lime">&gt;</span> MY ENGINEERING CONTRIBUTION
+            <span class="text-lime">&gt;</span> // WHAT I BUILT &amp; LESSONS LEARNED
           </h4>
           <p class="modal-body-text" id="modal-project-contribution"></p>
         </div>
@@ -1139,6 +1158,6 @@
     <span id="toast-message" class="toast-text font-mono">Copied to clipboard!</span>
   </div>
 
-  <script src="script.js?v=3.0"></script>
+  <script src="script.js?v=3.3"></script>
 </body>
 </html>

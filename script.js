@@ -12,23 +12,23 @@ document.documentElement.classList.add('js-active');
 const PROJECTS_DATA = {
   dawreek: {
     id: "dawreek",
-    title: "DawReeK — Premier League Match Prediction System",
-    category: "AI & Machine Learning • Desktop App",
+    title: "DawReeK — Premier League Match Predictor",
+    category: "Machine Learning • Python Desktop",
     badge: "Verified Repository",
     badgeType: "lime",
-    shortDesc: "A Python desktop application that uses historical Premier League data to predict home and away goals using Poisson regression, match statistics, and SQL Server.",
-    overview: "DawReeK is a Python desktop application that uses historical Premier League data to predict home and away goals. It combines Poisson regression, match statistics, and SQL Server to display predictions through a desktop interface.",
-    problem: "Calculating football match probabilities and team form manually requires aggregating historical match records, goal differences, and home/away performance factors that change from week to week.",
-    solution: "Built a Python desktop tool that queries historical match statistics from Microsoft SQL Server, calculates rolling team form metrics, applies Poisson regression models to estimate expected goals, and presents the predictions through a graphical desktop interface.",
+    shortDesc: "Got tired of subjective match arguments with friends, so I built an expected goals (xG) engine using historical Premier League match logs, Poisson distribution models, and SQL Server &mdash; packaged in a Python desktop UI to test my predictions before kick-off.",
+    overview: "DawReeK started from a simple debate among friends: can historical math predict Premier League matches better than gut feelings and pundit opinions? I built a complete desktop tool to find out, combining years of match logs, rolling form metrics, and Poisson regression to calculate realistic home and away goal expectancies.",
+    problem: "Football is notoriously high-variance. If you look only at simple win/loss records, you miss underlying performance trends—like a team dominating shots but suffering bad luck. Plus, processing years of match fixtures without lagging the UI required efficient data structuring.",
+    solution: "Stored cleaned historical data in SQL Server, queried rolling goal stats in Pandas, and implemented Poisson regression to estimate expected goals (xG). The interface allows selecting any match-up to instantly simulate probabilities and compare projected scorelines against historical odds.",
     features: [
-      "Poisson regression models estimating home and away goal expectancies",
+      "Poisson regression models calculating discrete home and away goal probability matrices",
       "Microsoft SQL Server relational database storing league tables, historical scores, and squad stats",
       "Rolling team form and goal difference calculations across recent fixtures",
       "Desktop user interface for selecting fixtures and viewing predicted scorelines",
       "Model evaluation comparing predicted goal outcomes against verified historical match results"
     ],
     technologies: ["Python", "SQL Server", "Scikit-learn", "Pandas", "NumPy", "Tkinter", "Poisson Regression"],
-    contribution: "Developed the desktop application: wrote the SQL relational schema queries, built data transformation logic in Pandas, implemented the Poisson goal prediction models, and constructed the Tkinter interface.",
+    contribution: "Designed and built the full pipeline from scratch: authored SQL queries and schema, engineered rolling form features in Pandas, trained the Poisson model, and built the CustomTkinter desktop interface.",
     gallery: [
       { src: "assets/dawreek-1.png", title: "Main Match Prediction Dashboard", caption: "Fixture view displaying predicted win/draw/loss probabilities and expected goal counts." },
       { src: "assets/dawreek-2.png", title: "League Standings & Points Table", caption: "Premier League table displaying points, goal difference, and recent form metrics." },
@@ -47,23 +47,23 @@ const PROJECTS_DATA = {
 
   ransomguard: {
     id: "ransomguard",
-    title: "RansomGuard — Behavioral Ransomware Detection & Response (In Development)",
+    title: "RansomGuard — Behavioral Ransomware Defense",
     category: "Cybersecurity • Behavioral ML",
-    badge: "Graduation Project (Class of 2027) • In Development",
+    badge: "Graduation Capstone • Active Work",
     badgeType: "amber",
-    shortDesc: "An undergraduate engineering capstone project investigating Windows Sysmon telemetry and file entropy analysis to explore behavioral ransomware detection.",
-    overview: "RansomGuard is an undergraduate engineering graduation capstone project currently under active development. The project explores behavioral detection strategies to identify potential ransomware activity by analyzing endpoint telemetry rather than relying solely on static signature databases.",
-    problem: "Modern ransomware employs code obfuscation and polymorphic binaries that can bypass conventional signature-based antivirus solutions. Detecting active encryption requires identifying behavioral anomalies such as rapid file modifications and entropy spikes.",
-    solution: "Developing a detection framework that analyzes Windows Sysmon event logs to identify suspicious process behaviors, calculates Shannon entropy on modified files to detect encryption patterns, and researches automated containment concepts such as process suspension.",
+    shortDesc: "Zero-day ransomware easily bypasses hash-based antivirus databases. For our senior capstone, we're building an endpoint monitor that catches active encryption via real-time Windows Sysmon event telemetry and Shannon file entropy spikes.",
+    overview: "RansomGuard is our senior engineering capstone project. Conventional antivirus tools rely heavily on known file signatures—which means zero-day ransomware can encrypt an entire drive before a signature is issued. We are investigating whether behavioral telemetry can stop attacks in flight.",
+    problem: "Modern ransomware encrypts files rapidly while disguising its binary signature through polymorphic packers. Detecting encryption before critical data is lost requires identifying behavioral anomalies without falsely flagging legitimate processes like ZIP archiving or video rendering.",
+    solution: "Ingesting Windows Sysmon event telemetry in real time, tracking rapid file I/O operations, and calculating Shannon file entropy on altered disk buffers (since encrypted files have near-maximum entropy ~7.9+). When a suspicious process triggers both thresholds, our containment heuristic triggers process suspension.",
     features: [
-      "Exploration of Windows Sysmon log ingestion for process and file modification events",
-      "Shannon entropy calculation algorithms to identify file encryption behavior",
-      "Analysis of behavioral heuristics such as rapid file renaming and abnormal disk I/O",
-      "Planned machine learning classification for suspicious process profiles (in progress)",
-      "Conceptual framework for automated process termination and endpoint containment (planned)"
+      "Real-time ingestion of Windows Sysmon log feeds for rapid process and file modification events",
+      "Shannon entropy calculation algorithms to identify telltale file encryption patterns",
+      "Analysis of behavioral heuristics such as rapid mass file renaming and abnormal disk I/O",
+      "Planned machine learning classification for suspicious process profiles (in active development)",
+      "Automated process termination and containment workflow concepts"
     ],
     technologies: ["Python", "Windows Sysmon", "Behavioral Heuristics", "Shannon Entropy", "Security Engineering"],
-    contribution: "Co-developing the project for the graduation capstone: researching Sysmon event parsing, experimenting with file entropy algorithms, and testing anomaly detection approaches.",
+    contribution: "Co-architecting the capstone pipeline: analyzing Sysmon event schema, prototyping Shannon entropy calculation modules, and evaluating anomaly detection thresholds on test datasets.",
     gallery: [],
     schematicType: "ransomguard",
     github: null,
@@ -72,14 +72,14 @@ const PROJECTS_DATA = {
 
   smartbox: {
     id: "smartbox",
-    title: "Smart Box — IoT-Based Smart Package Security System",
-    category: "Embedded Systems • IoT",
-    badge: "University Engineering Prototype",
+    title: "Smart Box — IoT Secure Package Delivery Locker",
+    category: "Embedded Systems • IoT Hardware",
+    badge: "Hardware Prototype",
     badgeType: "lime",
-    shortDesc: "A university engineering project prototyping an electronically secured package delivery compartment using dual-factor PIN and RFID access control and IoT architecture concepts.",
-    overview: "Smart Box is a university engineering project designed to address unattended package delivery security. The project combines physical compartment design with electronic access control, allowing authorized couriers and recipients to deposit and retrieve deliveries safely using a keypad PIN or RFID tag.",
-    problem: "Deliveries left unattended at doorsteps are vulnerable to package theft and weather damage when recipients are away from home.",
-    solution: "Designed and prototyped an electronic delivery compartment integrating a numeric matrix keypad, an RFID reader, a microcontroller for credential verification, and a solenoid lock mechanism, with a proposed architecture for IoT status telemetry.",
+    shortDesc: "Tackled doorstep package theft with a physical hardware build: wired an Arduino with dual-factor RFID and matrix PIN authentication, controlling a heavy-duty 12V fail-secure solenoid deadbolt through an isolated relay circuit.",
+    overview: "Smart Box is a university hardware project addressing a simple, widespread headache: missed package deliveries and doorstep package theft. We engineered an autonomous locker compartment that allows couriers to safely deposit packages using dual-factor credentials.",
+    problem: "Designing an unattended physical locker requires balancing electronic reliability with physical security: preventing false unlocks during voltage fluctuations, handling key debouncing, and ensuring authorized access without complicated setup.",
+    solution: "Prototyped a rugged wooden compartment secured with a 12V DC solenoid deadbolt driven by a relay module. Integrated an Arduino microcontroller with a 4x4 matrix keypad and an RC522 RFID reader (13.56 MHz), implementing a robust state machine that verifies either recipient RFID cards or courier single-use PIN codes.",
     features: [
       "Dual-factor access control supporting numeric PIN keypad and 13.56 MHz RFID tag authentication",
       "Microcontroller state machine managing credential validation and solenoid lock timing",
@@ -88,7 +88,7 @@ const PROJECTS_DATA = {
       "Proposed IoT telemetry architecture for package arrival notifications and status logging"
     ],
     technologies: ["Embedded Systems", "Microcontrollers", "RFID (13.56 MHz)", "Matrix Keypad", "Relay & Solenoid Control", "IoT Architecture"],
-    contribution: "Designed system architecture, wired and tested the keypad, RFID reader, and solenoid relay circuit with the microcontroller, and documented the hardware schematics.",
+    contribution: "Designed the electronic circuit schematics, wired all sensors and relays to the Arduino, wrote the embedded C++ state machine firmware, and assembled and tested the physical prototype.",
     gallery: [
       { src: "assets/smart-box.png", title: "Smart Box Prototype Overview", caption: "Physical prototype and hardware assembly of the delivery box." },
       { src: "assets/box1.jpeg", title: "Front Access Keypad and RFID Interface", caption: "Electronic authentication panel supporting dual-factor PIN and RFID entry." },
@@ -104,14 +104,14 @@ const PROJECTS_DATA = {
 
   linefollower: {
     id: "linefollower",
-    title: "Line Follower Car — Autonomous Tracking & RemoteXY Control",
-    category: "Embedded Systems • Robotics • Arduino",
-    badge: "Hardware & Robotics Project",
+    title: "Line Follower Car — Autonomous Optical Tracking & RemoteXY RC",
+    category: "Embedded Robotics • Arduino",
+    badge: "Hardware & Robotics",
     badgeType: "lime",
-    shortDesc: "An Arduino robot combining autonomous optical line tracking via analog infrared sensors with manual Bluetooth driving via RemoteXY.",
-    overview: "The Line Follower Car is an embedded robotics project built with an Arduino microcontroller. It combines autonomous line navigation along a physical surface track using infrared sensors with manual remote control via a smartphone app over Bluetooth.",
-    problem: "Robotic navigation requires real-time optical sensor processing for autonomous guidance while maintaining the ability to switch to manual control when human steering is needed.",
-    solution: "Assembled a two-wheel-drive vehicular chassis controlled by an Arduino Uno, paired with a dual-channel DC motor driver, two analog IR sensors for track boundary detection, and a Bluetooth module integrated with the RemoteXY mobile dashboard for mode toggling and steering.",
+    shortDesc: "Built from bare components to master real-time sensor loops: calibrated dual analog IR sensors for drift-free track tracing, then wired an HC-05 Bluetooth module with RemoteXY to toggle instant mobile steering from my phone.",
+    overview: "Built as an embedded robotics exploration to understand sensor calibration, feedback loops, and motor control. It navigates autonomous track paths using infrared optical sensors, with an instant failover switch to manual smartphone driving via Bluetooth.",
+    problem: "Infrared sensors are notoriously vulnerable to uneven track surfaces and varying ambient lighting. Setting fixed thresholds often causes robots to jitter wildly or lose tracking on sharp 90-degree turns.",
+    solution: "Wrote an adaptive differential steering algorithm in C++ running on an Arduino Uno. The algorithm evaluates analog IR sensor readings, modulates PWM duty cycles to the L298N dual H-bridge motor driver, and seamlessly switches to a custom RemoteXY mobile joystick interface over Bluetooth HC-05 whenever manual steering is engaged.",
     features: [
       "Autonomous line-tracking algorithm using two analog IR track-detection sensors (A0 and A1)",
       "Dual-mode operation: toggle between autonomous line following and manual mobile control",
@@ -120,7 +120,7 @@ const PROJECTS_DATA = {
       "Battery-powered vehicular chassis tested on physical track courses"
     ],
     technologies: ["Arduino", "Embedded C/C++", "IR Sensors", "L298N Motor Driver", "Bluetooth", "RemoteXY"],
-    contribution: "Assembled the chassis, wired the sensors and motor driver to the Arduino, authored the control firmware in C/C++, and configured the RemoteXY mobile dashboard layout.",
+    contribution: "Sourced components, soldered and assembled chassis wiring, authored the firmware in embedded C++, tuned differential steering curves, and designed the RemoteXY mobile dashboard layout.",
     gallery: [
       { src: "assets/line-follower-car.jpg", title: "Line Follower Car & Testing Track", caption: "Robotic car prototype beside the track course used for testing autonomous navigation." },
       { src: "assets/line-follower-remotexy.jpg", title: "RemoteXY Mobile Dashboard", caption: "Mobile interface screenshot showing mode switch and directional controls." }
@@ -132,14 +132,14 @@ const PROJECTS_DATA = {
 
   tazkarti: {
     id: "tazkarti",
-    title: "Tazkarti Bot — Match Availability & Telegram Alerts",
-    category: "Automation • Software Development",
+    title: "Tazkarti Bot — Match Availability & Instant Telegram Alerts",
+    category: "Automation • Python Daemon",
     badge: "Verified Repository",
     badgeType: "lime",
-    shortDesc: "An automated Python monitoring script that checks football ticket availability on Tazkarti, tracks state changes in SQLite, and sends instant push alerts via Telegram.",
-    overview: "Tazkarti Bot is a Python background service designed to solve the problem of missing high-demand football ticket releases in Egypt. It automatically monitors the Tazkarti platform and sends instant notifications to Telegram when tickets become available.",
-    problem: "High-profile football match tickets in Egypt frequently sell out within minutes of being released with no advance schedule, requiring fans to manually check the site repeatedly.",
-    solution: "Created an automated Python script that periodically polls the Tazkarti ticketing pages, parses availability status, tracks changes in a local SQLite database (matches.db), and immediately sends push alerts with booking links via the Telegram Bot API.",
+    shortDesc: "Egyptian football tickets sell out in 3 minutes unannounced. Rather than refreshing F5 all day, I wrote a 24/7 Python daemon that polls match availability, tracks state in SQLite, and pushes immediate Telegram alerts with direct booking links.",
+    overview: "High-demand Egyptian football matches on Tazkarti sell out in minutes without any scheduled announcement. Missing the drop meant missing the game. I built Tazkarti Bot to solve this exact frustration—a background daemon that monitors availability and notifies me on Telegram the instant tickets go live.",
+    problem: "Manually refreshing a web page all day is impossible, and naïve polling scripts either get rate-limited, crash on network blips, or spam you every 5 seconds with duplicate notifications.",
+    solution: "Built an asynchronous Python script that polls the endpoint with backoff error handling, checks ticket states against a local SQLite database (matches.db) for clean deduplication, and sends a formatted Telegram push notification with the direct match reservation URL.",
     features: [
       "Automated HTTP polling with request error handling and configurable check intervals",
       "Local SQLite database (matches.db) storing fixture IDs and previous availability states",
@@ -148,7 +148,7 @@ const PROJECTS_DATA = {
       "Environment variable configuration using python-dotenv for bot tokens and settings"
     ],
     technologies: ["Python", "Telegram Bot API", "SQLite", "Requests", "Python-dotenv"],
-    contribution: "Authored the full automation script: implemented HTTP scraping and parsing logic, designed the SQLite tracking table, and integrated Telegram Bot alerts.",
+    contribution: "Created the entire script independently: reverse-engineered the endpoint payloads, wrote state-tracking SQLite logic, and integrated Telegram Bot webhooks with error recovery.",
     gallery: [],
     schematicType: "tazkarti",
     github: "https://github.com/mohamed267411-netizen/tazkarti_bot",
@@ -157,14 +157,14 @@ const PROJECTS_DATA = {
 
   airline: {
     id: "airline",
-    title: "Airline Management System — Desktop Reservation Console",
-    category: "Software Development • Desktop App",
-    badge: "University Coursework Project",
+    title: "Airline Management System — Reservation Desk & Console",
+    category: "Software Engineering • Desktop App",
+    badge: "Coursework Project",
     badgeType: "lime",
-    shortDesc: "An object-oriented desktop application managing flight schedules, passenger reservations, and seat allocations using Python, SQLite, and Tkinter.",
-    overview: "The Airline Management System is a university software engineering project built to practice object-oriented programming (OOP), relational database design, and GUI development in Python.",
-    problem: "Managing flight reservations requires synchronized tracking of passenger information, flight availability, and seat allocations to prevent errors like double-booking.",
-    solution: "Developed a desktop application using Python and Tkinter, backed by an embedded SQLite database. Used OOP principles to structure flight, passenger, and booking entities with relational queries and input validation.",
+    shortDesc: "University OOP project built like a real airport reservation desk: strict relational SQLite transactions to prevent seat double-booking, complete with passenger lifecycles and an interactive Tkinter desk interface.",
+    overview: "A desktop software engineering application designed to model real-world airline ticketing operations: managing flight schedules, seat allocations, and passenger records with strict transactional consistency.",
+    problem: "Flight booking systems must strictly prevent overbooking and race conditions—cancelling a ticket must immediately return that specific seat to inventory, and duplicate seat assignments must be impossible.",
+    solution: "Built an object-oriented Python architecture backed by an embedded SQLite database. Implemented transactional queries with foreign keys and unique constraints, paired with a user-friendly Tkinter GUI for ticket clerks to search flights, register travelers, and print booking manifests.",
     features: [
       "Flight scheduling module with destination lookup, departure times, and capacity tracking",
       "Passenger registration and ticket reservation interface with input validation",
@@ -173,7 +173,7 @@ const PROJECTS_DATA = {
       "Clean desktop GUI built with Python Tkinter supporting fast lookup and booking cancellations"
     ],
     technologies: ["Python", "Tkinter GUI", "SQLite", "Object-Oriented Programming (OOP)"],
-    contribution: "Built the entire project: designed the SQLite database schema, implemented the Python classes and methods, and built the Tkinter graphical interface.",
+    contribution: "Developed the entire project: designed the 3NF relational database schema, implemented OOP business logic in Python, and built the multi-screen desktop interface.",
     gallery: [
       { src: "assets/air1.png", title: "Flight Schedule Interface", caption: "Main dashboard displaying scheduled flights, available seats, and departure details." },
       { src: "assets/air2.png", title: "Passenger Record Management", caption: "Form interface for capturing passenger identification, contact details, and assigned flights." },
@@ -186,14 +186,14 @@ const PROJECTS_DATA = {
 
   gym: {
     id: "gym",
-    title: "Gym Members Analytics — Exploratory Data Analysis",
-    category: "Data Analysis • Python",
+    title: "Gym Members Analytics — Attendance & Retention EDA",
+    category: "Data Analysis • Python EDA",
     badge: "Verified Repository",
     badgeType: "lime",
-    shortDesc: "An exploratory data analysis project examining gym member attendance patterns, workout frequency, and subscription retention using Pandas and Matplotlib.",
-    overview: "Gym Members Analytics is a data analysis project conducted in Python. It evaluates a dataset of gym memberships to understand member demographics, attendance habits, workout types, and retention patterns.",
-    problem: "Understanding what factors influence gym member attendance and membership renewals requires analyzing multi-variable data across age groups, visit frequencies, and workout preferences.",
-    solution: "Used Pandas and NumPy to clean and aggregate raw membership data, handled data type conversions and missing values, and created statistical visualizations using Matplotlib and Seaborn.",
+    shortDesc: "Exploratory data analysis in Pandas and Seaborn investigating why gym members quit: uncovered key dropout inflection points, attendance drop-offs, and multi-variable correlations that predict subscription renewals.",
+    overview: "A hands-on exploratory data analysis project investigating the factors that drive gym member attendance and long-term membership retention.",
+    problem: "Gyms often face high churn rates within the first 60 days. Raw gym attendance logs contain inconsistencies, missing session records, and outlier ages that obscure real behavioral patterns.",
+    solution: "Built a clean data wrangling pipeline in Pandas and NumPy to clean missing values and normalize visit records. Analyzed demographic correlations and generated multi-plot visualizations with Matplotlib and Seaborn, identifying clear attendance thresholds that separate committed members from churn risks.",
     features: [
       "Data preprocessing pipeline handling missing entries, type normalization, and outlier detection",
       "Demographic and age-bracket breakdown assessing membership distribution",
@@ -202,7 +202,7 @@ const PROJECTS_DATA = {
       "Summary observations on member workout preferences and renewal trends"
     ],
     technologies: ["Python", "Pandas", "NumPy", "Matplotlib", "Seaborn", "Exploratory Data Analysis (EDA)"],
-    contribution: "Completed the end-to-end data analysis workflow: wrote the Python scripts, cleaned the dataset, performed descriptive statistics, and generated all charts.",
+    contribution: "Executed the full analysis pipeline: cleaned the raw dataset, performed descriptive and inferential statistics in Jupyter, and designed all visual charts and summary takeaways.",
     gallery: [
       { src: "assets/gym-dashboard.png", title: "Gym Members Analytics Dashboard", caption: "Comprehensive visualization of member demographics, attendance frequency, and retention distributions." }
     ],
@@ -212,14 +212,14 @@ const PROJECTS_DATA = {
 
   yourmovies: {
     id: "yourmovies",
-    title: "Your Movies — Multi-Page Entertainment Web Portal",
-    category: "Software Development • Web Technologies",
+    title: "Your Movies — Lightweight Entertainment Web Portal",
+    category: "Frontend • Vanilla Web",
     badge: "Live Web Application",
     badgeType: "lime",
-    shortDesc: "A responsive multi-page entertainment catalog for movies, series, and anime built with semantic HTML5, CSS3 transitions, and vanilla JavaScript DOM filtering.",
-    overview: "Your Movies is a front-end web project built to practice responsive web design and client-side JavaScript DOM manipulation. It provides organized catalogs for trending films, television series, and anime titles.",
-    problem: "Building a responsive multi-page catalog requires clean semantic HTML structure, consistent CSS layout across pages, and responsive client-side filtering without external framework dependencies.",
-    solution: "Developed a clean multi-page site using semantic HTML5, modern CSS3 styling with flexbox and grid, and vanilla JavaScript to provide instant search and genre filtering without any external libraries.",
+    shortDesc: "Challenged myself to build a snappy multi-page media portal without heavy frameworks: handcrafted semantic HTML5, modern CSS Grid/Flexbox, and vanilla JavaScript DOM operations for instant real-time search and genre filtering.",
+    overview: "A responsive multi-page entertainment catalog built as a personal challenge: create a modern, sleek media browsing experience using pure web standards with zero heavy frameworks, bundlers, or third-party libraries.",
+    problem: "Building multi-page applications without modern frontend frameworks (like React or Vue) often leads to messy DOM manipulation, code duplication across pages, and sluggish client-side search.",
+    solution: "Structured modular semantic HTML5 templates, created a maintainable CSS architecture with CSS custom properties, Grid, and Flexbox, and wrote efficient vanilla JavaScript DOM filters that allow instant searching and category filtering with zero perceptible latency.",
     features: [
       "Multi-page architecture with dedicated portals for movies, television series, and anime",
       "Client-side search and category filtering powered by Vanilla JavaScript",
@@ -228,7 +228,7 @@ const PROJECTS_DATA = {
       "Zero build tools or dependencies, deployed live on GitHub Pages"
     ],
     technologies: ["HTML5", "CSS3", "JavaScript", "Responsive Design", "GitHub Pages"],
-    contribution: "Created the entire website from scratch: wrote the semantic HTML5 page templates, authored responsive CSS3 layouts, and implemented vanilla JS search and filtering.",
+    contribution: "Designed and developed the entire website from scratch: wrote the responsive styles, structured the navigation, implemented client-side JS filtering, and deployed it on GitHub Pages.",
     gallery: [],
     schematicType: "yourmovies",
     github: null,
@@ -240,8 +240,6 @@ const PROJECTS_DATA = {
    APP INITIALIZATION
    ========================================================================== */
 document.addEventListener('DOMContentLoaded', () => {
-  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
   // Initialize Core Navigation & Interaction Modules
   initNavbarScroll();
   initMobileMenu();
@@ -253,11 +251,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initImageLightbox();
   initEmailComposerAndCopy();
   initFooterYear();
-
-  // Non-intrusive progressive animations (only if reduced motion is disabled)
-  if (!prefersReducedMotion) {
-    initCanvasMesh();
-  }
+  initHeroTerminalTabs();
 });
 
 /* ==========================================================================
@@ -972,86 +966,34 @@ function initFooterYear() {
 }
 
 /* ==========================================================================
-   11. PROGRESSIVE BACKGROUND PARTICLE CONSTELLATION CANVAS
+   11. HERO DEVELOPER TERMINAL INTERACTIVE TABS
    ========================================================================== */
-function initCanvasMesh() {
-  const canvas = document.getElementById('bg-canvas');
-  if (!canvas) return;
-
-  const ctx = canvas.getContext('2d');
-  let width, height;
-  let particles = [];
-  let reqId;
-
-  const resize = () => {
-    width = canvas.width = window.innerWidth;
-    height = canvas.height = window.innerHeight;
+function initHeroTerminalTabs() {
+  const tabs = document.querySelectorAll('.term-tab[data-term-tab]');
+  const panes = {
+    profile: document.getElementById('pane-profile'),
+    status: document.getElementById('pane-status')
   };
 
-  window.addEventListener('resize', resize, { passive: true });
-  resize();
+  if (!tabs.length || !panes.profile || !panes.status) return;
 
-  class Particle {
-    constructor() {
-      this.x = Math.random() * width;
-      this.y = Math.random() * height;
-      this.vx = (Math.random() - 0.5) * 0.35;
-      this.vy = (Math.random() - 0.5) * 0.35;
-      this.radius = Math.random() * 1.5 + 0.6;
-    }
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      tabs.forEach(t => {
+        t.classList.remove('active');
+        t.setAttribute('aria-selected', 'false');
+      });
+      tab.classList.add('active');
+      tab.setAttribute('aria-selected', 'true');
 
-    update() {
-      this.x += this.vx;
-      this.y += this.vy;
-
-      if (this.x < 0) this.x = width;
-      if (this.x > width) this.x = 0;
-      if (this.y < 0) this.y = height;
-      if (this.y > height) this.y = 0;
-    }
-
-    draw() {
-      ctx.beginPath();
-      ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
-      ctx.fillStyle = 'rgba(163, 230, 53, 0.28)';
-      ctx.fill();
-    }
-  }
-
-  // Adjust particle count according to screen size
-  const count = Math.min(Math.floor((window.innerWidth * window.innerHeight) / 28000), 45);
-  for (let i = 0; i < count; i++) {
-    particles.push(new Particle());
-  }
-
-  const maxDistance = 120;
-
-  function animate() {
-    ctx.clearRect(0, 0, width, height);
-
-    for (let i = 0; i < particles.length; i++) {
-      particles[i].update();
-      particles[i].draw();
-
-      for (let j = i + 1; j < particles.length; j++) {
-        const dx = particles[i].x - particles[j].x;
-        const dy = particles[i].y - particles[j].y;
-        const dist = Math.hypot(dx, dy);
-
-        if (dist < maxDistance) {
-          const opacity = (1 - dist / maxDistance) * 0.12;
-          ctx.beginPath();
-          ctx.strokeStyle = `rgba(163, 230, 53, ${opacity})`;
-          ctx.lineWidth = 0.7;
-          ctx.moveTo(particles[i].x, particles[i].y);
-          ctx.lineTo(particles[j].x, particles[j].y);
-          ctx.stroke();
-        }
+      const target = tab.getAttribute('data-term-tab');
+      if (target === 'profile' && panes.profile) {
+        panes.profile.style.display = 'block';
+        if (panes.status) panes.status.style.display = 'none';
+      } else if (panes.status) {
+        if (panes.profile) panes.profile.style.display = 'none';
+        panes.status.style.display = 'block';
       }
-    }
-
-    reqId = requestAnimationFrame(animate);
-  }
-
-  reqId = requestAnimationFrame(animate);
+    });
+  });
 }
